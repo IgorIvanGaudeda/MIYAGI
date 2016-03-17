@@ -1,0 +1,10 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}{section.1}
+\contentsline {section}{\numberline {2}Formatando o Texto}{2}{section.2}
+\contentsline {section}{\numberline {3}Figuras e Tabelas}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Figura}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Tabela}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Listas}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Lista enumerada}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Lista n\IeC {\~a}o-enumerada}{3}{subsection.4.2}
+\contentsline {section}{\numberline {5}Equa\IeC {\c c}\IeC {\~o}es}{3}{section.5}

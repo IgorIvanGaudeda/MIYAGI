@@ -1,0 +1,27 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{Er01}
+P.~Erd{\H o}s, \emph{A selection of problems and results in combinatorics},
+  Recent trends in combinatorics (Matrahaza, 1995), Cambridge Univ. Press,
+  Cambridge, pp.~1--6.
+
+\bibitem{ConcreteMath}
+R.L. Graham, D.E. Knuth, and O.~Patashnik, \emph{Concrete mathematics},
+  Addison-Wesley, Reading, MA, 1989.
+
+\bibitem{Knuth92}
+D.E. Knuth, \emph{Two notes on notation}, Amer. Math. Monthly \textbf{99}
+  (1992), 403--422.
+
+\bibitem{Simpson}
+H.~Simpson, \emph{Proof of the {R}iemann {H}ypothesis}, preprint (2003),
+  available at \text{http://www.math.drofnats.edu/riemann.ps}.
+
+\end{thebibliography}
