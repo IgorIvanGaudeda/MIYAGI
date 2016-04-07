@@ -51,15 +51,40 @@ Equipe:
 
 Professor Orientador: Daniel Rossato de Oliveira \\
 
-Resumo: \\
+Resumo: O projeto visa a implementação de um sistema completo de monitoramento e assistência para idosos através de um dispositivo de pulso e uma base transmissora conectada à Internet. As principais funções do dispositovo são o monitoramento de batimentos cardíacos, a detecção de queda e um botão de emergência, que podem ser acessados através de uma solução web.
 
-Palavras-chave: 
+Palavras-chave: Idoso, monitoramento, wearables, ultra low power, Internet of things (IoT).
 
 \section{DESCRIÇÃO DO PROJETO / CARACTERIZAÇÃO}
 
 \subsection{Objetivo Geral}
+Este projeto tem como objetivodesenvolver uma solução não invasiva para o acompanhamento da saúde - principalmente - de idosos, através do monitoramento de batimentos cardíacos, da detecção de possíveis quedas e da presença de um botão de pânico que pode ser acionado em caso de qualquer emergência, além das funções de monitoramento de bateria e de relógio. 
 
 \subsection{Objetivos Específicos}
+O projeto consiste em três subsistemas específicos: o dispositivo, a base transmissora e a aplicação web, cada qual com seus obejtivos específicos.
+
+\subsubsection{Dispositivo de pulso}
+\begin{enumerate}
+\item Desenvolver um firmware para o SoC (System on Chip) Texas CC430, presente no kit de relógio de pulso eZ430-CHRONOS-915.
+\item Desenvolver uma função de monitoramento do acelerometro, para medir batimentos cadíacos e possíveis quedas.
+\item Desenvolver uma função de monitoramento do botão de emergência, para indicar quando o botão foi acionado.
+\item Desenvolver uma função de monitoramento de bateria, para indicar o nível atual e quando uma troca deverá ser feita.
+\item Desenvolver as funções anteriores de forma a economizar energia e maximizar a duração da bateria, para reduzir o tempo entre trocas.
+\item Desenvolver um protocolo de comunicação com a base transmissora, para receber e enviar dados. 
+\end{enumerate}
+
+%O dispositivo de pulso consiste num relógio digital incrementado com sensores para monitorar o batimento cardíaco, as possíveis quedas e o acionamento do %botão de pânico, consumindo o mínimo possível de energia para ser enquadrado como um dispositivo "ultra low power" alimentado por uma bateria de 3.3V de %relógio. O monitoramento deve acontecer em tempo real e reportar - imediatamente - à base transmissora qualquer alteração considerada suspeita. Dentre as %funções operacionais, o dispositivo de pulso deve alertar a base sobre a necessidade da troca iminente da bateria e receber a atualização de informações %relevantes.
+
+\subsubsection{Base transmissora}
+Desenvolver um circuito que consistirá no rádio de comunicação com o relógio, um microcontrolador, e uma interface Ethernet. O firmware do microcontrolador deverá se capaz de realizar o comunicação com o relógio e transmitir e receber dados da internet, através da porta Ethernet. A base também deverá contar com um web server capaz de mostrar informações e configurações do relógio e da própria base.
+
+
+A base transmissora fará o intermédio entre o dispositivo de pulso e a internet. A base deverá receber as informações do dispositivo via rádio-frequência e reportá-las à aplicação de monitoramento web através da internet.
+
+\subsubsection{Aplicação Web}
+Desenvoler uma aplicação web, que recebe e envia dados, através de requisições, para a base transmissora. A aplicação, no momento, não contará com interface grafica avançada, mas apenas o necessário para a operação do sistema.
+
+A aplicação deve ser uma plataforma de fácil acompanhamento dos dados recebidos dos dispositivos de pulso, além poder enviar informações aos dispositivos.
 
 \subsection{Diagrama}
 
