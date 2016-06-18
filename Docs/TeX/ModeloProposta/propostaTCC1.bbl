@@ -7,21 +7,18 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
-\bibitem{Er01}
-P.~Erd{\H o}s, \emph{A selection of problems and results in combinatorics},
-  Recent trends in combinatorics (Matrahaza, 1995), Cambridge Univ. Press,
-  Cambridge, pp.~1--6.
+\bibitem{SLAU292G}
+Texas Instruments, \emph{ez430-chronos development tool user's guide (rev. g)},
+  Disponível em \url{http://www.ti.com/lit/ug/slau292g/slau292g.pdf} Acesso em
+  22/04/2016.
 
-\bibitem{ConcreteMath}
-R.L. Graham, D.E. Knuth, and O.~Patashnik, \emph{Concrete mathematics},
-  Addison-Wesley, Reading, MA, 1989.
+\bibitem{KUCHEMANN2012}
+Berlindes~Astrid Kuchemann, \emph{Envelhecimento populacional, cuidado e
+  cidadania: velhos dilemas e novos desafios}, Sociedade e Estado \textbf{27}
+  (2012), 165 -- 180 (pt).
 
-\bibitem{Knuth92}
-D.E. Knuth, \emph{Two notes on notation}, Amer. Math. Monthly \textbf{99}
-  (1992), 403--422.
-
-\bibitem{Simpson}
-H.~Simpson, \emph{Proof of the {R}iemann {H}ypothesis}, preprint (2003),
-  available at \text{http://www.math.drofnats.edu/riemann.ps}.
+\bibitem{IEEE6091301}
+S.~Kwon, J.~Lee, G.~S. Chung, and K.~S. Park, \emph{Validation of heart rate
+  extraction through an iphone accelerometer},  (2011), 5260--5263.
 
 \end{thebibliography}

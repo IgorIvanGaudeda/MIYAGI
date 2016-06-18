@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.16)  6 APR 2016 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.16)  30 MAY 2016 20:24
 entering extended mode
 **C:/Users/igorg/Dropbox/MIYAGI/Docs/TeX/ModeloProposta/propostaTCC1.tex
 (C:/Users/igorg/Dropbox/MIYAGI/Docs/TeX/ModeloProposta/propostaTCC1.tex
@@ -875,23 +875,79 @@ Package: wrapfig 2003/01/31  v 3.6
 \f@ncyO@olf=\skip54
 \f@ncyO@orf=\skip55
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+(C:\Users\igorg\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen188
+\enit@toks=\toks36
+\enit@inbox=\box40
+\enitdp@description=\count138
+)
+(C:\Users\igorg\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen189
+\calc@Bdimen=\dimen190
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count141
+\calc@Cskip=\skip59
+)
+(C:\Users\igorg\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+\AM@pagewidth=\dimen191
+\AM@pageheight=\dimen192
+
+(C:\Users\igorg\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box41
+\AM@global@opts=\toks37
+\AM@toc@title=\toks38
+\c@AM@survey=\count142
+\AM@templatesizebox=\box42
+)
 (propostaTCC1.aux)
 \openout1 = `propostaTCC1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -929,181 +985,320 @@ LaTeX Font Info:    ... okay on input line 24.
 
 (C:\Users\igorg\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
-\scratchdimen=\dimen188
-\scratchbox=\box40
-\nofMPsegments=\count139
-\nofMParguments=\count140
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count141
-\MPscratchDim=\dimen189
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count143
+\scratchdimen=\dimen193
+\scratchbox=\box43
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen194
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks40
 )
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 24.
+\AtBeginShipoutBox=\box44
+Package hyperref Info: Link coloring OFF on input line 30.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count144
+\c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (propostaTCC1.out) (propostaTCC1.out)
 \@outlinefile=\write4
 \openout4 = `propostaTCC1.out'.
 
  ABD: EveryShipout initializing macros
-<figuras/UTFPR.png, id=102, 198.7425pt x 108.405pt>
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+<figuras/UTFPR.png, id=138, 198.7425pt x 108.405pt>
 File: figuras/UTFPR.png Graphic file (type png)
  <use figuras/UTFPR.png>
-Package pdftex.def Info: figuras/UTFPR.png used on input line 27.
+Package pdftex.def Info: figuras/UTFPR.png used on input line 33.
 (pdftex.def)             Requested size: 72.55157pt x 39.57494pt.
 
-<figuras/daeln.jpg, id=104, 1027.84pt x 680.5425pt>
+<figuras/daeln.jpg, id=140, 1027.84pt x 680.5425pt>
 File: figuras/daeln.jpg Graphic file (type jpg)
  <use figuras/daeln.jpg>
-Package pdftex.def Info: figuras/daeln.jpg used on input line 36.
+Package pdftex.def Info: figuras/daeln.jpg used on input line 42.
 (pdftex.def)             Requested size: 72.55157pt x 48.02705pt.
 
-Overfull \hbox (4.43596pt too wide) in paragraph at lines 26--37
+Overfull \hbox (4.43596pt too wide) in paragraph at lines 32--43
 [] [] [] 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 44.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 47.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 58.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 60.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 64.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 82.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 93.
 [1
 
 {C:/Users/igorg/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figuras/U
 TFPR.png> <./figuras/daeln.jpg>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 89.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 91.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 93.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 97.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 99.
+
+<figuras/diagrama_geral.png, id=162, 689.57625pt x 207.77625pt>
+File: figuras/diagrama_geral.png Graphic file (type png)
+
+<use figuras/diagrama_geral.png>
+Package pdftex.def Info: figuras/diagrama_geral.png used on input line 101.
+(pdftex.def)             Requested size: 517.18091pt x 155.83179pt.
+
+Overfull \hbox (33.48404pt too wide) in paragraph at lines 101--102
+ [] 
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 103.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 105.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 107.
+(babel)             in language  on input line 104.
+<figuras/diagrama_pulso.png, id=163, 548.0475pt x 498.06075pt>
+File: figuras/diagrama_pulso.png Graphic file (type png)
+
+<use figuras/diagrama_pulso.png>
+Package pdftex.def Info: figuras/diagrama_pulso.png used on input line 106.
+(pdftex.def)             Requested size: 411.0346pt x 373.54463pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 109.
+
+<figuras/diagrama_base.png, id=164, 566.71725pt x 331.83975pt>
+File: figuras/diagrama_base.png Graphic file (type png)
+
+<use figuras/diagrama_base.png>
+Package pdftex.def Info: figuras/diagrama_base.png used on input line 111.
+(pdftex.def)             Requested size: 425.0369pt x 248.8792pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 111.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 112.
+ [2 <./figuras/diagrama_geral.png> <./figuras/diagrama_pulso.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 115.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 114.
+ <figuras/diagrama_web.png, id=172, 544.434pt x 263.18324pt>
+File: figuras/diagrama_web.png Graphic file (type png)
+
+<use figuras/diagrama_web.png>
+Package pdftex.def Info: figuras/diagrama_web.png used on input line 116.
+(pdftex.def)             Requested size: 408.3245pt x 197.38695pt.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 119.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 121.
- (propostaTCC1.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-[]\T1/cmr/m/n/10 H. Simp-son, \T1/cmr/m/it/10 Proof of the Ri-e-mann Hy-pothe-s
-is\T1/cmr/m/n/10 , pre-print (2003), avai-la-ble at
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 127.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 129.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 130.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 130.
+ [3 <./figuras/diagrama_base.png> <./figuras/diagrama_web.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 138.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 144.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 149.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 151.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 166.
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
  []
 
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 188.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 128.
- [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
- (propostaTCC1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+(babel)             in language  on input line 188.
+[4]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 191.
+ <figuras/Cronograma-1.png, id=182, 1660.2025pt x 2347.77126pt>
+File: figuras/Cronograma-1.png Graphic file (type png)
+
+<use figuras/Cronograma-1.png>
+Package pdftex.def Info: figuras/Cronograma-1.png used on input line 193.
+(pdftex.def)             Requested size: 481.4464pt x 680.83624pt.
+
+<figuras/Cronograma-2.png, id=183, 1660.2025pt x 2347.77126pt>
+File: figuras/Cronograma-2.png Graphic file (type png)
+
+<use figuras/Cronograma-2.png>
+Package pdftex.def Info: figuras/Cronograma-2.png used on input line 194.
+(pdftex.def)             Requested size: 481.4464pt x 680.83624pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+ [5]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+ [6 <./figuras/Cronograma-1.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 199.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 199.
+ [7 <./figuras/Cronograma-2.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 199.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 201.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 203.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 207.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 209.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 212.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 214.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 232.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 232.
+ [8] (propostaTCC1.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+))
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 275.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 275.
+ [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
+
+(propostaTCC1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
 Package rerunfilecheck Info: File `propostaTCC1.out' has not changed.
-(rerunfilecheck)             Checksum: 6FE109290717D22D3239B2F28044E4F0;1812.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+(rerunfilecheck)             Checksum: A8CE6424CBB500C2A320907D5BAB6350;2568.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 17210 strings out of 493634
- 314809 string characters out of 3141314
- 388495 words of memory out of 3000000
- 20242 multiletter control sequences out of 15000+200000
- 10647 words of font info for 29 fonts, out of 3000000 for 9000
+ 18457 strings out of 493634
+ 335773 string characters out of 3141314
+ 411357 words of memory out of 3000000
+ 21387 multiletter control sequences out of 15000+200000
+ 10960 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,11n,54p,721b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,11n,54p,823b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecti1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\igorg\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk>
-Output written on propostaTCC1.pdf (2 pages, 209090 bytes).
+ectt1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecti1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\igorg\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\igorg\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\igorg\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\igorg\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on propostaTCC1.pdf (9 pages, 647283 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

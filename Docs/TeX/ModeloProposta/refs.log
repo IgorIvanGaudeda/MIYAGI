@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdftex 2016.3.17)  17 MAR 2016 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdftex 2016.3.17)  29 MAY 2016 17:05
 entering extended mode
 **C:/Users/igorg/Dropbox/MIYAGI/Docs/TeX/ModeloProposta/refs.bib
 (C:/Users/igorg/Dropbox/MIYAGI/Docs/TeX/ModeloProposta/refs.bib
 ! Undefined control sequence.
-l.22         \texttt
-                    {http://www.math.drofnats.edu/riemann.ps}",
+l.4    author={K\~A\textonequaterchemann
+                                        , Berlindes Astrid},
 ? 
 ! Emergency stop.
-l.22         \texttt
-                    {http://www.math.drofnats.edu/riemann.ps}",
+l.4    author={K\~A\textonequaterchemann
+                                        , Berlindes Astrid},
 End of file on the terminal!
 
 !  ==> Fatal error occurred, no output PDF file produced!
