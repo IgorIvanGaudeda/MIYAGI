@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>ez430_chronos_access_point/915MHz - Unrestricted IAR Workbench (USA)</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>465</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1155</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-13846-31657</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>ez430_chronos_access_point</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti/Applications</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti/Applications/main_AP_BM.c</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti/Components</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti/Configuration</ExpandedNode><ExpandedNode>ez430_chronos_access_point/simpliciti/Configuration/Access Point</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-28276-10900</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>130</YPos2><SelStart2>5320</SelStart2><SelEnd2>5320</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\AP_MSP430F5509_CC1101_915MHz.r43</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\simpliciti_readme.txt</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>163</SelStart2><SelEnd2>163</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\simpliciti.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>42</YPos2><SelStart2>3591</SelStart2><SelEnd2>3591</SelEnd2></Tab><ActiveTab>3</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\Configuration\smpl_nwk_config.dat</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>37</YPos2><SelStart2>3659</SelStart2><SelEnd2>3659</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\Configuration\Access Point\smpl_config.dat</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>51</YPos2><SelStart2>4761</SelStart2><SelEnd2>4761</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\simpliciti\Applications\main_AP_BM.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05ABE718><key>iaridepm.enu1</key></Toolbar-05ABE718></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>679</Bottom><Right>556</Right><x>-2</x><y>-2</y><xscreen>240</xscreen><yscreen>178</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>178536</sizeHorzCY><sizeVertCX>290625</sizeVertCX><sizeVertCY>683049</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>273</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>275</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>275827</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>178536</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
