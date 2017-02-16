@@ -1,0 +1,112 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+Making BSP_InitDrivers a function synonym of BSP_InitLeds
+
+		======File-level Analysis Summary======
+
+
+extern void BSP_Delay() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void BSP_Init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 15 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	__disable_interrupt() (1 times)
+	BSP_InitDrivers() (1 times)
+	BSP_InitBoard() (1 times)
+
+extern void BSP_InitBoard() is called from 1 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void BSP_InitDrivers() is called from 1 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	BSP_InitLeds() (1 times)
+
+extern void BSP_InitLeds() is called from 1 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern int _system_pre_init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 5 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+Address of global variable is never taken:
+	static unsigned char sIterationsPerUsec
+
+
+
+These functions may be recursive:
+	BSP_Init()
+
+Making this function inlineable: BSP_InitLeds()
+
+Making this function inlineable: BSP_InitDrivers()
+
+These external functions are called but not defined here:
+	__disable_interrupt()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern int _system_pre_init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 5 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void BSP_InitLeds() is called from 1 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void BSP_InitDrivers() is called from 1 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	BSP_InitLeds() (1 times)
+
+==============================================================================
+
+extern void BSP_InitBoard() is called from 1 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void BSP_Init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 15 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	BSP_InitBoard() (1 times)
+	BSP_InitDrivers() (1 times)
+
+==============================================================================
+
+extern void BSP_Delay() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

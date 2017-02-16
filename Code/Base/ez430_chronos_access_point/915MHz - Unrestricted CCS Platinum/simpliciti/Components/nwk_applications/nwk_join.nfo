@@ -1,0 +1,194 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+static unsigned long generateLinkToken() is called from 1 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+static void handleJoinRequest() is called from 1 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	smpl_send_join_reply() (1 times)
+
+static int memcmp() is called from 1 sites in this file.
+    It appears to be inlineable (size = 31 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+extern void nwk_getJoinToken() is called from 0 sites in this file.
+    It appears to be inlineable (size = 8 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern struct $$fake3 *nwk_isSandFClient() is called from 1 sites in this file.
+    It appears to be inlineable (size = 33 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (1 times)
+
+extern enum smplStatus nwk_join() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void nwk_joinInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_getSFInfoPtr() (1 times)
+	generateLinkToken() (1 times)
+	nwk_setLinkToken() (1 times)
+	MRFI_RandomByte() (1 times)
+
+extern enum fhStatus nwk_processJoin() is called from 0 sites in this file.
+    It appears to be inlineable (size = 32 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_PostKillSem() (1 times)
+	handleJoinRequest() (1 times)
+	nwk_isValidReply() (1 times)
+
+extern void nwk_setJoinContext() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void nwk_setJoinToken() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+static void smpl_send_join_reply() is called from 1 sites in this file.
+    It appears to be inlineable (size = 124 units)
+    It has 7 non-trivial scope blocks nested 5 deep.
+    It calls these functions:
+	nwk_sendFrame() (1 times)
+	nwk_resetSFMarker() (1 times)
+	nwk_isSandFClient() (1 times)
+	 ? () (1 times)
+	nwk_saveJoinedDevice() (1 times)
+	memcpy() (2 times)
+	nwk_buildFrame() (1 times)
+	nwk_putNumObjectIntoMsg() (1 times)
+	nwk_getLinkToken() (1 times)
+	nwk_getNumObjectFromMsg() (1 times)
+	nwk_getProtocolVersion() (1 times)
+
+Address of global variable is never taken:
+	static unsigned char sJoinOK
+	static struct $$fake4 *spSandFContext
+	static unsigned char (*spCallback)()
+	static unsigned long sJoinToken
+
+
+
+These functions may be recursive:
+	nwk_joinInit()
+	nwk_processJoin()
+	handleJoinRequest()
+	smpl_send_join_reply()
+Inlineable function will be suppressed: memcmp()
+
+Making this function inlineable: handleJoinRequest()
+Inlineable function will be suppressed: handleJoinRequest()
+
+Making this function inlineable: generateLinkToken()
+Inlineable function will be suppressed: generateLinkToken()
+
+These external functions are called but not defined here:
+	memcpy()
+	nwk_getProtocolVersion()
+	nwk_getNumObjectFromMsg()
+	nwk_getLinkToken()
+	nwk_putNumObjectIntoMsg()
+	nwk_buildFrame()
+	nwk_saveJoinedDevice()
+	 ? ()
+	nwk_resetSFMarker()
+	nwk_sendFrame()
+	nwk_isValidReply()
+	MRFI_PostKillSem()
+	MRFI_RandomByte()
+	nwk_setLinkToken()
+	nwk_getSFInfoPtr()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void nwk_setJoinToken() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_setJoinContext() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern struct $$fake3 *nwk_isSandFClient() is called from 1 sites in this file.
+    It appears to be inlineable (size = 33 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (1 times)
+
+==============================================================================
+
+static void smpl_send_join_reply() is called from 1 sites in this file.
+    It appears to be inlineable (size = 124 units)
+    It has 7 non-trivial scope blocks nested 5 deep.
+    It calls these functions:
+	nwk_isSandFClient() (1 times)
+
+==============================================================================
+
+extern enum fhStatus nwk_processJoin() is called from 0 sites in this file.
+    It appears to be inlineable (size = 32 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	handleJoinRequest() (1 times)
+
+==============================================================================
+
+extern void nwk_joinInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	generateLinkToken() (1 times)
+
+==============================================================================
+
+extern enum smplStatus nwk_join() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_getJoinToken() is called from 0 sites in this file.
+    It appears to be inlineable (size = 8 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

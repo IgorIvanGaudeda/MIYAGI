@@ -1,0 +1,182 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void InitClock_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 33 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__delay_cycles() (1 times)
+	__bic_SR_register() (1 times)
+	__bis_SR_register() (2 times)
+
+extern void InitPorts_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 19 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void UNMI_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__no_operation() (3 times)
+	USB_disable() (1 times)
+
+extern void USB_Handler_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 90 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__enable_interrupt() (1 times)
+	USBCDC_sendData() (1 times)
+	__disable_interrupt() (1 times)
+	USBCDC_intfStatus() (1 times)
+	usb_decode() (1 times)
+	USBCDC_receiveData() (1 times)
+	USBCDC_bytesInUSBBuffer() (1 times)
+
+extern void bluerobin_start() is called from 1 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	BRTX_Start_v() (1 times)
+	BRTX_SetID_v() (1 times)
+	BR_Init_v() (1 times)
+	BRTX_GetID_u32() (1 times)
+
+extern void bluerobin_stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	BRTX_Stop_v() (1 times)
+
+extern void main() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	simpliciti_main() (1 times)
+	wbsl_main() (1 times)
+	wbsl_config() (1 times)
+	bluerobin_start() (1 times)
+	USB_handleVbusOnEvent() (1 times)
+	USB_connectionInfo() (1 times)
+	USB_setEnabledEvents() (1 times)
+	USB_init() (1 times)
+	__enable_interrupt() (1 times)
+	usb_handler_init() (1 times)
+	BRTX_WriteData_v() (1 times)
+	BRTX_SetID_v() (1 times)
+	BR_Init_v() (1 times)
+	InitClock_v() (1 times)
+	SetVCore() (1 times)
+	InitPorts_v() (1 times)
+	CC_SPI_DeselectChip_v() (1 times)
+	CC_SPI_WriteRead_u8() (4 times)
+	CC_SPI_Init_v() (1 times)
+
+
+These functions may be recursive:
+	UNMI_ISR()
+	USB_Handler_v()
+	bluerobin_stop()
+	main()
+	bluerobin_start()
+	InitClock_v()
+
+Making this function inlineable: InitPorts_v()
+
+Making this function inlineable: bluerobin_start()
+
+These external functions are called but not defined here:
+	CC_SPI_Init_v()
+	CC_SPI_WriteRead_u8()
+	CC_SPI_DeselectChip_v()
+	SetVCore()
+	BRTX_WriteData_v()
+	usb_handler_init()
+	USB_init()
+	USB_setEnabledEvents()
+	USB_connectionInfo()
+	USB_handleVbusOnEvent()
+	wbsl_config()
+	wbsl_main()
+	simpliciti_main()
+	BRTX_Stop_v()
+	BRTX_GetID_u32()
+	BR_Init_v()
+	BRTX_SetID_v()
+	BRTX_Start_v()
+	USBCDC_bytesInUSBBuffer()
+	USBCDC_receiveData()
+	usb_decode()
+	USBCDC_intfStatus()
+	__disable_interrupt()
+	USBCDC_sendData()
+	__enable_interrupt()
+	USB_disable()
+	__no_operation()
+	__bis_SR_register()
+	__bic_SR_register()
+	__delay_cycles()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void InitPorts_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 19 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void InitClock_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 33 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void bluerobin_start() is called from 1 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void main() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	InitPorts_v() (1 times)
+	InitClock_v() (1 times)
+	bluerobin_start() (1 times)
+
+==============================================================================
+
+extern void bluerobin_stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void USB_Handler_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 90 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void UNMI_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

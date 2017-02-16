@@ -1,0 +1,37 @@
+Resumo
+	Motivação
+	Objetivo
+	Metodo
+	Desenvolvimento
+	Resultados
+		tecnologico
+		cientifico	
+		economico
+		social
+		ambiental
+
+INTRODUÇAO
+	motivaçao
+	objetivo
+	justificativa
+	apresentaçao do documento
+	metodo
+	estudos/revisao
+		alg geneticos
+		logica fuzzy
+		consideracoes sobre estudo
+	especificaçao
+		patentes
+		base de dados
+		consideraçoes
+	desenvolvimento
+		deenv mod 1..
+		desenv sw
+		consideraçoes
+	gestao
+		escopo e riscos
+		cronograma e custos
+		consideraçoes
+	conclusao
+		consideraçoes finais
+	

@@ -1,0 +1,330 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+static void *memset() is called from 2 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+static void reset_RF_registers() is called from 1 sites in this file.
+    It appears to be inlineable (size = 29 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_SpiWriteReg() (1 times)
+
+static void rxModeOff() is called from 6 sites in this file.
+    It appears to be inlineable (size = 21 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_SpiCmdStrobe() (3 times)
+
+static void rxModeOn() is called from 3 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_SpiCmdStrobe() (1 times)
+
+static void sendDataPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 150 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	rxModeOff() (1 times)
+	rxModeOn() (1 times)
+	wbsl_transmit() (1 times)
+	wbsl_resetTimer() (2 times)
+	wbsl_setTimer() (2 times)
+
+static void sendInitPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 104 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	rxModeOff() (1 times)
+	rxModeOn() (1 times)
+	wbsl_transmit() (1 times)
+	wbsl_resetTimer() (2 times)
+	wbsl_setTimer() (2 times)
+
+static void wbsl_DelayUsec() is called from 2 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__set_interrupt_state() (1 times)
+	BSP_Delay() (1 times)
+	__disable_interrupt() (1 times)
+	__get_interrupt_state() (1 times)
+
+extern void wbsl_GpioIsr() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_RfIsr() (1 times)
+
+extern void wbsl_RfIsr() is called from 1 sites in this file.
+    It has 5 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	__set_interrupt_state() (1 times)
+	wbsl_SpiCmdStrobe() (4 times)
+	__disable_interrupt() (1 times)
+	__get_interrupt_state() (1 times)
+	memcpy() (1 times)
+	wbsl_SpiReadRxFifo() (1 times)
+	wbsl_SpiReadReg() (2 times)
+	memset() (1 times)
+
+extern void wbsl_config() is called from 0 sites in this file.
+    It appears to be inlineable (size = 110 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	__enable_interrupt() (1 times)
+	wbsl_SpiWriteReg() (2 times)
+	wbsl_SpiReadReg() (2 times)
+	wbsl_DelayUsec() (2 times)
+	__disable_interrupt() (3 times)
+	wbsl_SpiInit() (1 times)
+
+extern unsigned char wbsl_link() is called from 1 sites in this file.
+    It appears to be inlineable (size = 92 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_transmit() (1 times)
+	wbsl_resetTimer() (1 times)
+	wbsl_setTimer() (1 times)
+
+extern void wbsl_main() is called from 0 sites in this file.
+    It appears to be inlineable (size = 98 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	reset_RF_registers() (1 times)
+	wbsl_resetTimer() (2 times)
+	wbsl_setTimer() (2 times)
+	wbsl_sendPacket() (1 times)
+	wbsl_link() (1 times)
+	rxModeOn() (1 times)
+	rxModeOff() (3 times)
+	wbsl_reset() (1 times)
+
+extern void wbsl_reset() is called from 1 sites in this file.
+    It appears to be inlineable (size = 42 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memset() (1 times)
+
+extern void wbsl_resetTimer() is called from 7 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void wbsl_sendPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 29 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	sendInitPacket() (1 times)
+	sendDataPacket() (1 times)
+
+extern void wbsl_setTimer() is called from 7 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char wbsl_transmit() is called from 3 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_SpiCmdStrobe() (2 times)
+	wbsl_SpiWriteTxFifo() (1 times)
+	rxModeOff() (1 times)
+
+Address of global variable is never taken:
+	static unsigned char sInitWbslDone
+	static unsigned char initOk
+	static unsigned currentPacket
+	static unsigned char wbsl_rxtxMode
+	static unsigned char wbsl_number_of_retries
+	static unsigned char update_complete
+	static unsigned char wNumCurrentPeers
+
+
+
+These functions may be recursive:
+	wbsl_GpioIsr()
+	wbsl_RfIsr()
+	wbsl_config()
+	wbsl_DelayUsec()
+	wbsl_main()
+	reset_RF_registers()
+	wbsl_link()
+	wbsl_sendPacket()
+	sendInitPacket()
+	sendDataPacket()
+	rxModeOn()
+	wbsl_transmit()
+	rxModeOff()
+
+Results of interprocedural value propagation:
+
+   static void wbsl_DelayUsec() has these parameter attributes:
+      unsigned howLong :  howLong%30u == 10u;  howLong <= 40u;  howLong >= 10u;
+Inlineable function will be suppressed: memset()
+
+Making this function inlineable: wbsl_resetTimer()
+
+Making this function inlineable: rxModeOn()
+Inlineable function will be suppressed: rxModeOn()
+
+Making this function inlineable: reset_RF_registers()
+Inlineable function will be suppressed: reset_RF_registers()
+
+These external functions are called but not defined here:
+	memcpy()
+	wbsl_SpiWriteTxFifo()
+	wbsl_SpiInit()
+	__enable_interrupt()
+	wbsl_SpiReadReg()
+	wbsl_SpiReadRxFifo()
+	__get_interrupt_state()
+	__disable_interrupt()
+	BSP_Delay()
+	__set_interrupt_state()
+	wbsl_SpiCmdStrobe()
+	wbsl_SpiWriteReg()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+static void rxModeOff() is called from 6 sites in this file.
+    It appears to be inlineable (size = 21 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char wbsl_transmit() is called from 3 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	rxModeOff() (1 times)
+
+==============================================================================
+
+extern void wbsl_setTimer() is called from 7 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void wbsl_resetTimer() is called from 7 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+static void sendDataPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 150 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_setTimer() (2 times)
+	wbsl_resetTimer() (2 times)
+	wbsl_transmit() (1 times)
+	rxModeOn() (1 times)
+	rxModeOff() (1 times)
+
+==============================================================================
+
+static void sendInitPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 104 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_setTimer() (2 times)
+	wbsl_resetTimer() (2 times)
+	wbsl_transmit() (1 times)
+	rxModeOn() (1 times)
+	rxModeOff() (1 times)
+
+==============================================================================
+
+extern void wbsl_sendPacket() is called from 1 sites in this file.
+    It appears to be inlineable (size = 29 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	sendDataPacket() (1 times)
+	sendInitPacket() (1 times)
+
+==============================================================================
+
+extern void wbsl_reset() is called from 1 sites in this file.
+    It appears to be inlineable (size = 42 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memset() (1 times)
+
+==============================================================================
+
+extern unsigned char wbsl_link() is called from 1 sites in this file.
+    It appears to be inlineable (size = 92 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_setTimer() (1 times)
+	wbsl_resetTimer() (1 times)
+	wbsl_transmit() (1 times)
+
+==============================================================================
+
+extern void wbsl_main() is called from 0 sites in this file.
+    It appears to be inlineable (size = 98 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_reset() (1 times)
+	rxModeOff() (3 times)
+	rxModeOn() (1 times)
+	wbsl_link() (1 times)
+	wbsl_sendPacket() (1 times)
+	wbsl_setTimer() (2 times)
+	wbsl_resetTimer() (2 times)
+	reset_RF_registers() (1 times)
+
+==============================================================================
+
+static void wbsl_DelayUsec() is called from 2 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void wbsl_config() is called from 0 sites in this file.
+    It appears to be inlineable (size = 110 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	wbsl_DelayUsec() (2 times)
+
+==============================================================================
+
+extern void wbsl_RfIsr() is called from 1 sites in this file.
+    It has 5 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	memset() (1 times)
+
+==============================================================================
+
+extern void wbsl_GpioIsr() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	wbsl_RfIsr() (1 times)
+
+== END OF INFO OUTPUT==

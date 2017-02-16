@@ -1,0 +1,120 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+static int memcmp() is called from 2 sites in this file.
+    It appears to be inlineable (size = 31 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+static void *memset() is called from 2 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void nwk_QInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memset() (2 times)
+
+extern void nwk_QadjustOrder() is called from 1 sites in this file.
+    It appears to be inlineable (size = 41 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__set_interrupt_state() (1 times)
+	__disable_interrupt() (1 times)
+	__get_interrupt_state() (1 times)
+
+extern struct $$fake3 *nwk_QfindOldest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 184 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (2 times)
+	__set_interrupt_state() (2 times)
+	__disable_interrupt() (1 times)
+	__get_interrupt_state() (1 times)
+	nwk_getConnInfo() (1 times)
+
+extern struct $$fake3 *nwk_QfindSlot() is called from 0 sites in this file.
+    It appears to be inlineable (size = 87 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_QadjustOrder() (1 times)
+
+extern struct $$fake3 *nwk_getQ() is called from 0 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+These functions may be recursive:
+	nwk_QfindOldest()
+	nwk_QfindSlot()
+	nwk_QadjustOrder()
+Inlineable function will be suppressed: memcmp()
+Inlineable function will be suppressed: memset()
+
+These external functions are called but not defined here:
+	nwk_getConnInfo()
+	__get_interrupt_state()
+	__disable_interrupt()
+	__set_interrupt_state()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern struct $$fake3 *nwk_getQ() is called from 0 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_QadjustOrder() is called from 1 sites in this file.
+    It appears to be inlineable (size = 41 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern struct $$fake3 *nwk_QfindSlot() is called from 0 sites in this file.
+    It appears to be inlineable (size = 87 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_QadjustOrder() (1 times)
+
+==============================================================================
+
+extern struct $$fake3 *nwk_QfindOldest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 184 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (2 times)
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in nwk_QfindOldest() fails to unroll-and-jam: Outer Loop has multiple blocks
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern void nwk_QInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memset() (2 times)
+
+== END OF INFO OUTPUT==

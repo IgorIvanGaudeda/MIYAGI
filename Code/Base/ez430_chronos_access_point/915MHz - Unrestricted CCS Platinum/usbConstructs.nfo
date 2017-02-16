@@ -1,0 +1,68 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern unsigned cdcReceiveDataInBuffer() is called from 0 sites in this file.
+    It appears to be inlineable (size = 28 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	USBCDC_receiveData() (1 times)
+	USBCDC_bytesInUSBBuffer() (1 times)
+
+extern unsigned char cdcSendDataInBackground() is called from 0 sites in this file.
+    It appears to be inlineable (size = 46 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	USBCDC_sendData() (1 times)
+	USBCDC_intfStatus() (1 times)
+
+extern unsigned char cdcSendDataWaitTilDone() is called from 0 sites in this file.
+    It appears to be inlineable (size = 58 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	USBCDC_intfStatus() (1 times)
+	USBCDC_sendData() (1 times)
+
+
+These functions may be recursive:
+	cdcReceiveDataInBuffer()
+	cdcSendDataInBackground()
+	cdcSendDataWaitTilDone()
+
+These external functions are called but not defined here:
+	USBCDC_intfStatus()
+	USBCDC_sendData()
+	USBCDC_bytesInUSBBuffer()
+	USBCDC_receiveData()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern unsigned char cdcSendDataWaitTilDone() is called from 0 sites in this file.
+    It appears to be inlineable (size = 58 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char cdcSendDataInBackground() is called from 0 sites in this file.
+    It appears to be inlineable (size = 46 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned cdcReceiveDataInBuffer() is called from 0 sites in this file.
+    It appears to be inlineable (size = 28 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

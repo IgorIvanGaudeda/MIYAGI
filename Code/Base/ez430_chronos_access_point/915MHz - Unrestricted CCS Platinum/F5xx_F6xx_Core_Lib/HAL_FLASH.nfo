@@ -1,0 +1,154 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void FlashMemoryFill_32() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void FlashWrite_16() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void FlashWrite_32() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void FlashWrite_8() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char Flash_EraseCheck() is called from 0 sites in this file.
+    It appears to be inlineable (size = 26 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void Flash_SegmentErase() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void Flash_SegmentErase() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char Flash_EraseCheck() is called from 0 sites in this file.
+    It appears to be inlineable (size = 26 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void FlashWrite_8() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function FlashWrite_8() in ../F5xx_F6xx_Core_Lib/HAL_FLASH.c
+	in the 'while' loop with loop variable 'count' at lines ../F5xx_F6xx_Core_Lib/HAL_FLASH.c:74-78
+	for the statement *Flash_ptr = *Data_ptr; at line 76
+
+	Consider declaring 'Data_ptr' as unsigned char * restrict Data_ptr
+	or declaring 'Flash_ptr' as  unsigned char * restrict Flash_ptr
+	to assert that 'Data_ptr' in the address of *Data_ptr;
+	and            'Flash_ptr' in the address of *Flash_ptr;
+	do not access the same object in memory.
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in FlashWrite_8() fails to unroll-and-jam: Outer LCV is not suitable
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern void FlashWrite_32() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function FlashWrite_32() in ../F5xx_F6xx_Core_Lib/HAL_FLASH.c
+	in the 'while' loop with loop variable 'count' at lines ../F5xx_F6xx_Core_Lib/HAL_FLASH.c:104-108
+	for the statement *Flash_ptr = *Data_ptr; at line 106
+
+	Consider declaring 'Data_ptr' as unsigned long * restrict Data_ptr
+	or declaring 'Flash_ptr' as  unsigned long * restrict Flash_ptr
+	to assert that 'Data_ptr' in the address of *Data_ptr;
+	and            'Flash_ptr' in the address of *Flash_ptr;
+	do not access the same object in memory.
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in FlashWrite_32() fails to unroll-and-jam: Outer LCV is not suitable
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern void FlashWrite_16() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function FlashWrite_16() in ../F5xx_F6xx_Core_Lib/HAL_FLASH.c
+	in the 'while' loop with loop variable 'count' at lines ../F5xx_F6xx_Core_Lib/HAL_FLASH.c:89-93
+	for the statement *Flash_ptr = *Data_ptr; at line 91
+
+	Consider declaring 'Data_ptr' as unsigned * restrict Data_ptr
+	or declaring 'Flash_ptr' as  unsigned * restrict Flash_ptr
+	to assert that 'Data_ptr' in the address of *Data_ptr;
+	and            'Flash_ptr' in the address of *Flash_ptr;
+	do not access the same object in memory.
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in FlashWrite_16() fails to unroll-and-jam: Outer LCV is not suitable
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern void FlashMemoryFill_32() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in FlashMemoryFill_32() fails to unroll-and-jam: Outer LCV is not suitable
+
+		====== End Unroll-and-jam Result ======
+
+
+== END OF INFO OUTPUT==

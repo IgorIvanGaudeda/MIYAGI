@@ -1,0 +1,112 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void CC_SPI_DeselectChip_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void CC_SPI_Init_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 69 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__delay_cycles() (4 times)
+
+extern void CC_SPI_SelectChipWaitUntilReady_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void CC_SPI_SelectChip_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char CC_SPI_SingleWriteRead_u8() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	CC_SPI_DeselectChip_v() (1 times)
+	CC_SPI_WriteRead_u8() (1 times)
+	CC_SPI_SelectChip_v() (1 times)
+
+extern unsigned char CC_SPI_WriteRead_u8() is called from 1 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+These functions may be recursive:
+	CC_SPI_Init_v()
+
+Making this function inlineable: CC_SPI_WriteRead_u8()
+
+Making this function inlineable: CC_SPI_SelectChip_v()
+
+Making this function inlineable: CC_SPI_DeselectChip_v()
+
+These external functions are called but not defined here:
+	__delay_cycles()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern unsigned char CC_SPI_WriteRead_u8() is called from 1 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void CC_SPI_SelectChip_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void CC_SPI_DeselectChip_v() is called from 1 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char CC_SPI_SingleWriteRead_u8() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	CC_SPI_SelectChip_v() (1 times)
+	CC_SPI_WriteRead_u8() (1 times)
+	CC_SPI_DeselectChip_v() (1 times)
+
+==============================================================================
+
+extern void CC_SPI_SelectChipWaitUntilReady_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void CC_SPI_Init_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 69 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

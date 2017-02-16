@@ -1,0 +1,46 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void configure_ports() is called from 0 sites in this file.
+    It appears to be inlineable (size = 44 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__bis_SR_register() (1 times)
+	__disable_interrupt() (1 times)
+	__get_SR_register() (1 times)
+
+
+These functions may be recursive:
+	configure_ports()
+
+These external functions are called but not defined here:
+	__get_SR_register()
+	__disable_interrupt()
+	__bis_SR_register()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void configure_ports() is called from 0 sites in this file.
+    It appears to be inlineable (size = 44 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function configure_ports() in ../F5xx_F6xx_Core_Lib/HAL_PMAP.c
+	in the 'for' loop with loop variable 'i' at lines ../F5xx_F6xx_Core_Lib/HAL_PMAP.c:69-71
+	for the statement PxMAPy[i] = port_mapping[i]; at line 70
+
+	Consider declaring 'port_mapping' as const unsigned char * const restrict port_mapping
+	or declaring 'PxMAPy' as  unsigned char * const restrict PxMAPy
+	to assert that 'port_mapping' in the address of port_mapping[i];
+	and            'PxMAPy' in the address of PxMAPy[i];
+	do not access the same object in memory.
+
+== END OF INFO OUTPUT==

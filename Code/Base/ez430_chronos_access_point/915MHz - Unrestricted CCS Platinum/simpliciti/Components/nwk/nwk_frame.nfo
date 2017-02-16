@@ -1,0 +1,257 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void MRFI_RxCompleteISR() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	dispatchFrame() (1 times)
+	MRFI_Receive() (1 times)
+	nwk_QfindSlot() (1 times)
+
+static void dispatchFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 172 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	 ? () (2 times)
+	nwk_isConnectionValid() (1 times)
+	isDupSandFFrame() (1 times)
+	nwk_replayFrame() (3 times)
+	nwk_isSandFClient() (1 times)
+	nwk_getBCastAddress() (1 times)
+	memcmp() (3 times)
+
+extern unsigned char isDupSandFFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 73 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (4 times)
+	nwk_getQ() (1 times)
+
+static int memcmp() is called from 8 sites in this file.
+    It appears to be inlineable (size = 31 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+extern void nwk_SendEmptyPollRspFrame() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_Transmit() (1 times)
+	memcpy() (2 times)
+
+extern struct $$fake5 *nwk_buildAckReqFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 31 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_buildFrame() (1 times)
+
+extern struct $$fake5 *nwk_buildFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 88 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcpy() (2 times)
+	nwk_QfindSlot() (1 times)
+
+extern void nwk_frameInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_RandomByte() (1 times)
+	nwk_getMyAddress() (1 times)
+
+extern unsigned char nwk_getMyRxType() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern struct $$fake5 *nwk_getSandFFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 63 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (1 times)
+	nwk_getQ() (1 times)
+	nwk_QfindOldest() (1 times)
+
+extern void nwk_replayFrame() is called from 3 sites in this file.
+    It appears to be inlineable (size = 30 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_sendFrame() (1 times)
+	MRFI_DelayMs() (1 times)
+
+extern enum smplStatus nwk_retrieveFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 81 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	nwk_QadjustOrder() (1 times)
+	memcpy() (2 times)
+	nwk_getConnInfo() (1 times)
+	nwk_QfindOldest() (1 times)
+
+extern void nwk_sendAckReply() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_Transmit() (1 times)
+	memcpy() (2 times)
+
+extern enum smplStatus nwk_sendFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 28 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_Transmit() (1 times)
+
+Address of global variable is never taken:
+	static unsigned char (*spCallback)()
+	static unsigned char sMyTxType
+	static unsigned char sMyRxType
+	static const struct $$fake3 *sMyAddr
+	static unsigned char sTRACTID
+
+
+
+These functions may be recursive:
+	MRFI_RxCompleteISR()
+	dispatchFrame()
+	isDupSandFFrame()
+	nwk_SendEmptyPollRspFrame()
+	nwk_buildAckReqFrame()
+	nwk_buildFrame()
+	nwk_frameInit()
+	nwk_getSandFFrame()
+	nwk_replayFrame()
+	nwk_retrieveFrame()
+	nwk_sendAckReply()
+	nwk_sendFrame()
+Inlineable function will be suppressed: memcmp()
+
+These external functions are called but not defined here:
+	memcpy()
+	nwk_getConnInfo()
+	nwk_QadjustOrder()
+	MRFI_DelayMs()
+	nwk_QfindOldest()
+	nwk_getMyAddress()
+	MRFI_RandomByte()
+	MRFI_Transmit()
+	nwk_getQ()
+	nwk_getBCastAddress()
+	nwk_isSandFClient()
+	nwk_isConnectionValid()
+	 ? ()
+	nwk_QfindSlot()
+	MRFI_Receive()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern enum smplStatus nwk_sendFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 28 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_sendAckReply() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern enum smplStatus nwk_retrieveFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 81 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_replayFrame() is called from 3 sites in this file.
+    It appears to be inlineable (size = 30 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_sendFrame() (1 times)
+
+==============================================================================
+
+extern struct $$fake5 *nwk_getSandFFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 63 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (1 times)
+
+==============================================================================
+
+extern unsigned char nwk_getMyRxType() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void nwk_frameInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern struct $$fake5 *nwk_buildFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 88 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern struct $$fake5 *nwk_buildAckReqFrame() is called from 0 sites in this file.
+    It appears to be inlineable (size = 31 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	nwk_buildFrame() (1 times)
+
+==============================================================================
+
+extern void nwk_SendEmptyPollRspFrame() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char isDupSandFFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 73 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (4 times)
+
+==============================================================================
+
+static void dispatchFrame() is called from 1 sites in this file.
+    It appears to be inlineable (size = 172 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	memcmp() (3 times)
+	nwk_replayFrame() (3 times)
+	isDupSandFFrame() (1 times)
+
+==============================================================================
+
+extern void MRFI_RxCompleteISR() is called from 0 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	dispatchFrame() (1 times)
+
+== END OF INFO OUTPUT==

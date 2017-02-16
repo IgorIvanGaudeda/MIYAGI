@@ -1,0 +1,30 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void TIMER0_A1_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	BlueRobin_RadioISR_v() (1 times)
+
+
+These functions may be recursive:
+	TIMER0_A1_ISR()
+
+These external functions are called but not defined here:
+	BlueRobin_RadioISR_v()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void TIMER0_A1_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

@@ -1,0 +1,785 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void USB_InitSerialStringDescriptor() is called from 1 sites in this file.
+    It appears to be inlineable (size = 142 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	Get_TLV_Info() (1 times)
+
+extern unsigned char USB_connect() is called from 0 sites in this file.
+    It appears to be inlineable (size = 14 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_connectionInfo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_connectionState() is called from 0 sites in this file.
+    It appears to be inlineable (size = 104 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_disable() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_disconnect() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_enable() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	XT2_Start() (1 times)
+
+extern unsigned char USB_forceRemoteWakeup() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned USB_getEnabledEvents() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_init() is called from 0 sites in this file.
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	__bis_SR_register() (1 times)
+	USB_initMemcpy() (1 times)
+	USB_InitSerialStringDescriptor() (1 times)
+	__disable_interrupt() (1 times)
+	__get_SR_register() (1 times)
+
+extern unsigned char USB_reset() is called from 0 sites in this file.
+    It appears to be inlineable (size = 284 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	CdcResetData() (1 times)
+
+extern unsigned char USB_resume() is called from 0 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	USB_enable() (1 times)
+
+extern unsigned char USB_setEnabledEvents() is called from 0 sites in this file.
+    It appears to be inlineable (size = 6 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char USB_suspend() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char usbClearDeviceFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+
+extern unsigned char usbClearEndpointFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 49 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (2 times)
+
+extern void usbClearOEP0ByteCount() is called from 11 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char usbDecodeAndProcessUsbRequest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 125 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSetAddress() (1 times)
+	USB_handleEnumCompleteEvent() (1 times)
+	 ? () (1 times)
+
+extern unsigned char usbGetConfiguration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetConfigurationDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetDeviceDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetDeviceStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetEndpointStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 103 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (2 times)
+	usbClearOEP0ByteCount() (2 times)
+
+extern unsigned char usbGetInterface() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetInterfaceStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (1 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbGetStringDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 49 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendDataPacketOnEP0() (2 times)
+	usbClearOEP0ByteCount() (1 times)
+
+extern unsigned char usbInvalidRequest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+
+extern void usbReceiveDataPacketOnEP0() is called from 0 sites in this file.
+    It appears to be inlineable (size = 14 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+
+extern void usbReceiveNextPacketOnOEP0() is called from 0 sites in this file.
+    It appears to be inlineable (size = 52 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbStallOEP0() (2 times)
+
+extern void usbSendDataPacketOnEP0() is called from 10 sites in this file.
+    It appears to be inlineable (size = 24 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendNextPacketOnIEP0() (1 times)
+
+extern void usbSendNextPacketOnIEP0() is called from 1 sites in this file.
+    It appears to be inlineable (size = 81 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void usbSendZeroLengthPacketOnIEP0() is called from 9 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char usbSetAddress() is called from 0 sites in this file.
+    It appears to be inlineable (size = 19 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallOEP0() (1 times)
+
+extern unsigned char usbSetConfiguration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallOEP0() (1 times)
+
+extern unsigned char usbSetDeviceFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+
+extern unsigned char usbSetEndpointFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 57 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (2 times)
+
+extern unsigned char usbSetInterface() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallOEP0() (1 times)
+
+extern void usbStallEndpoint0() is called from 5 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void usbStallOEP0() is called from 5 sites in this file.
+    It appears to be inlineable (size = 6 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+Address of global variable is never taken:
+	static unsigned char bRemoteWakeup
+	static unsigned char bHostAskMoreDataThanAvailable
+	static unsigned char *pbOEP0Buffer
+	static unsigned char *pbIEP0Buffer
+	static unsigned char bInterfaceNumber
+
+
+
+These functions may be recursive:
+	USB_init()
+	USB_InitSerialStringDescriptor()
+	USB_reset()
+	USB_resume()
+	USB_enable()
+	usbDecodeAndProcessUsbRequest()
+
+Making this function inlineable: usbStallOEP0()
+
+Making this function inlineable: usbStallEndpoint0()
+
+Making this function inlineable: usbSendZeroLengthPacketOnIEP0()
+
+Making this function inlineable: usbClearOEP0ByteCount()
+
+These external functions are called but not defined here:
+	 ? ()
+	USB_handleEnumCompleteEvent()
+	CdcResetData()
+	__get_SR_register()
+	__disable_interrupt()
+	USB_initMemcpy()
+	__bis_SR_register()
+	XT2_Start()
+	Get_TLV_Info()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void usbStallOEP0() is called from 5 sites in this file.
+    It appears to be inlineable (size = 6 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void usbStallEndpoint0() is called from 5 sites in this file.
+    It appears to be inlineable (size = 11 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void usbSendZeroLengthPacketOnIEP0() is called from 9 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char usbSetInterface() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallOEP0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbSetEndpointFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 57 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (2 times)
+	usbStallEndpoint0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbSetDeviceFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallEndpoint0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbSetConfiguration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 22 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallOEP0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbSetAddress() is called from 0 sites in this file.
+    It appears to be inlineable (size = 19 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallOEP0() (1 times)
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallEndpoint0() (1 times)
+
+==============================================================================
+
+extern void usbSendNextPacketOnIEP0() is called from 1 sites in this file.
+    It appears to be inlineable (size = 81 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function usbSendNextPacketOnIEP0() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop with loop variable 'bIndex' at lines ../USB_API/USB_Common/usb.c:803-807
+	for the statement abIEP0Buffer[bIndex] = **&pbIEP0Buffer; at line 805
+
+	Consider declaring 'pbIEP0Buffer' as static unsigned char * restrict pbIEP0Buffer
+	to assert that lvalues **&pbIEP0Buffer;
+	and                    abIEP0Buffer[bIndex];
+	do not access the same object in memory.
+
+==============================================================================
+
+extern void usbSendDataPacketOnEP0() is called from 10 sites in this file.
+    It appears to be inlineable (size = 24 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendNextPacketOnIEP0() (1 times)
+
+==============================================================================
+
+extern void usbClearOEP0ByteCount() is called from 11 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void usbReceiveNextPacketOnOEP0() is called from 0 sites in this file.
+    It appears to be inlineable (size = 52 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallOEP0() (2 times)
+	usbClearOEP0ByteCount() (1 times)
+
+ADVICE: In function usbReceiveNextPacketOnOEP0() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop with loop variable 'bIndex' at lines ../USB_API/USB_Common/usb.c:842-846
+	for the statement **&pbOEP0Buffer = abOEP0Buffer[bIndex]; at line 844
+
+	Consider declaring 'pbOEP0Buffer' as static unsigned char * restrict pbOEP0Buffer
+	to assert that lvalues **&pbOEP0Buffer;
+	and                    abOEP0Buffer[bIndex];
+	do not access the same object in memory.
+
+==============================================================================
+
+extern void usbReceiveDataPacketOnEP0() is called from 0 sites in this file.
+    It appears to be inlineable (size = 14 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+
+==============================================================================
+
+extern unsigned char usbInvalidRequest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbStallEndpoint0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetStringDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 49 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (2 times)
+
+==============================================================================
+
+extern unsigned char usbGetInterfaceStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetInterface() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetEndpointStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 103 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (2 times)
+	usbSendDataPacketOnEP0() (2 times)
+
+==============================================================================
+
+extern unsigned char usbGetDeviceStatus() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetDeviceDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetConfigurationDescriptor() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbGetConfiguration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 9 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbClearOEP0ByteCount() (1 times)
+	usbSendDataPacketOnEP0() (1 times)
+
+==============================================================================
+
+extern unsigned char usbDecodeAndProcessUsbRequest() is called from 0 sites in this file.
+    It appears to be inlineable (size = 125 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSetAddress() (1 times)
+
+==============================================================================
+
+extern unsigned char usbClearEndpointFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 49 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (2 times)
+
+==============================================================================
+
+extern unsigned char usbClearDeviceFeature() is called from 0 sites in this file.
+    It appears to be inlineable (size = 16 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendZeroLengthPacketOnIEP0() (1 times)
+	usbStallEndpoint0() (1 times)
+
+==============================================================================
+
+extern unsigned char USB_suspend() is called from 0 sites in this file.
+    It appears to be inlineable (size = 23 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_setEnabledEvents() is called from 0 sites in this file.
+    It appears to be inlineable (size = 6 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_enable() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_resume() is called from 0 sites in this file.
+    It appears to be inlineable (size = 12 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	USB_enable() (1 times)
+
+==============================================================================
+
+extern unsigned char USB_reset() is called from 0 sites in this file.
+    It appears to be inlineable (size = 284 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void USB_InitSerialStringDescriptor() is called from 1 sites in this file.
+    It appears to be inlineable (size = 142 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = hexValue+55; at line 346
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = hexValue+48; at line 345
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = 0u; at line 347
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = hexValue+55; at line 352
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = hexValue+48; at line 351
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement abramSerialStringDescriptor[j] = 0u; at line 353
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum>>4; at line 343
+	and the statement ++(*&pbSerNum); at line 341
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    *&pbSerNum;
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = hexValue+55; at line 346
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = hexValue+48; at line 345
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = 0u; at line 347
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = hexValue+55; at line 352
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = hexValue+48; at line 351
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement abramSerialStringDescriptor[j] = 0u; at line 353
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    abramSerialStringDescriptor[j];
+	do not access the same object in memory.
+
+ADVICE: In function USB_InitSerialStringDescriptor() in ../USB_API/USB_Common/usb.c
+	in the 'for' loop at lines ../USB_API/USB_Common/usb.c:341-354
+	for the statement hexValue = **&pbSerNum&0xf; at line 349
+	and the statement ++(*&pbSerNum); at line 341
+
+	Consider declaring 'pbSerNum' as unsigned char * restrict pbSerNum
+	to assert that lvalues **&pbSerNum;
+	and                    *&pbSerNum;
+	do not access the same object in memory.
+
+==============================================================================
+
+extern unsigned char USB_init() is called from 0 sites in this file.
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	USB_InitSerialStringDescriptor() (1 times)
+
+==============================================================================
+
+extern unsigned USB_getEnabledEvents() is called from 0 sites in this file.
+    It appears to be inlineable (size = 2 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_forceRemoteWakeup() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_disconnect() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_disable() is called from 0 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_connectionState() is called from 0 sites in this file.
+    It appears to be inlineable (size = 104 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_connectionInfo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 38 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char USB_connect() is called from 0 sites in this file.
+    It appears to be inlineable (size = 14 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

@@ -1,0 +1,151 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+static void spiBurstFifoAccess() is called from 2 sites in this file.
+    It appears to be inlineable (size = 106 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__set_interrupt_state() (2 times)
+	__get_interrupt_state() (2 times)
+	__disable_interrupt() (5 times)
+
+static unsigned char spiRegAccess() is called from 2 sites in this file.
+    It appears to be inlineable (size = 60 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__set_interrupt_state() (1 times)
+	__get_interrupt_state() (1 times)
+	__disable_interrupt() (2 times)
+
+extern unsigned char wbsl_SpiCmdStrobe() is called from 0 sites in this file.
+    It appears to be inlineable (size = 56 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__set_interrupt_state() (1 times)
+	__disable_interrupt() (3 times)
+	__get_interrupt_state() (1 times)
+
+extern void wbsl_SpiInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 34 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char wbsl_SpiReadReg() is called from 0 sites in this file.
+    It appears to be inlineable (size = 15 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__disable_interrupt() (1 times)
+	spiRegAccess() (1 times)
+
+extern void wbsl_SpiReadRxFifo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiBurstFifoAccess() (1 times)
+
+extern void wbsl_SpiWriteReg() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__disable_interrupt() (1 times)
+	spiRegAccess() (1 times)
+
+extern void wbsl_SpiWriteTxFifo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiBurstFifoAccess() (1 times)
+
+
+These functions may be recursive:
+	wbsl_SpiCmdStrobe()
+	wbsl_SpiReadReg()
+	wbsl_SpiReadRxFifo()
+	wbsl_SpiWriteReg()
+	spiRegAccess()
+	wbsl_SpiWriteTxFifo()
+	spiBurstFifoAccess()
+
+Results of interprocedural value propagation:
+
+   static void spiBurstFifoAccess() has these parameter attributes:
+      unsigned char addrByte :  addrByte%0x80u == 127u;  addrByte <= 0xffu;  addrByte >= 127u;
+
+These external functions are called but not defined here:
+	__disable_interrupt()
+	__get_interrupt_state()
+	__set_interrupt_state()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+static void spiBurstFifoAccess() is called from 2 sites in this file.
+    It appears to be inlineable (size = 106 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void wbsl_SpiWriteTxFifo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiBurstFifoAccess() (1 times)
+
+==============================================================================
+
+static unsigned char spiRegAccess() is called from 2 sites in this file.
+    It appears to be inlineable (size = 60 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void wbsl_SpiWriteReg() is called from 0 sites in this file.
+    It appears to be inlineable (size = 17 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiRegAccess() (1 times)
+
+==============================================================================
+
+extern void wbsl_SpiReadRxFifo() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiBurstFifoAccess() (1 times)
+
+==============================================================================
+
+extern unsigned char wbsl_SpiReadReg() is called from 0 sites in this file.
+    It appears to be inlineable (size = 15 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	spiRegAccess() (1 times)
+
+==============================================================================
+
+extern void wbsl_SpiInit() is called from 0 sites in this file.
+    It appears to be inlineable (size = 34 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char wbsl_SpiCmdStrobe() is called from 0 sites in this file.
+    It appears to be inlineable (size = 56 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

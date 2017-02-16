@@ -1,0 +1,70 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern unsigned SetVCore() is called from 0 sites in this file.
+    It appears to be inlineable (size = 40 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	SetVCoreDown() (1 times)
+	SetVCoreUp() (1 times)
+
+static unsigned SetVCoreDown() is called from 1 sites in this file.
+    It appears to be inlineable (size = 102 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+static unsigned SetVCoreUp() is called from 1 sites in this file.
+    It appears to be inlineable (size = 149 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+static unsigned SetVCoreUp() is called from 1 sites in this file.
+    It appears to be inlineable (size = 149 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+static unsigned SetVCoreDown() is called from 1 sites in this file.
+    It appears to be inlineable (size = 102 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in SetVCoreDown() fails to unroll-and-jam: Outer trip count may be NULL
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern unsigned SetVCore() is called from 0 sites in this file.
+    It appears to be inlineable (size = 40 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	SetVCoreUp() (1 times)
+	SetVCoreDown() (1 times)
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in SetVCore() fails to unroll-and-jam: Outer Loop has multiple blocks
+
+		====== End Unroll-and-jam Result ======
+
+
+== END OF INFO OUTPUT==

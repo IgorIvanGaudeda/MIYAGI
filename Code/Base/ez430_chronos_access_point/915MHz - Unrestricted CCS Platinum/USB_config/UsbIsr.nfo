@@ -1,0 +1,143 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void IEP0InterruptHandler() is called from 1 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbSendNextPacketOnIEP0() (1 times)
+
+extern unsigned char OEP0InterruptHandler() is called from 1 sites in this file.
+    It appears to be inlineable (size = 37 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	Handler_SetLineCoding() (1 times)
+	usbReceiveNextPacketOnOEP0() (1 times)
+
+extern void PWRVBUSoffHandler() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void PWRVBUSonHandler() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned char SetupPacketInterruptHandler() is called from 2 sites in this file.
+    It appears to be inlineable (size = 66 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	usbDecodeAndProcessUsbRequest() (1 times)
+
+extern void iUsbInterruptHandler() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__bic_SR_register_on_exit() (1 times)
+	__no_operation() (2 times)
+	USB_handleClockEvent() (1 times)
+	USB_handleVbusOnEvent() (1 times)
+	PWRVBUSonHandler() (1 times)
+	USB_handleVbusOffEvent() (1 times)
+	PWRVBUSoffHandler() (1 times)
+	IEP0InterruptHandler() (1 times)
+	OEP0InterruptHandler() (1 times)
+	USB_handleResetEvent() (1 times)
+	USB_reset() (1 times)
+	USB_handleSuspendEvent() (1 times)
+	USB_suspend() (1 times)
+	USB_handleResumeEvent() (1 times)
+	USB_resume() (1 times)
+	CdcToHostFromBuffer() (1 times)
+	CdcToBufferFromHost() (1 times)
+	USBCDC_handleDataReceived() (1 times)
+	USBCDC_bytesInUSBBuffer() (1 times)
+	CdcIsReceiveInProgress() (1 times)
+	SetupPacketInterruptHandler() (2 times)
+
+
+These functions may be recursive:
+	iUsbInterruptHandler()
+	IEP0InterruptHandler()
+	OEP0InterruptHandler()
+	SetupPacketInterruptHandler()
+
+These external functions are called but not defined here:
+	CdcIsReceiveInProgress()
+	USBCDC_bytesInUSBBuffer()
+	USBCDC_handleDataReceived()
+	CdcToBufferFromHost()
+	CdcToHostFromBuffer()
+	USB_resume()
+	USB_handleResumeEvent()
+	USB_suspend()
+	USB_handleSuspendEvent()
+	USB_reset()
+	USB_handleResetEvent()
+	USB_handleVbusOffEvent()
+	USB_handleVbusOnEvent()
+	USB_handleClockEvent()
+	__no_operation()
+	__bic_SR_register_on_exit()
+	usbDecodeAndProcessUsbRequest()
+	usbReceiveNextPacketOnOEP0()
+	Handler_SetLineCoding()
+	usbSendNextPacketOnIEP0()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern unsigned char SetupPacketInterruptHandler() is called from 2 sites in this file.
+    It appears to be inlineable (size = 66 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char OEP0InterruptHandler() is called from 1 sites in this file.
+    It appears to be inlineable (size = 37 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void IEP0InterruptHandler() is called from 1 sites in this file.
+    It appears to be inlineable (size = 20 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void PWRVBUSoffHandler() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void PWRVBUSonHandler() is called from 1 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void iUsbInterruptHandler() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	SetupPacketInterruptHandler() (2 times)
+	OEP0InterruptHandler() (1 times)
+	IEP0InterruptHandler() (1 times)
+	PWRVBUSoffHandler() (1 times)
+	PWRVBUSonHandler() (1 times)
+
+== END OF INFO OUTPUT==

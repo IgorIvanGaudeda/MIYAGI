@@ -1,0 +1,77 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern unsigned char sCB() is called from 0 sites in this file.
+    It appears to be inlineable (size = 18 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void simpliciti_main() is called from 0 sites in this file.
+    It appears to be inlineable (size = 222 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	MRFI_RxIdle() (1 times)
+	memcpy() (1 times)
+	SMPL_Send() (1 times)
+	SMPL_Receive() (1 times)
+	__set_interrupt_state() (1 times)
+	__disable_interrupt() (1 times)
+	__get_interrupt_state() (1 times)
+	SMPL_LinkListen() (1 times)
+	SMPL_Ioctl() (1 times)
+	SMPL_Init() (1 times)
+	BSP_Init() (1 times)
+
+Address of global variable is never taken:
+	static unsigned char sNumCurrentPeers
+
+
+
+These functions may be recursive:
+	simpliciti_main()
+
+These external functions are called but not defined here:
+	memcpy()
+	BSP_Init()
+	SMPL_Init()
+	SMPL_Ioctl()
+	SMPL_LinkListen()
+	__get_interrupt_state()
+	__disable_interrupt()
+	__set_interrupt_state()
+	SMPL_Receive()
+	SMPL_Send()
+	MRFI_RxIdle()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void simpliciti_main() is called from 0 sites in this file.
+    It appears to be inlineable (size = 222 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#1 in simpliciti_main() fails to unroll-and-jam: Outer Loop has multiple blocks
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern unsigned char sCB() is called from 0 sites in this file.
+    It appears to be inlineable (size = 18 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==
