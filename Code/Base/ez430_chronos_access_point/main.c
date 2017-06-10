@@ -58,6 +58,9 @@
 #include "mrfi.h"
 #include "WBSL/wbsl.h"
 
+#include "UART.h"
+#include "RTC.h"
+
 //Function declarations
 void InitPorts_v(void);
 void InitClock_v(void);
@@ -103,6 +106,9 @@ void main (void)
   CC_SPI_DeselectChip_v();
   UCSCTL6 |= XT2BYPASS;
 
+  // Initialize UART
+  UART_Init_v();
+
   // Initialize unused port pins
   InitPorts_v();
 
@@ -112,52 +118,28 @@ void main (void)
   // Initialize clock system
   InitClock_v();
 
+  // Initialize RTC
+  RTC_Init_v();
+
   // Initialize debug output pins
   INIT_TX_ACTIVITY;
   INIT_RX_ACTIVITY;
 
   // Initialize BR receiver library
-  BR_Init_v();
-  BRTX_SetID_v(TX_SERIAL_NO);
-  BRTX_WriteData_v(0, 40);
+  //BR_Init_v();
+  //BRTX_SetID_v(TX_SERIAL_NO);
+  //BRTX_WriteData_v(0, 40);
   // Reset simpliciti_data
   simpliciti_data[0] = 0xFF;
 
   // Initialize command handler
-  usb_handler_init();
+  //usb_handler_init();
 
   // Enable interrupts
   __enable_interrupt();
 
-  // Initialize USB port
-  USB_init();
-
-  // Enable various USB event handling routines
-  USB_setEnabledEvents(  kUSB_VbusOnEvent + kUSB_VbusOffEvent + kUSB_receiveCompletedEvent
-                       + kUSB_dataReceivedEvent + kUSB_UsbSuspendEvent + kUSB_UsbResumeEvent + kUSB_UsbResetEvent);
-    
-  // See if we are already attached physically to USB, and if so, connect to it
-  // Normally applications don't invoke the event handlers, but this is an exception.  
-  if (USB_connectionInfo() & kUSB_vbusPresent)
-  {
-    USB_handleVbusOnEvent();
-  }
-
   while (1)
   {
-
-    // For BlueRobin
-    if (bluerobin_start_now && !simpliciti_on && !wbsl_on)
-    {
-      // Start BlueRobin stack
-      bluerobin_start();
-      system_status = HW_BLUEROBIN_TRANSMITTING;
-      // Reset start flag
-      bluerobin_start_now = 0;
-    }
-    // For SimpliciTI AP
-    else if (simpliciti_start_now && !wbsl_on)
-    {
       RX_ACTIVITY_ON;
       // Clear start trigger
       simpliciti_start_now = 0;
@@ -172,40 +154,8 @@ void main (void)
       // Clean up after SimpliciTI
       simpliciti_data[0] = 0xFF;
       RX_ACTIVITY_OFF;
-    }
-    else if (wbsl_start_now && !simpliciti_on)
-    {
-
-      RX_ACTIVITY_ON;
-      // Clear start Trigger
-      wbsl_start_now = 0;
-      //Config the RF module for WBSL
-      wbsl_config();
-      // Assign new System Status
-      system_status = HW_WBSL_LINKED;
-      wbsl_on = 1;
-      // Start access point and try to pair  with an End Device,
-      // once paired, download the software update then return.
-      wbsl_main();
-
-      // Check if there was an error during the Update procedure to alert the GUI
-      if(getFlag(wbsl_flag,WBSL_STATUS_ERROR))
-      {
-    	  system_status = HW_WBSL_ERROR;
-      }
-      else
-      {
-    	  system_status = HW_WBSL_STOPPED;
-      }
-       //Clear WBSL Flags
-       wbsl_on = 0;
-       wbsl_data[0] = 0xFF;
-
-       RX_ACTIVITY_OFF;
-   }
 
   }
-
 }
 
 void USB_Handler_v(void)
@@ -315,7 +265,7 @@ void InitClock_v(void)
 void InitPorts_v(void)
 {
   // Initialize all unused pins as low level output
-  P4OUT  &= ~(                            BIT4 | BIT5 | BIT6 | BIT7);
+  P4OUT  &= ~(                            				BIT6 | BIT7);
   P5OUT  &= ~(BIT0 | BIT1                                          );
   P6OUT  &= ~(BIT0 | BIT1 | BIT2 | BIT3                            );
   P4DIR  |=  (                            BIT4 | BIT5 | BIT6 | BIT7);

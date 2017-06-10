@@ -114,4 +114,5 @@ USB_config \
 WBSL \
 bluerobin \
 simpliciti \
+simpliciti/Applications \
 

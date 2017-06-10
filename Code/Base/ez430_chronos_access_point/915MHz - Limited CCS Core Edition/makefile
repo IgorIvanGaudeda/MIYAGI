@@ -10,6 +10,8 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./RTC.obj" \
+"./UART.obj" \
 "./ccSPI.obj" \
 "./cmdHandler.obj" \
 "./main.obj" \
@@ -28,6 +30,7 @@ ORDERED_OBJS += \
 "./WBSL/spi_wbsl.obj" \
 "./WBSL/wbsl.obj" \
 "./bluerobin/timer.obj" \
+"./simpliciti/Applications/main_AP_BM.obj" \
 "../lnk_msp430f5509.cmd" \
 "../msp430USB.cmd" \
 "../bluerobin/BlueRobin_TX_915MHz.lib" \
@@ -50,6 +53,7 @@ RMDIR := RMDIR /S/Q
 -include WBSL/subdir_vars.mk
 -include bluerobin/subdir_vars.mk
 -include simpliciti/subdir_vars.mk
+-include simpliciti/Applications/subdir_vars.mk
 -include subdir_rules.mk
 -include F5xx_F6xx_Core_Lib/subdir_rules.mk
 -include USB_API/USB_CDC_API/subdir_rules.mk
@@ -58,6 +62,7 @@ RMDIR := RMDIR /S/Q
 -include WBSL/subdir_rules.mk
 -include bluerobin/subdir_rules.mk
 -include simpliciti/subdir_rules.mk
+-include simpliciti/Applications/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -175,8 +180,8 @@ ez430_chronos_access_point_915MHz.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMD
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "ccSPI.d" "cmdHandler.d" "main.d" "usbConstructs.d" "usbEventHandling.d" "F5xx_F6xx_Core_Lib\HAL_FLASH.d" "F5xx_F6xx_Core_Lib\HAL_PMAP.d" "F5xx_F6xx_Core_Lib\HAL_PMM.d" "F5xx_F6xx_Core_Lib\HAL_TLV.d" "F5xx_F6xx_Core_Lib\HAL_UCS.d" "USB_API\USB_CDC_API\UsbCdc.d" "USB_API\USB_Common\dma.d" "USB_API\USB_Common\usb.d" "USB_config\UsbIsr.d" "USB_config\descriptors.d" "WBSL\spi_wbsl.d" "WBSL\wbsl.d" "bluerobin\timer.d" 
-	-$(RM) "ccSPI.obj" "cmdHandler.obj" "main.obj" "usbConstructs.obj" "usbEventHandling.obj" "F5xx_F6xx_Core_Lib\HAL_FLASH.obj" "F5xx_F6xx_Core_Lib\HAL_PMAP.obj" "F5xx_F6xx_Core_Lib\HAL_PMM.obj" "F5xx_F6xx_Core_Lib\HAL_TLV.obj" "F5xx_F6xx_Core_Lib\HAL_UCS.obj" "USB_API\USB_CDC_API\UsbCdc.obj" "USB_API\USB_Common\dma.obj" "USB_API\USB_Common\usb.obj" "USB_config\UsbIsr.obj" "USB_config\descriptors.obj" "WBSL\spi_wbsl.obj" "WBSL\wbsl.obj" "bluerobin\timer.obj" 
+	-$(RM) "RTC.d" "UART.d" "ccSPI.d" "cmdHandler.d" "main.d" "usbConstructs.d" "usbEventHandling.d" "F5xx_F6xx_Core_Lib\HAL_FLASH.d" "F5xx_F6xx_Core_Lib\HAL_PMAP.d" "F5xx_F6xx_Core_Lib\HAL_PMM.d" "F5xx_F6xx_Core_Lib\HAL_TLV.d" "F5xx_F6xx_Core_Lib\HAL_UCS.d" "USB_API\USB_CDC_API\UsbCdc.d" "USB_API\USB_Common\dma.d" "USB_API\USB_Common\usb.d" "USB_config\UsbIsr.d" "USB_config\descriptors.d" "WBSL\spi_wbsl.d" "WBSL\wbsl.d" "bluerobin\timer.d" "simpliciti\Applications\main_AP_BM.d" 
+	-$(RM) "RTC.obj" "UART.obj" "ccSPI.obj" "cmdHandler.obj" "main.obj" "usbConstructs.obj" "usbEventHandling.obj" "F5xx_F6xx_Core_Lib\HAL_FLASH.obj" "F5xx_F6xx_Core_Lib\HAL_PMAP.obj" "F5xx_F6xx_Core_Lib\HAL_PMM.obj" "F5xx_F6xx_Core_Lib\HAL_TLV.obj" "F5xx_F6xx_Core_Lib\HAL_UCS.obj" "USB_API\USB_CDC_API\UsbCdc.obj" "USB_API\USB_Common\dma.obj" "USB_API\USB_Common\usb.obj" "USB_config\UsbIsr.obj" "USB_config\descriptors.obj" "WBSL\spi_wbsl.obj" "WBSL\wbsl.obj" "bluerobin\timer.obj" "simpliciti\Applications\main_AP_BM.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

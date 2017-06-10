@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v4.2.1                      
 ******************************************************************************
->> Linked Thu Feb 09 19:09:14 2017
+>> Linked Sat Jun 10 15:27:16 2017
 
 OUTPUT FILE NAME:   <ez430_chronos_access_point_915MHz.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0000e162
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000e334
 
 
 MEMORY CONFIGURATION
@@ -19,8 +19,8 @@ MEMORY CONFIGURATION
   INFOB                 00001900   00000080  00000000  00000080  RWIX
   INFOA                 00001980   00000080  00000000  00000080  RWIX
   USBRAM                00001c00   00000800  00000000  00000800  RWIX
-  RAM                   00002400   00001000  00000521  00000adf  RWIX
-  FLASH                 0000a000   00005f80  00004ffd  00000f83  RWIX
+  RAM                   00002400   00001000  0000060f  000009f1  RWIX
+  FLASH                 0000a000   00005f80  00005067  00000f19  RWIX
   INT00                 0000ff80   00000002  00000000  00000002  RWIX
   INT01                 0000ff82   00000002  00000000  00000002  RWIX
   INT02                 0000ff84   00000002  00000000  00000002  RWIX
@@ -94,34 +94,36 @@ section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
 .pinit     0    0000a000    00000000     UNINITIALIZED
 
-.bss       0    00002400    00000481     UNINITIALIZED
+.bss       0    00002400    0000056f     UNINITIALIZED
                   00002400    0000019d     wbsl.obj (.bss)
                   0000259d    00000001     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.bss)
                   0000259e    00000118                                      : nwk_QMgmt.obj (.bss)
-                  000026b6    00000046                                      : main_AP_BM.obj (.bss)
-                  000026fc    00000044     usb.obj (.bss)
-                  00002740    0000003a     cmdHandler.obj (.bss)
-                  0000277a    00000030     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.bss)
-                  000027aa    0000002d                                      : nwk.obj (.bss)
-                  000027d7    00000001                                      : nwk_api.obj (.bss)
-                  000027d8    00000022     UsbCdc.obj (.bss)
-                  000027fa    00000017     main.obj (.bss)
-                  00002811    00000001     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ping.obj (.bss)
-                  00002812    00000015     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.bss)
-                  00002827    00000001     usbEventHandling.obj (.bss)
-                  00002828    0000000d     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.bss)
-                  00002835    00000001     --HOLE--
-                  00002836    0000000a                                      : nwk_frame.obj (.bss)
-                  00002840    0000000a                                      : nwk_link.obj (.bss)
-                  0000284a    0000000a     BlueRobin_TX_915MHz.lib : br_common.obj (.bss)
-                  00002854    00000009     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.bss)
-                  0000285d    00000001     --HOLE--
-                  0000285e    00000008     dma.obj (.bss)
-                  00002866    00000008     rts430x.lib : _lock.obj (.bss)
-                  0000286e    00000008                 : boot.obj (.bss)
-                  00002876    00000005     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.bss)
-                  0000287b    00000001     --HOLE--
-                  0000287c    00000005     BlueRobin_TX_915MHz.lib : cc_radio.obj (.bss)
+                  000026b6    000000ca     main_AP_BM.obj (.bss)
+                  00002780    00000069     UART.obj (.bss)
+                  000027e9    00000001     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.bss)
+                  000027ea    00000044     usb.obj (.bss)
+                  0000282e    0000003a     cmdHandler.obj (.bss)
+                  00002868    00000030     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.bss)
+                  00002898    0000002d                                      : nwk.obj (.bss)
+                  000028c5    00000001                                      : nwk_ping.obj (.bss)
+                  000028c6    00000022     UsbCdc.obj (.bss)
+                  000028e8    00000017     main.obj (.bss)
+                  000028ff    00000001     usbEventHandling.obj (.bss)
+                  00002900    00000015     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.bss)
+                  00002915    00000001     --HOLE--
+                  00002916    0000000d     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.bss)
+                  00002923    00000001     --HOLE--
+                  00002924    0000000a                                      : nwk_frame.obj (.bss)
+                  0000292e    0000000a                                      : nwk_link.obj (.bss)
+                  00002938    0000000a     BlueRobin_TX_915MHz.lib : br_common.obj (.bss)
+                  00002942    00000009     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.bss)
+                  0000294b    00000001     --HOLE--
+                  0000294c    00000008     dma.obj (.bss)
+                  00002954    00000008     rts430x.lib : _lock.obj (.bss)
+                  0000295c    00000008                 : boot.obj (.bss)
+                  00002964    00000005     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.bss)
+                  00002969    00000001     --HOLE--
+                  0000296a    00000005     BlueRobin_TX_915MHz.lib : cc_radio.obj (.bss)
 
 .data      0    00002400    00000000     UNINITIALIZED
 
@@ -129,308 +131,280 @@ section   page    origin      length       input sections
                   00003360    00000002     rts430x.lib : boot.obj (.stack)
                   00003362    0000009e     --HOLE--
 
-.text      0    0000a000    00004a8c     
-                  0000a000    00000396     cmdHandler.obj (.text:usb_decode)
-                  0000a396    000001b0     UsbCdc.obj (.text:USBCDC_receiveData)
-                  0000a546    0000019a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Init)
-                  0000a6e0    0000017e                                      : nwk_link.obj (.text:smpl_send_link_reply)
-                  0000a85e    0000016a     main.obj (.text:main)
-                  0000a9c8    00000160     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_QfindOldest)
-                  0000ab28    0000015e                                      : main_AP_BM.obj (.text:simpliciti_main)
-                  0000ac86    00000158     UsbCdc.obj (.text:CdcToHostFromBuffer)
-                  0000adde    00000148     UsbIsr.obj (.text:_isr:iUsbInterruptHandler)
-                  0000af26    00000146     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Transmit)
-                  0000b06c    0000013c     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioInit_v)
-                  0000b1a8    0000013c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:dispatchFrame)
-                  0000b2e4    00000120     usb.obj (.text:USB_reset)
-                  0000b404    00000118     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Ioctl)
-                  0000b51c    0000010c                                      : nwk_api.obj (.text:SMPL_SendOpt)
-                  0000b628    00000106                                      : nwk_join.obj (.text:smpl_send_join_reply)
-                  0000b72e    00000102     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.text:StateMachineAndScheduler_v)
-                  0000b830    000000fe     UsbCdc.obj (.text:CdcToBufferFromHost)
-                  0000b92e    000000fe     wbsl.obj (.text:sendDataPacket)
-                  0000ba2c    000000ee     wbsl.obj (.text:wbsl_main)
-                  0000bb1a    000000e4     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:Mrfi_SyncPinRxIsr)
-                  0000bbfe    000000d4                                      : nwk.obj (.text:nwk_allocateLocalRxPort)
-                  0000bcd2    000000ce     HAL_PMM.obj (.text:SetVCoreUp)
-                  0000bda0    000000ce     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_processMgmt)
-                  0000be6e    000000c4     usb.obj (.text:USB_InitSerialStringDescriptor)
-                  0000bf32    000000bc     wbsl.obj (.text:sendInitPacket)
-                  0000bfee    000000ba     AP_MSP430F5509_CC1101_915MHz.lib : nwk_link.obj (.text:nwk_processLink)
-                  0000c0a8    000000aa     wbsl.obj (.text:wbsl_RfIsr)
-                  0000c152    000000a6     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:isDupSandFFrame)
-                  0000c1f8    000000a4                                      : nwk_ioctl.obj (.text:nwk_radioControl)
-                  0000c29c    000000a4     wbsl.obj (.text:wbsl_config)
-                  0000c340    000000a2     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:nwk_retrieveFrame)
-                  0000c3e2    00000098     UsbCdc.obj (.text:USBCDC_intfStatus)
-                  0000c47a    00000092     main.obj (.text:USB_Handler_v)
-                  0000c50c    00000092     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_isConnectionValid)
-                  0000c59e    00000090                                      : nwk_frame.obj (.text:nwk_buildFrame)
-                  0000c62e    00000090     usb.obj (.text:usbDecodeAndProcessUsbRequest)
-                  0000c6be    0000008c     ccSPI.obj (.text:CC_SPI_Init_v)
-                  0000c74a    0000008c     HAL_PMM.obj (.text:SetVCoreDown)
-                  0000c7d6    0000008a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:spiBurstFifoAccess)
-                  0000c860    0000008a     spi_wbsl.obj (.text:spiBurstFifoAccess)
-                  0000c8ea    00000088     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_nwkInit)
-                  0000c972    00000086                                      : nwk_frame.obj (.text:nwk_SendEmptyPollRspFrame)
-                  0000c9f8    00000084     usb.obj (.text:USB_enable)
-                  0000ca7c    00000080     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_QfindSlot)
-                  0000cafc    00000080                                      : nwk_frame.obj (.text:nwk_sendAckReply)
-                  0000cb7c    00000078     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_Init_v)
-                  0000cbf4    00000078     UsbCdc.obj (.text:USBCDC_bytesInUSBBuffer)
-                  0000cc6c    00000074     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:nwk_getSandFFrame)
-                  0000cce0    00000072     UsbCdc.obj (.text:USBCDC_sendData)
-                  0000cd52    00000070     usb.obj (.text:usbGetEndpointStatus)
-                  0000cdc2    00000070     usb.obj (.text:usbSendNextPacketOnIEP0)
-                  0000ce32    00000070     wbsl.obj (.text:wbsl_link)
-                  0000cea2    0000006e     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioTransmitRegularData_v)
-                  0000cf10    0000006c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ping.obj (.text:nwk_processPing)
-                  0000cf7c    00000068                                      : nwk_api.obj (.text:SMPL_LinkListen)
-                  0000cfe4    00000066                                      : nwk.obj (.text:nwk_saveJoinedDevice)
-                  0000d04a    0000005e     UsbCdc.obj (.text:CopyUsbToBuff)
-                  0000d0a8    0000005e     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_SetRFPwr)
-                  0000d106    0000005c                                      : mrfi.obj (.text:MRFI_SetLogicalChannel)
-                  0000d162    0000005a                                      : mrfi.obj (.text:MRFI_ReplyDelay)
-                  0000d1bc    00000058     usb.obj (.text:USB_init)
-                  0000d214    00000056     usb.obj (.text:usbClearEndpointFeature)
-                  0000d26a    00000052     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_processJoin)
-                  0000d2bc    00000052                                      : nwk_ioctl.obj (.text:nwk_rawSend)
-                  0000d30e    00000052     UsbCdc.obj (.text:usbGetLineCoding)
-                  0000d360    00000050     usb.obj (.text:usbSetEndpointFeature)
-                  0000d3b0    0000004c     UsbCdc.obj (.text:Handler_SetLineCoding)
-                  0000d3fc    0000004a     main.obj (.text:InitClock_v)
-                  0000d446    0000004a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:mrfiSpiCmdStrobe)
-                  0000d490    0000004a                                      : nwk.obj (.text:nwk_isValidReply)
-                  0000d4da    0000004a     usb.obj (.text:usbGetStringDescriptor)
-                  0000d524    0000004a     spi_wbsl.obj (.text:wbsl_SpiCmdStrobe)
-                  0000d56e    00000048     HAL_TLV.obj (.text:Get_TLV_Info)
-                  0000d5b6    00000048     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Rssi)
-                  0000d5fe    00000048     rts430x.lib : autoinit.obj (.text:_auto_init)
-                  0000d646    00000048     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_findAlreadyJoined)
-                  0000d68e    00000046     BlueRobin_TX_915MHz.lib : brtx_packet.obj (.text:BRTX_MakePacket_v)
-                  0000d6d4    00000046                             : br_common.obj (.text:BR_CalcRandomTimeOffset_u16)
-                  0000d71a    00000046     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_isSandFClient)
-                  0000d760    00000046     usb.obj (.text:usbReceiveNextPacketOnOEP0)
-                  0000d7a6    00000046     wbsl.obj (.text:wbsl_reset)
-                  0000d7ec    00000044     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Receive)
-                  0000d830    00000044     UsbIsr.obj (.text:SetupPacketInterruptHandler)
-                  0000d874    00000044     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_findPeer)
-                  0000d8b8    00000044                                      : nwk_link.obj (.text:nwk_getLocalLinkID)
-                  0000d8fc    00000044                                      : nwk.obj (.text:nwk_isLinkDuplicate)
-                  0000d940    00000044                                      : mrfi.obj (.text:spiRegAccess)
-                  0000d984    00000044     spi_wbsl.obj (.text:spiRegAccess)
-                  0000d9c8    00000042     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RxIdle)
-                  0000da0a    00000042     UsbIsr.obj (.text:PWRVBUSoffHandler)
-                  0000da4c    00000040     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioIdle_v)
-                  0000da8c    0000003e     HAL_PMM.obj (.text:SetVCore)
-                  0000daca    0000003e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_joinInit)
-                  0000db08    0000003e                                      : nwk_frame.obj (.text:nwk_replayFrame)
-                  0000db46    0000003c                                      : nwk.obj (.text:initializeConnection)
-                  0000db82    0000003a     UsbCdc.obj (.text:CdcResetData)
-                  0000dbbc    0000003a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RxAddrIsFiltered)
-                  0000dbf6    0000003a                                      : nwk.obj (.text:nwk_getNextConnection)
-                  0000dc30    00000038     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BRTX_Start_v)
-                  0000dc68    00000038                             : brtx_irq.obj (.text:_isr:BRTX_Timing_IRQ_v)
-                  0000dca0    00000038     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_putNumObjectIntoMsg)
-                  0000dcd8    00000036                                      : mrfi.obj (.text:Mrfi_CalculateRssi)
-                  0000dd0e    00000036     main.obj (.text:_isr:UNMI_ISR)
-                  0000dd44    00000036     usb.obj (.text:usbSetAddress)
-                  0000dd7a    00000034     BlueRobin_TX_915MHz.lib : br_common.obj (.text:BR_CalcCRC_u8)
-                  0000ddae    00000034     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:mrfiSpiInit)
-                  0000dde2    00000034     spi_wbsl.obj (.text:wbsl_SpiInit)
-                  0000de16    00000032     usb.obj (.text:USB_connectionInfo)
-                  0000de48    00000032     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ioctl.obj (.text:nwk_deviceAddress)
-                  0000de7a    00000032     wbsl.obj (.text:wbsl_transmit)
-                  0000deac    00000030     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_WakeUp)
-                  0000dedc    00000030     UsbIsr.obj (.text:PWRVBUSonHandler)
-                  0000df0c    00000030     HAL_UCS.obj (.text:XT2_Start)
-                  0000df3c    00000030     dma.obj (.text:memcpyDMA0)
-                  0000df6c    00000030     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_QadjustOrder)
-                  0000df9c    00000030                                      : nwk_ioctl.obj (.text:nwk_rawReceive)
-                  0000dfcc    00000030                                      : nwk_frame.obj (.text:nwk_sendFrame)
-                  0000dffc    00000030     wbsl.obj (.text:wbsl_sendPacket)
-                  0000e02c    0000002e     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RxOn)
-                  0000e05a    0000002e     UsbIsr.obj (.text:OEP0InterruptHandler)
-                  0000e088    0000002c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Init)
-                  0000e0b4    0000002c     usb.obj (.text:USB_suspend)
-                  0000e0e0    0000002c     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_checkAppMsgTID)
-                  0000e10c    0000002c     wbsl.obj (.text:rxModeOff)
-                  0000e138    0000002a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Sleep)
-                  0000e162    0000002a     rts430x.lib : boot.obj (.text:_isr:_c_int00_noexit)
-                  0000e18c    0000002a     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_getConnInfo)
-                  0000e1b6    0000002a                                      : nwk_globals.obj (.text:nwk_globalsInit)
-                  0000e1e0    0000002a                                      : nwk_link.obj (.text:nwk_linkInit)
-                  0000e20a    0000002a     usb.obj (.text:usbGetDeviceStatus)
-                  0000e234    00000028     cmdHandler.obj (.text:BRTX_DataTransfered_v)
-                  0000e25c    00000028     dma.obj (.text:USB_initMemcpy)
-                  0000e284    00000028     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:map_lid2idx)
-                  0000e2ac    00000028     usb.obj (.text:usbSetConfiguration)
-                  0000e2d4    00000026     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:Mrfi_DelayUsec)
-                  0000e2fa    00000026                                      : mrfi.obj (.text:_isr:BSP_GpioPort1Isr)
-                  0000e320    00000026                                      : nwk_QMgmt.obj (.text:nwk_QInit)
-                  0000e346    00000026                                      : nwk.obj (.text:nwk_checkConnInfo)
-                  0000e36c    00000026     usb.obj (.text:usbClearDeviceFeature)
-                  0000e392    00000026     usb.obj (.text:usbSetDeviceFeature)
-                  0000e3b8    00000024     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:BSP_Delay)
-                  0000e3dc    00000024                                      : bsp.obj (.text:BSP_Init)
-                  0000e400    00000024                                      : nwk_frame.obj (.text:nwk_frameInit)
-                  0000e424    00000022     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BR_Init_v)
-                  0000e446    00000022     usb.obj (.text:USB_disable)
-                  0000e468    00000022     usb.obj (.text:USB_disconnect)
-                  0000e48a    00000022     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:nwk_buildAckReqFrame)
-                  0000e4ac    00000022     wbsl.obj (.text:wbsl_DelayUsec)
-                  0000e4ce    00000020     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioPowerdown_v)
-                  0000e4ee    00000020     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:MRFI_RxCompleteISR)
-                  0000e50e    00000020     rts430x.lib : memmov.obj (.text:memmove)
-                  0000e52e    00000020     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ioctl.obj (.text:nwk_connectionControl)
-                  0000e54e    00000020     usb.obj (.text:usbSendDataPacketOnEP0)
-                  0000e56e    00000020     cmdHandler.obj (.text:usb_handler_init)
-                  0000e58e    0000001e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.text:nwk_setMyAddress)
-                  0000e5ac    0000001e     usb.obj (.text:usbGetInterface)
-                  0000e5ca    0000001e     usb.obj (.text:usbGetInterfaceStatus)
-                  0000e5e8    0000001e     spi_wbsl.obj (.text:wbsl_SpiReadReg)
-                  0000e606    0000001c     UsbIsr.obj (.text:IEP0InterruptHandler)
-                  0000e622    0000001c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_mgmtInit)
-                  0000e63e    0000001a     usb.obj (.text:USB_connect)
-                  0000e658    0000001a     usb.obj (.text:usbSetInterface)
-                  0000e672    0000001a     wbsl.obj (.text:wbsl_setTimer)
-                  0000e68c    00000018     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_SingleWriteRead_u8)
-                  0000e6a4    00000018     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_DelayMs)
-                  0000e6bc    00000018     usb.obj (.text:USB_resume)
-                  0000e6d4    00000018     spi_wbsl.obj (.text:wbsl_SpiWriteReg)
-                  0000e6ec    00000016     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RandomByte)
-                  0000e702    00000016     rts430x.lib : div16u.obj (.text)
-                  0000e718    00000016                 : mult16_f5hw.obj (.text)
-                  0000e72e    00000016     usb.obj (.text:usbGetConfigurationDescriptor)
-                  0000e744    00000016     usb.obj (.text:usbGetDeviceDescriptor)
-                  0000e75a    00000016     wbsl.obj (.text:wbsl_GpioIsr)
-                  0000e770    00000014     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:BSP_InitBoard)
-                  0000e784    00000014     usbEventHandling.obj (.text:USB_handleVbusOnEvent)
-                  0000e798    00000014     main.obj (.text:bluerobin_stop)
-                  0000e7ac    00000014     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ioctl.obj (.text:nwk_joinContext)
-                  0000e7c0    00000014                                      : main_AP_BM.obj (.text:sCB)
-                  0000e7d4    00000014     usb.obj (.text:usbGetConfiguration)
-                  0000e7e8    00000014     usb.obj (.text:usbReceiveDataPacketOnEP0)
-                  0000e7fc    00000014     UsbCdc.obj (.text:usbSetControlLineState)
-                  0000e810    00000012     BlueRobin_TX_915MHz.lib : br_common.obj (.text:BR_CalcRandomChannel_u8)
-                  0000e822    00000012                             : cc_radio.obj (.text:CC_OscOn_v)
-                  0000e834    00000012     UsbCdc.obj (.text:CdcIsReceiveInProgress)
-                  0000e846    00000012     rts430x.lib : memcpy.obj (.text:memcpy)
-                  0000e858    00000012     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_getJoinToken)
-                  0000e86a    00000012                                      : nwk_link.obj (.text:nwk_getLinkToken)
-                  0000e87c    00000012                                      : nwk_globals.obj (.text:nwk_getMyAddress)
-                  0000e88e    00000012                                      : nwk_join.obj (.text:nwk_setJoinToken)
-                  0000e8a0    00000012                                      : nwk_link.obj (.text:nwk_setLinkToken)
-                  0000e8b2    00000012     usb.obj (.text:usbInvalidRequest)
-                  0000e8c4    00000010     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_WriteRead_u8)
-                  0000e8d4    00000010     ccSPI.obj (.text:CC_SPI_WriteRead_u8)
-                  0000e8e4    00000010     usbEventHandling.obj (.text:USBCDC_handleDataReceived)
-                  0000e8f4    00000010     timer.obj (.text:_isr:TIMER0_A1_ISR)
-                  0000e904    00000010     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_getQ)
-                  0000e914    0000000e     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BRTX_WriteData_v)
-                  0000e922    0000000e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_setJoinContext)
-                  0000e930    0000000e                                      : nwk_link.obj (.text:nwk_setListenContext)
-                  0000e93e    0000000e     usb.obj (.text:usbSendZeroLengthPacketOnIEP0)
-                  0000e94c    0000000c     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.text:BRTX_GetTimer_u16)
-                  0000e958    0000000c                             : brSPI.obj (.text:BR_SPI_SelectChipWaitUntilReady_v)
-                  0000e964    0000000c     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_PostKillSem)
-                  0000e970    0000000c                                      : mrfi.obj (.text:MRFI_Receive)
-                  0000e97c    0000000c                                      : nwk.obj (.text:nwk_getNumObjectFromMsg)
-                  0000e988    0000000c     UsbCdc.obj (.text:usbSetLineCoding)
-                  0000e994    0000000c     spi_wbsl.obj (.text:wbsl_SpiWriteTxFifo)
-                  0000e9a0    0000000a     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BRTX_GetID_u32)
-                  0000e9aa    0000000a                             : br_api.obj (.text:BRTX_SetID_v)
-                  0000e9b4    0000000a                             : br_api.obj (.text:BRTX_Stop_v)
-                  0000e9be    0000000a     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:_system_pre_init)
-                  0000e9c8    0000000a                                      : nwk_ping.obj (.text:nwk_pingInit)
-                  0000e9d2    0000000a     rts430x.lib : lsl16.obj (.text)
-                  0000e9dc    0000000a     spi_wbsl.obj (.text:wbsl_SpiReadRxFifo)
-                  0000e9e6    00000008     usbEventHandling.obj (.text:USB_handleVbusOffEvent)
-                  0000e9ee    00000008     usb.obj (.text:USB_setEnabledEvents)
-                  0000e9f6    00000008     HAL_UCS.obj (.text:XT2_Stop)
-                  0000e9fe    00000008     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_resetSFMarker)
-                  0000ea06    00000006     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_DeselectChip_v)
-                  0000ea0c    00000006                             : brSPI.obj (.text:BR_SPI_SelectChip_v)
-                  0000ea12    00000006     ccSPI.obj (.text:CC_SPI_DeselectChip_v)
-                  0000ea18    00000006     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_GetRadioState)
-                  0000ea1e    00000006                                      : nwk_api.obj (.text:SMPL_Send)
-                  0000ea24    00000006     rts430x.lib : isr_trap.obj (.text:__TI_ISR_TRAP)
-                  0000ea2a    00000006     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_freeConnection)
-                  0000ea30    00000006                                      : nwk_globals.obj (.text:nwk_getBCastAddress)
-                  0000ea36    00000006                                      : nwk_globals.obj (.text:nwk_getFWVersion)
-                  0000ea3c    00000006                                      : nwk_frame.obj (.text:nwk_getMyRxType)
-                  0000ea42    00000006                                      : nwk.obj (.text:nwk_getSFInfoPtr)
-                  0000ea48    00000004     usbEventHandling.obj (.text:USBCDC_handleReceiveCompleted)
-                  0000ea4c    00000004     usbEventHandling.obj (.text:USBCDC_handleSendCompleted)
-                  0000ea50    00000004     usbEventHandling.obj (.text:USBCDC_handleSetControlLineState)
-                  0000ea54    00000004     usbEventHandling.obj (.text:USBCDC_handleSetLineCoding)
-                  0000ea58    00000004     usbEventHandling.obj (.text:USB_handleClockEvent)
-                  0000ea5c    00000004     usbEventHandling.obj (.text:USB_handleEnumCompleteEvent)
-                  0000ea60    00000004     usbEventHandling.obj (.text:USB_handleResetEvent)
-                  0000ea64    00000004     usbEventHandling.obj (.text:USB_handleResumeEvent)
-                  0000ea68    00000004     usbEventHandling.obj (.text:USB_handleSuspendEvent)
-                  0000ea6c    00000004     rts430x.lib : exit.obj (.text:abort)
-                  0000ea70    00000004     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_NVObj)
-                  0000ea74    00000004                                      : nwk_globals.obj (.text:nwk_getProtocolVersion)
-                  0000ea78    00000004                                      : nwk_join.obj (.text:nwk_join)
-                  0000ea7c    00000004                                      : nwk_freq.obj (.text:nwk_processFreq)
-                  0000ea80    00000004                                      : nwk_security.obj (.text:nwk_processSecurity)
-                  0000ea84    00000002     cmdHandler.obj (.text:BRTX_PrepareData_v)
-                  0000ea86    00000002     rts430x.lib : _lock.obj (.text:_nop)
-                  0000ea88    00000002     AP_MSP430F5509_CC1101_915MHz.lib : nwk_freq.obj (.text:nwk_freqInit)
-                  0000ea8a    00000002                                      : nwk_security.obj (.text:nwk_securityInit)
+.text      0    0000a000    00004b66     
+                  0000a000    00000bbe     main_AP_BM.obj (.text:simpliciti_main)
+                  0000abbe    00000396     cmdHandler.obj (.text:usb_decode)
+                  0000af54    000001b0     UsbCdc.obj (.text:USBCDC_receiveData)
+                  0000b104    0000019a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Init)
+                  0000b29e    0000017e                                      : nwk_link.obj (.text:smpl_send_link_reply)
+                  0000b41c    00000160                                      : nwk_QMgmt.obj (.text:nwk_QfindOldest)
+                  0000b57c    00000158     UsbCdc.obj (.text:CdcToHostFromBuffer)
+                  0000b6d4    00000148     UsbIsr.obj (.text:_isr:iUsbInterruptHandler)
+                  0000b81c    00000146     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Transmit)
+                  0000b962    0000013c                                      : nwk_frame.obj (.text:dispatchFrame)
+                  0000ba9e    00000120     usb.obj (.text:USB_reset)
+                  0000bbbe    00000118     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Ioctl)
+                  0000bcd6    0000010c                                      : nwk_api.obj (.text:SMPL_SendOpt)
+                  0000bde2    00000106                                      : nwk_join.obj (.text:smpl_send_join_reply)
+                  0000bee8    00000102     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.text:StateMachineAndScheduler_v)
+                  0000bfea    000000fe     UsbCdc.obj (.text:CdcToBufferFromHost)
+                  0000c0e8    000000e4     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:Mrfi_SyncPinRxIsr)
+                  0000c1cc    000000d4                                      : nwk.obj (.text:nwk_allocateLocalRxPort)
+                  0000c2a0    000000ce     HAL_PMM.obj (.text:SetVCoreUp)
+                  0000c36e    000000ce     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_processMgmt)
+                  0000c43c    000000ba                                      : nwk_link.obj (.text:nwk_processLink)
+                  0000c4f6    000000aa     wbsl.obj (.text:wbsl_RfIsr)
+                  0000c5a0    000000a6     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:isDupSandFFrame)
+                  0000c646    000000a4                                      : nwk_ioctl.obj (.text:nwk_radioControl)
+                  0000c6ea    000000a2                                      : nwk_frame.obj (.text:nwk_retrieveFrame)
+                  0000c78c    000000a0     main.obj (.text:main)
+                  0000c82c    00000098     UsbCdc.obj (.text:USBCDC_intfStatus)
+                  0000c8c4    00000092     main.obj (.text:USB_Handler_v)
+                  0000c956    00000092     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_isConnectionValid)
+                  0000c9e8    00000090                                      : nwk_frame.obj (.text:nwk_buildFrame)
+                  0000ca78    00000090     usb.obj (.text:usbDecodeAndProcessUsbRequest)
+                  0000cb08    0000008c     ccSPI.obj (.text:CC_SPI_Init_v)
+                  0000cb94    0000008c     HAL_PMM.obj (.text:SetVCoreDown)
+                  0000cc20    0000008a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:spiBurstFifoAccess)
+                  0000ccaa    0000008a     spi_wbsl.obj (.text:spiBurstFifoAccess)
+                  0000cd34    00000088     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_nwkInit)
+                  0000cdbc    00000086                                      : nwk_frame.obj (.text:nwk_SendEmptyPollRspFrame)
+                  0000ce42    00000084     usb.obj (.text:USB_enable)
+                  0000cec6    00000080     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_QfindSlot)
+                  0000cf46    00000080                                      : nwk_frame.obj (.text:nwk_sendAckReply)
+                  0000cfc6    00000078     UsbCdc.obj (.text:USBCDC_bytesInUSBBuffer)
+                  0000d03e    00000074     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:nwk_getSandFFrame)
+                  0000d0b2    00000072     UsbCdc.obj (.text:USBCDC_sendData)
+                  0000d124    00000070     usb.obj (.text:usbGetEndpointStatus)
+                  0000d194    00000070     usb.obj (.text:usbSendNextPacketOnIEP0)
+                  0000d204    0000006e     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioTransmitRegularData_v)
+                  0000d272    0000006e     UART.obj (.text:_isr:USCI_A1_ISR)
+                  0000d2e0    0000006c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ping.obj (.text:nwk_processPing)
+                  0000d34c    00000066                                      : nwk.obj (.text:nwk_saveJoinedDevice)
+                  0000d3b2    0000005e     UsbCdc.obj (.text:CopyUsbToBuff)
+                  0000d410    0000005e     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_SetRFPwr)
+                  0000d46e    0000005c                                      : mrfi.obj (.text:MRFI_SetLogicalChannel)
+                  0000d4ca    0000005a                                      : mrfi.obj (.text:MRFI_ReplyDelay)
+                  0000d524    00000056     usb.obj (.text:usbClearEndpointFeature)
+                  0000d57a    00000052     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_processJoin)
+                  0000d5cc    00000052                                      : nwk_ioctl.obj (.text:nwk_rawSend)
+                  0000d61e    00000052     UsbCdc.obj (.text:usbGetLineCoding)
+                  0000d670    00000050     usb.obj (.text:usbSetEndpointFeature)
+                  0000d6c0    0000004c     UsbCdc.obj (.text:Handler_SetLineCoding)
+                  0000d70c    0000004a     main.obj (.text:InitClock_v)
+                  0000d756    0000004a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:mrfiSpiCmdStrobe)
+                  0000d7a0    0000004a                                      : nwk.obj (.text:nwk_isValidReply)
+                  0000d7ea    0000004a     usb.obj (.text:usbGetStringDescriptor)
+                  0000d834    0000004a     spi_wbsl.obj (.text:wbsl_SpiCmdStrobe)
+                  0000d87e    00000048     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_Rssi)
+                  0000d8c6    00000048     rts430x.lib : autoinit.obj (.text:_auto_init)
+                  0000d90e    00000048     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_findAlreadyJoined)
+                  0000d956    00000046     BlueRobin_TX_915MHz.lib : brtx_packet.obj (.text:BRTX_MakePacket_v)
+                  0000d99c    00000046                             : br_common.obj (.text:BR_CalcRandomTimeOffset_u16)
+                  0000d9e2    00000046     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_isSandFClient)
+                  0000da28    00000046     usb.obj (.text:usbReceiveNextPacketOnOEP0)
+                  0000da6e    00000044     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Receive)
+                  0000dab2    00000044     UsbIsr.obj (.text:SetupPacketInterruptHandler)
+                  0000daf6    00000044     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_findPeer)
+                  0000db3a    00000044                                      : nwk.obj (.text:nwk_isLinkDuplicate)
+                  0000db7e    00000044                                      : mrfi.obj (.text:spiRegAccess)
+                  0000dbc2    00000044     spi_wbsl.obj (.text:spiRegAccess)
+                  0000dc06    00000042     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RxIdle)
+                  0000dc48    00000042     UsbIsr.obj (.text:PWRVBUSoffHandler)
+                  0000dc8a    00000042     UART.obj (.text:UART_recv_async)
+                  0000dccc    00000040     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioIdle_v)
+                  0000dd0c    00000040     UART.obj (.text:UART_Init_v)
+                  0000dd4c    0000003e     HAL_PMM.obj (.text:SetVCore)
+                  0000dd8a    0000003e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_joinInit)
+                  0000ddc8    0000003e                                      : nwk_frame.obj (.text:nwk_replayFrame)
+                  0000de06    0000003c                                      : nwk.obj (.text:initializeConnection)
+                  0000de42    0000003a     UsbCdc.obj (.text:CdcResetData)
+                  0000de7c    0000003a     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RxAddrIsFiltered)
+                  0000deb6    0000003a     RTC.obj (.text:RTC_Init_v)
+                  0000def0    0000003a     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_getNextConnection)
+                  0000df2a    00000038     BlueRobin_TX_915MHz.lib : brtx_irq.obj (.text:_isr:BRTX_Timing_IRQ_v)
+                  0000df62    00000038     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_putNumObjectIntoMsg)
+                  0000df9a    00000036                                      : mrfi.obj (.text:Mrfi_CalculateRssi)
+                  0000dfd0    00000036     main.obj (.text:_isr:UNMI_ISR)
+                  0000e006    00000036     usb.obj (.text:usbSetAddress)
+                  0000e03c    00000034     BlueRobin_TX_915MHz.lib : br_common.obj (.text:BR_CalcCRC_u8)
+                  0000e070    00000034     UART.obj (.text:UART_send_async)
+                  0000e0a4    00000034     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:mrfiSpiInit)
+                  0000e0d8    00000032                                      : nwk_ioctl.obj (.text:nwk_deviceAddress)
+                  0000e10a    00000030                                      : mrfi.obj (.text:MRFI_WakeUp)
+                  0000e13a    00000030     UsbIsr.obj (.text:PWRVBUSonHandler)
+                  0000e16a    00000030     HAL_UCS.obj (.text:XT2_Start)
+                  0000e19a    00000030     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_QadjustOrder)
+                  0000e1ca    00000030                                      : nwk_ioctl.obj (.text:nwk_rawReceive)
+                  0000e1fa    00000030                                      : nwk_frame.obj (.text:nwk_sendFrame)
+                  0000e22a    0000002e                                      : mrfi.obj (.text:MRFI_RxOn)
+                  0000e258    0000002e     UsbIsr.obj (.text:OEP0InterruptHandler)
+                  0000e286    0000002c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_api.obj (.text:SMPL_Init)
+                  0000e2b2    0000002c     usb.obj (.text:USB_suspend)
+                  0000e2de    0000002c     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_checkAppMsgTID)
+                  0000e30a    0000002a                                      : mrfi.obj (.text:MRFI_Sleep)
+                  0000e334    0000002a     rts430x.lib : boot.obj (.text:_isr:_c_int00_noexit)
+                  0000e35e    0000002a     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_getConnInfo)
+                  0000e388    0000002a                                      : nwk_globals.obj (.text:nwk_globalsInit)
+                  0000e3b2    0000002a                                      : nwk_link.obj (.text:nwk_linkInit)
+                  0000e3dc    0000002a     usb.obj (.text:usbGetDeviceStatus)
+                  0000e406    00000028     cmdHandler.obj (.text:BRTX_DataTransfered_v)
+                  0000e42e    00000028     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:map_lid2idx)
+                  0000e456    00000028     usb.obj (.text:usbSetConfiguration)
+                  0000e47e    00000026     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:Mrfi_DelayUsec)
+                  0000e4a4    00000026                                      : mrfi.obj (.text:_isr:BSP_GpioPort1Isr)
+                  0000e4ca    00000026                                      : nwk_QMgmt.obj (.text:nwk_QInit)
+                  0000e4f0    00000026                                      : nwk.obj (.text:nwk_checkConnInfo)
+                  0000e516    00000026     usb.obj (.text:usbClearDeviceFeature)
+                  0000e53c    00000026     usb.obj (.text:usbSetDeviceFeature)
+                  0000e562    00000024     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:BSP_Delay)
+                  0000e586    00000024                                      : bsp.obj (.text:BSP_Init)
+                  0000e5aa    00000024                                      : nwk_frame.obj (.text:nwk_frameInit)
+                  0000e5ce    00000022     usb.obj (.text:USB_disable)
+                  0000e5f0    00000022     usb.obj (.text:USB_disconnect)
+                  0000e612    00000022     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:nwk_buildAckReqFrame)
+                  0000e634    00000020     BlueRobin_TX_915MHz.lib : cc_radio.obj (.text:CC_RadioPowerdown_v)
+                  0000e654    00000020     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.text:MRFI_RxCompleteISR)
+                  0000e674    00000020     rts430x.lib : memmov.obj (.text:memmove)
+                  0000e694    00000020     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ioctl.obj (.text:nwk_connectionControl)
+                  0000e6b4    00000020     usb.obj (.text:usbSendDataPacketOnEP0)
+                  0000e6d4    0000001e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.text:nwk_setMyAddress)
+                  0000e6f2    0000001e     usb.obj (.text:usbGetInterface)
+                  0000e710    0000001e     usb.obj (.text:usbGetInterfaceStatus)
+                  0000e72e    0000001e     spi_wbsl.obj (.text:wbsl_SpiReadReg)
+                  0000e74c    0000001c     UsbIsr.obj (.text:IEP0InterruptHandler)
+                  0000e768    0000001c     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_mgmtInit)
+                  0000e784    0000001a     usb.obj (.text:USB_connect)
+                  0000e79e    0000001a     usb.obj (.text:usbSetInterface)
+                  0000e7b8    00000018     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_SingleWriteRead_u8)
+                  0000e7d0    00000018     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_DelayMs)
+                  0000e7e8    00000018     usb.obj (.text:USB_resume)
+                  0000e800    00000016     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_RandomByte)
+                  0000e816    00000016     rts430x.lib : div16u.obj (.text)
+                  0000e82c    00000016                 : mult16_f5hw.obj (.text)
+                  0000e842    00000016     usb.obj (.text:usbGetConfigurationDescriptor)
+                  0000e858    00000016     usb.obj (.text:usbGetDeviceDescriptor)
+                  0000e86e    00000016     wbsl.obj (.text:wbsl_GpioIsr)
+                  0000e884    00000014     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:BSP_InitBoard)
+                  0000e898    00000014     usbEventHandling.obj (.text:USB_handleVbusOnEvent)
+                  0000e8ac    00000014     main.obj (.text:bluerobin_stop)
+                  0000e8c0    00000014     AP_MSP430F5509_CC1101_915MHz.lib : nwk_ioctl.obj (.text:nwk_joinContext)
+                  0000e8d4    00000014     main_AP_BM.obj (.text:sCB)
+                  0000e8e8    00000014     usb.obj (.text:usbGetConfiguration)
+                  0000e8fc    00000014     usb.obj (.text:usbReceiveDataPacketOnEP0)
+                  0000e910    00000014     UsbCdc.obj (.text:usbSetControlLineState)
+                  0000e924    00000012     BlueRobin_TX_915MHz.lib : br_common.obj (.text:BR_CalcRandomChannel_u8)
+                  0000e936    00000012                             : cc_radio.obj (.text:CC_OscOn_v)
+                  0000e948    00000012     UsbCdc.obj (.text:CdcIsReceiveInProgress)
+                  0000e95a    00000012     rts430x.lib : memcpy.obj (.text:memcpy)
+                  0000e96c    00000012     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_getJoinToken)
+                  0000e97e    00000012                                      : nwk_link.obj (.text:nwk_getLinkToken)
+                  0000e990    00000012                                      : nwk_globals.obj (.text:nwk_getMyAddress)
+                  0000e9a2    00000012                                      : nwk_join.obj (.text:nwk_setJoinToken)
+                  0000e9b4    00000012                                      : nwk_link.obj (.text:nwk_setLinkToken)
+                  0000e9c6    00000012     usb.obj (.text:usbInvalidRequest)
+                  0000e9d8    00000010     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_WriteRead_u8)
+                  0000e9e8    00000010     ccSPI.obj (.text:CC_SPI_WriteRead_u8)
+                  0000e9f8    00000010     usbEventHandling.obj (.text:USBCDC_handleDataReceived)
+                  0000ea08    00000010     timer.obj (.text:_isr:TIMER0_A1_ISR)
+                  0000ea18    00000010     AP_MSP430F5509_CC1101_915MHz.lib : nwk_QMgmt.obj (.text:nwk_getQ)
+                  0000ea28    0000000e     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BRTX_WriteData_v)
+                  0000ea36    0000000e     AP_MSP430F5509_CC1101_915MHz.lib : nwk_join.obj (.text:nwk_setJoinContext)
+                  0000ea44    0000000e     usb.obj (.text:usbSendZeroLengthPacketOnIEP0)
+                  0000ea52    0000000c     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_PostKillSem)
+                  0000ea5e    0000000c                                      : mrfi.obj (.text:MRFI_Receive)
+                  0000ea6a    0000000c                                      : nwk.obj (.text:nwk_getNumObjectFromMsg)
+                  0000ea76    0000000c     UsbCdc.obj (.text:usbSetLineCoding)
+                  0000ea82    0000000a     BlueRobin_TX_915MHz.lib : br_api.obj (.text:BRTX_GetID_u32)
+                  0000ea8c    0000000a                             : br_api.obj (.text:BRTX_SetID_v)
+                  0000ea96    0000000a                             : br_api.obj (.text:BRTX_Stop_v)
+                  0000eaa0    0000000a     AP_MSP430F5509_CC1101_915MHz.lib : bsp.obj (.text:_system_pre_init)
+                  0000eaaa    0000000a                                      : nwk_ping.obj (.text:nwk_pingInit)
+                  0000eab4    0000000a     rts430x.lib : lsl16.obj (.text)
+                  0000eabe    0000000a     spi_wbsl.obj (.text:wbsl_SpiReadRxFifo)
+                  0000eac8    00000008     usbEventHandling.obj (.text:USB_handleVbusOffEvent)
+                  0000ead0    00000008     HAL_UCS.obj (.text:XT2_Stop)
+                  0000ead8    00000008     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.text:nwk_resetSFMarker)
+                  0000eae0    00000006     BlueRobin_TX_915MHz.lib : brSPI.obj (.text:BR_SPI_DeselectChip_v)
+                  0000eae6    00000006                             : brSPI.obj (.text:BR_SPI_SelectChip_v)
+                  0000eaec    00000006     ccSPI.obj (.text:CC_SPI_DeselectChip_v)
+                  0000eaf2    00000006     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.text:MRFI_GetRadioState)
+                  0000eaf8    00000006                                      : nwk_api.obj (.text:SMPL_Send)
+                  0000eafe    00000006     rts430x.lib : isr_trap.obj (.text:__TI_ISR_TRAP)
+                  0000eb04    00000006     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_freeConnection)
+                  0000eb0a    00000006                                      : nwk_globals.obj (.text:nwk_getBCastAddress)
+                  0000eb10    00000006                                      : nwk_globals.obj (.text:nwk_getFWVersion)
+                  0000eb16    00000006                                      : nwk_frame.obj (.text:nwk_getMyRxType)
+                  0000eb1c    00000006                                      : nwk.obj (.text:nwk_getSFInfoPtr)
+                  0000eb22    00000004     usbEventHandling.obj (.text:USBCDC_handleReceiveCompleted)
+                  0000eb26    00000004     usbEventHandling.obj (.text:USBCDC_handleSendCompleted)
+                  0000eb2a    00000004     usbEventHandling.obj (.text:USBCDC_handleSetControlLineState)
+                  0000eb2e    00000004     usbEventHandling.obj (.text:USBCDC_handleSetLineCoding)
+                  0000eb32    00000004     usbEventHandling.obj (.text:USB_handleClockEvent)
+                  0000eb36    00000004     usbEventHandling.obj (.text:USB_handleEnumCompleteEvent)
+                  0000eb3a    00000004     usbEventHandling.obj (.text:USB_handleResetEvent)
+                  0000eb3e    00000004     usbEventHandling.obj (.text:USB_handleResumeEvent)
+                  0000eb42    00000004     usbEventHandling.obj (.text:USB_handleSuspendEvent)
+                  0000eb46    00000004     rts430x.lib : exit.obj (.text:abort)
+                  0000eb4a    00000004     AP_MSP430F5509_CC1101_915MHz.lib : nwk.obj (.text:nwk_NVObj)
+                  0000eb4e    00000004                                      : nwk_globals.obj (.text:nwk_getProtocolVersion)
+                  0000eb52    00000004                                      : nwk_join.obj (.text:nwk_join)
+                  0000eb56    00000004                                      : nwk_freq.obj (.text:nwk_processFreq)
+                  0000eb5a    00000004                                      : nwk_security.obj (.text:nwk_processSecurity)
+                  0000eb5e    00000002     cmdHandler.obj (.text:BRTX_PrepareData_v)
+                  0000eb60    00000002     rts430x.lib : _lock.obj (.text:_nop)
+                  0000eb62    00000002     AP_MSP430F5509_CC1101_915MHz.lib : nwk_freq.obj (.text:nwk_freqInit)
+                  0000eb64    00000002                                      : nwk_security.obj (.text:nwk_securityInit)
 
-.const     0    0000ea8c    0000041d     
-                  0000ea8c    0000010a     descriptors.obj (.const:tUsbRequestList)
-                  0000eb96    00000100     BlueRobin_TX_915MHz.lib : br_common.obj (.const:.string:RandomValue_u8)
-                  0000ec96    00000090     descriptors.obj (.const:.string:abromStringDescriptor)
-                  0000ed26    00000054     wbsl.obj (.const:wbslRadioCfg)
-                  0000ed7a    00000043     descriptors.obj (.const)
-                  0000edbd    00000001     --HOLE-- [fill = 0]
-                  0000edbe    00000042     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.const:mrfiRadioCfg)
-                  0000ee00    00000032     wbsl.obj (.const:ResetRadioCfg)
-                  0000ee32    00000027     BlueRobin_TX_915MHz.lib : cc_radio.obj (.const:.string:RadioSettings_t)
-                  0000ee59    00000001     --HOLE-- [fill = 0]
-                  0000ee5a    00000018     AP_MSP430F5509_CC1101_915MHz.lib : nwk_frame.obj (.const:func)
-                  0000ee72    00000012     descriptors.obj (.const:.string:abromDeviceDescriptor)
-                  0000ee84    00000010     descriptors.obj (.const:stUsbHandle)
-                  0000ee94    00000009     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.const)
-                  0000ee9d    00000001     --HOLE-- [fill = 0]
-                  0000ee9e    00000004                                      : mrfi.obj (.const:.string:mrfiBroadcastAddr)
-                  0000eea2    00000004                                      : mrfi.obj (.const:.string:mrfiLogicalChanTable)
-                  0000eea6    00000003                                      : mrfi.obj (.const:.string:mrfiRFPowerTable)
+.const     0    0000eb66    0000036f     
+                  0000eb66    0000010a     descriptors.obj (.const:tUsbRequestList)
+                  0000ec70    00000100     BlueRobin_TX_915MHz.lib : br_common.obj (.const:.string:RandomValue_u8)
+                  0000ed70    00000090     descriptors.obj (.const:.string:abromStringDescriptor)
+                  0000ee00    00000043     descriptors.obj (.const)
+                  0000ee43    00000001     main_AP_BM.obj (.const)
+                  0000ee44    00000042     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.const:mrfiRadioCfg)
+                  0000ee86    00000018                                      : nwk_frame.obj (.const:func)
+                  0000ee9e    00000012     descriptors.obj (.const:.string:abromDeviceDescriptor)
+                  0000eeb0    00000010     descriptors.obj (.const:stUsbHandle)
+                  0000eec0    00000009     AP_MSP430F5509_CC1101_915MHz.lib : nwk_globals.obj (.const)
+                  0000eec9    00000001     --HOLE-- [fill = 0]
+                  0000eeca    00000004                                      : mrfi.obj (.const:.string:mrfiBroadcastAddr)
+                  0000eece    00000004                                      : mrfi.obj (.const:.string:mrfiLogicalChanTable)
+                  0000eed2    00000003                                      : mrfi.obj (.const:.string:mrfiRFPowerTable)
 
-.cinit     0    0000eeaa    00000154     
-                  0000eeaa    0000003c     wbsl.obj (.cinit)
-                  0000eee6    00000030     cmdHandler.obj (.cinit)
-                  0000ef16    0000002f     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.cinit)
-                  0000ef45    00000001     --HOLE-- [fill = 0]
-                  0000ef46    00000021                                      : nwk_join.obj (.cinit)
-                  0000ef67    00000001     --HOLE-- [fill = 0]
-                  0000ef68    00000020                                      : nwk_frame.obj (.cinit)
-                  0000ef88    00000019                                      : nwk_link.obj (.cinit)
-                  0000efa1    00000001     --HOLE-- [fill = 0]
-                  0000efa2    00000011                                      : main_AP_BM.obj (.cinit)
-                  0000efb3    00000001     --HOLE-- [fill = 0]
-                  0000efb4    00000011     usb.obj (.cinit)
+.cinit     0    0000eed6    00000192     
+                  0000eed6    0000003c     wbsl.obj (.cinit)
+                  0000ef12    00000031     main_AP_BM.obj (.cinit)
+                  0000ef43    00000001     --HOLE-- [fill = 0]
+                  0000ef44    00000030     cmdHandler.obj (.cinit)
+                  0000ef74    0000002f     AP_MSP430F5509_CC1101_915MHz.lib : mrfi.obj (.cinit)
+                  0000efa3    00000001     --HOLE-- [fill = 0]
+                  0000efa4    00000021                                      : nwk_join.obj (.cinit)
                   0000efc5    00000001     --HOLE-- [fill = 0]
-                  0000efc6    0000000b     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.cinit)
-                  0000efd1    00000001     --HOLE-- [fill = 0]
-                  0000efd2    00000005                                      : bsp.obj (.cinit)
-                  0000efd7    00000001     --HOLE-- [fill = 0]
-                  0000efd8    00000005                                      : nwk.obj (.cinit)
-                  0000efdd    00000001     --HOLE-- [fill = 0]
-                  0000efde    00000005                                      : nwk_api.obj (.cinit)
-                  0000efe3    00000001     --HOLE-- [fill = 0]
-                  0000efe4    00000005                                      : nwk_globals.obj (.cinit)
-                  0000efe9    00000001     --HOLE-- [fill = 0]
-                  0000efea    00000005                                      : nwk_ping.obj (.cinit)
-                  0000efef    00000001     --HOLE-- [fill = 0]
-                  0000eff0    00000005     main.obj (.cinit)
-                  0000eff5    00000001     --HOLE-- [fill = 0]
-                  0000eff6    00000005     usbEventHandling.obj (.cinit)
-                  0000effb    00000001     --HOLE-- [fill = 0]
-                  0000effc    00000002     (.pad.cinit) [fill = 0]
+                  0000efc6    00000020                                      : nwk_frame.obj (.cinit)
+                  0000efe6    0000001d     UART.obj (.cinit)
+                  0000f003    00000001     --HOLE-- [fill = 0]
+                  0000f004    00000019     AP_MSP430F5509_CC1101_915MHz.lib : nwk_link.obj (.cinit)
+                  0000f01d    00000001     --HOLE-- [fill = 0]
+                  0000f01e    00000011     usb.obj (.cinit)
+                  0000f02f    00000001     --HOLE-- [fill = 0]
+                  0000f030    0000000b     AP_MSP430F5509_CC1101_915MHz.lib : nwk_mgmt.obj (.cinit)
+                  0000f03b    00000001     --HOLE-- [fill = 0]
+                  0000f03c    00000005                                      : bsp.obj (.cinit)
+                  0000f041    00000001     --HOLE-- [fill = 0]
+                  0000f042    00000005                                      : nwk.obj (.cinit)
+                  0000f047    00000001     --HOLE-- [fill = 0]
+                  0000f048    00000005                                      : nwk_api.obj (.cinit)
+                  0000f04d    00000001     --HOLE-- [fill = 0]
+                  0000f04e    00000005                                      : nwk_globals.obj (.cinit)
+                  0000f053    00000001     --HOLE-- [fill = 0]
+                  0000f054    00000005                                      : nwk_ping.obj (.cinit)
+                  0000f059    00000001     --HOLE-- [fill = 0]
+                  0000f05a    00000005     main.obj (.cinit)
+                  0000f05f    00000001     --HOLE-- [fill = 0]
+                  0000f060    00000005     usbEventHandling.obj (.cinit)
+                  0000f065    00000001     --HOLE-- [fill = 0]
+                  0000f066    00000002     (.pad.cinit) [fill = 0]
 
 RTC        0    0000ffd2    00000002     
                   0000ffd2    00000002     rts430x.lib : int41.obj (.int41)
@@ -450,7 +424,7 @@ USCI_B1    0    0000ffda    00000002
                   0000ffda    00000002     rts430x.lib : int45.obj (.int45)
 
 USCI_A1    0    0000ffdc    00000002     
-                  0000ffdc    00000002     rts430x.lib : int46.obj (.int46)
+                  0000ffdc    00000002     UART.obj (.int46)
 
 PORT1      0    0000ffde    00000002     
                   0000ffde    00000002     rts430x.lib : int47.obj (.int47)
@@ -547,43 +521,39 @@ address    name
 00000752   ADC10MEM0
 00000753   ADC10MEM0_H
 00000752   ADC10MEM0_L
-0000281a   BRTX_BasicPeriodTime_u16
-00002816   BRTX_ConfigFlags_t
-0000e234   BRTX_DataTransfered_v
-00002822   BRTX_FirstData_u32
-00002818   BRTX_FirstPacketTime_u16
-0000e9a0   BRTX_GetID_u32
-0000e94c   BRTX_GetTimer_u16
-0000281c   BRTX_ID_u32
-0000d68e   BRTX_MakePacket_v
-0000284a   BRTX_PacketBits_t
-00002817   BRTX_PacketChannel_u8
-00002812   BRTX_PacketState_u8
-0000ea84   BRTX_PrepareData_v
-00002820   BRTX_SC_u8
-00002826   BRTX_SecondData_u8
-0000e9aa   BRTX_SetID_v
-0000dc30   BRTX_Start_v
-00002814   BRTX_StatusFlags_t
-0000e9b4   BRTX_Stop_v
-0000dc68   BRTX_Timing_IRQ_v
-0000e914   BRTX_WriteData_v
-0000dd7a   BR_CalcCRC_u8
-0000e810   BR_CalcRandomChannel_u8
-0000d6d4   BR_CalcRandomTimeOffset_u16
-0000e424   BR_Init_v
-0000ea06   BR_SPI_DeselectChip_v
-0000cb7c   BR_SPI_Init_v
-0000e958   BR_SPI_SelectChipWaitUntilReady_v
-0000ea0c   BR_SPI_SelectChip_v
-0000e68c   BR_SPI_SingleWriteRead_u8
-0000e8c4   BR_SPI_WriteRead_u8
-0000e3b8   BSP_Delay
-0000e2fa   BSP_GpioPort1Isr
-0000e3dc   BSP_Init
-0000e770   BSP_InitBoard
-0000e4ce   BlueRobin_RadioISR_v
-0000ea6c   C$$EXIT
+00002702   AlarmChangedFlag
+00002908   BRTX_BasicPeriodTime_u16
+00002904   BRTX_ConfigFlags_t
+0000e406   BRTX_DataTransfered_v
+00002910   BRTX_FirstData_u32
+00002906   BRTX_FirstPacketTime_u16
+0000ea82   BRTX_GetID_u32
+0000290a   BRTX_ID_u32
+0000d956   BRTX_MakePacket_v
+00002938   BRTX_PacketBits_t
+00002905   BRTX_PacketChannel_u8
+00002900   BRTX_PacketState_u8
+0000eb5e   BRTX_PrepareData_v
+0000290e   BRTX_SC_u8
+00002914   BRTX_SecondData_u8
+0000ea8c   BRTX_SetID_v
+00002902   BRTX_StatusFlags_t
+0000ea96   BRTX_Stop_v
+0000df2a   BRTX_Timing_IRQ_v
+0000ea28   BRTX_WriteData_v
+0000e03c   BR_CalcCRC_u8
+0000e924   BR_CalcRandomChannel_u8
+0000d99c   BR_CalcRandomTimeOffset_u16
+0000eae0   BR_SPI_DeselectChip_v
+0000eae6   BR_SPI_SelectChip_v
+0000e7b8   BR_SPI_SingleWriteRead_u8
+0000e9d8   BR_SPI_WriteRead_u8
+0000e562   BSP_Delay
+0000e4a4   BSP_GpioPort1Isr
+0000e586   BSP_Init
+0000e884   BSP_InitBoard
+0000e634   BlueRobin_RadioISR_v
+0000eb46   C$$EXIT
 000008c0   CBCTL0
 000008c1   CBCTL0_H
 000008c0   CBCTL0_L
@@ -600,17 +570,16 @@ address    name
 000008cd   CBINT_H
 000008cc   CBINT_L
 000008ce   CBIV
-0000287e   CC_256ByteWriteTime_u16
-0000e822   CC_OscOn_v
-0000287c   CC_OscStartupTime_u16
-0000da4c   CC_RadioIdle_v
-0000b06c   CC_RadioInit_v
-0000e4ce   CC_RadioPowerdown_v
-0000e4ce   CC_RadioStop_v
-0000cea2   CC_RadioTransmitRegularData_v
-0000ea12   CC_SPI_DeselectChip_v
-0000c6be   CC_SPI_Init_v
-0000e8d4   CC_SPI_WriteRead_u8
+0000296c   CC_256ByteWriteTime_u16
+0000e936   CC_OscOn_v
+0000296a   CC_OscStartupTime_u16
+0000dccc   CC_RadioIdle_v
+0000e634   CC_RadioPowerdown_v
+0000e634   CC_RadioStop_v
+0000d204   CC_RadioTransmitRegularData_v
+0000eaec   CC_SPI_DeselectChip_v
+0000cb08   CC_SPI_Init_v
+0000e9e8   CC_SPI_WriteRead_u8
 00000150   CRCDI
 00000152   CRCDIRB
 00000153   CRCDIRB_H
@@ -623,11 +592,11 @@ address    name
 00000156   CRCRESR
 00000157   CRCRESR_H
 00000156   CRCRESR_L
-0000e834   CdcIsReceiveInProgress
-0000db82   CdcResetData
-0000b830   CdcToBufferFromHost
-0000ac86   CdcToHostFromBuffer
-0000d04a   CopyUsbToBuff
+0000e948   CdcIsReceiveInProgress
+0000de42   CdcResetData
+0000bfea   CdcToBufferFromHost
+0000b57c   CdcToHostFromBuffer
+0000d3b2   CopyUsbToBuff
 00000510   DMA0CTL
 00000511   DMA0CTL_H
 00000510   DMA0CTL_L
@@ -676,8 +645,9 @@ address    name
 0000050e   DMAIV
 0000050f   DMAIV_H
 0000050e   DMAIV_L
+00002700   DateTimeChangedFlag
 00001800   DeviceConfig_t
-00002776   Distance_u16
+00002864   Distance_u16
 00000140   FCTL1
 00000141   FCTL1_H
 00000140   FCTL1_L
@@ -687,12 +657,11 @@ address    name
 00000146   FCTL4
 00000147   FCTL4_H
 00000146   FCTL4_L
-0000d56e   Get_TLV_Info
-0000d3b0   Handler_SetLineCoding
-00002773   HeartRate_u8
-0000e606   IEP0InterruptHandler
-0000e9d2   I_LSL
-0000d3fc   InitClock_v
+0000d6c0   Handler_SetLineCoding
+00002861   HeartRate_u8
+0000e74c   IEP0InterruptHandler
+0000eab4   I_LSL
+0000d70c   InitClock_v
 000004c4   MAC
 000004da   MAC32H
 000004db   MAC32H_H
@@ -732,24 +701,25 @@ address    name
 000004c2   MPYS_L
 000004c1   MPY_H
 000004c0   MPY_L
-0000e6a4   MRFI_DelayMs
-0000ea18   MRFI_GetRadioState
-0000a546   MRFI_Init
-0000e964   MRFI_PostKillSem
-0000e6ec   MRFI_RandomByte
-0000e970   MRFI_Receive
-0000d162   MRFI_ReplyDelay
-0000d5b6   MRFI_Rssi
-0000dbbc   MRFI_RxAddrIsFiltered
-0000e4ee   MRFI_RxCompleteISR
-0000d9c8   MRFI_RxIdle
-0000e02c   MRFI_RxOn
-0000d106   MRFI_SetLogicalChannel
-0000d0a8   MRFI_SetRFPwr
-0000e138   MRFI_Sleep
-0000af26   MRFI_Transmit
-0000deac   MRFI_WakeUp
-0000e05a   OEP0InterruptHandler
+0000e7d0   MRFI_DelayMs
+0000eaf2   MRFI_GetRadioState
+0000b104   MRFI_Init
+0000ea52   MRFI_PostKillSem
+0000e800   MRFI_RandomByte
+0000ea5e   MRFI_Receive
+0000d4ca   MRFI_ReplyDelay
+0000d87e   MRFI_Rssi
+0000de7c   MRFI_RxAddrIsFiltered
+0000e654   MRFI_RxCompleteISR
+0000dc06   MRFI_RxIdle
+0000e22a   MRFI_RxOn
+0000d46e   MRFI_SetLogicalChannel
+0000d410   MRFI_SetRFPwr
+0000e30a   MRFI_Sleep
+0000b81c   MRFI_Transmit
+0000e10a   MRFI_WakeUp
+00002701   MedicineChangedFlag
+0000e258   OEP0InterruptHandler
 000004c8   OP2
 000004e2   OP2H
 000004e3   OP2H_H
@@ -872,8 +842,8 @@ address    name
 0000012e   PMMRIE
 0000012f   PMMRIE_H
 0000012e   PMMRIE_L
-0000da0a   PWRVBUSoffHandler
-0000dedc   PWRVBUSonHandler
+0000dc48   PWRVBUSoffHandler
+0000e13a   PWRVBUSonHandler
 00000158   RCCTL0
 00000159   RCCTL0_H
 00000158   RCCTL0_L
@@ -932,7 +902,8 @@ address    name
 000004b6   RTCYEAR
 000004b7   RTCYEAR_H
 000004b6   RTCYEAR_L
-0000eb96   RandomValue_u8
+0000deb6   RTC_Init_v
+0000ec70   RandomValue_u8
 00000100   SFRIE1
 00000101   SFRIE1_H
 00000100   SFRIE1_L
@@ -942,12 +913,11 @@ address    name
 00000104   SFRRPCR
 00000105   SFRRPCR_H
 00000104   SFRRPCR_L
-0000e088   SMPL_Init
-0000b404   SMPL_Ioctl
-0000cf7c   SMPL_LinkListen
-0000d7ec   SMPL_Receive
-0000ea1e   SMPL_Send
-0000b51c   SMPL_SendOpt
+0000e286   SMPL_Init
+0000bbbe   SMPL_Ioctl
+0000da6e   SMPL_Receive
+0000eaf8   SMPL_Send
+0000bcd6   SMPL_SendOpt
 000004ce   SUMEXT
 000004cf   SUMEXT_H
 000004ce   SUMEXT_L
@@ -993,9 +963,9 @@ address    name
 0000019a   SYSUNIV
 0000019b   SYSUNIV_H
 0000019a   SYSUNIV_L
-0000da8c   SetVCore
-0000d830   SetupPacketInterruptHandler
-00002774   Speed_u8
+0000dd4c   SetVCore
+0000dab2   SetupPacketInterruptHandler
+00002862   Speed_u8
 00000352   TA0CCR0
 00000354   TA0CCR1
 00000356   TA0CCR2
@@ -1048,9 +1018,12 @@ address    name
 000003e0   TB0EX0
 000003ee   TB0IV
 000003d0   TB0R
-0000e8f4   TIMER0_A1_ISR
-0000e4ce   TX_PacketEnd
+0000ea08   TIMER0_A1_ISR
+0000e634   TX_PacketEnd
 00002556   TxBuffer
+0000dd0c   UART_Init_v
+0000dc8a   UART_recv_async
+0000e070   UART_send_async
 000005d0   UCA0ABCTL
 000005c6   UCA0BRW
 000005c7   UCA0BRW_H
@@ -1152,16 +1125,16 @@ address    name
 00000170   UCSCTL8
 00000171   UCSCTL8_H
 00000170   UCSCTL8_L
-0000dd0e   UNMI_ISR
-0000cbf4   USBCDC_bytesInUSBBuffer
-0000e8e4   USBCDC_handleDataReceived
-0000ea48   USBCDC_handleReceiveCompleted
-0000ea4c   USBCDC_handleSendCompleted
-0000ea50   USBCDC_handleSetControlLineState
-0000ea54   USBCDC_handleSetLineCoding
-0000c3e2   USBCDC_intfStatus
-0000a396   USBCDC_receiveData
-0000cce0   USBCDC_sendData
+0000dfd0   UNMI_ISR
+0000cfc6   USBCDC_bytesInUSBBuffer
+0000e9f8   USBCDC_handleDataReceived
+0000eb22   USBCDC_handleReceiveCompleted
+0000eb26   USBCDC_handleSendCompleted
+0000eb2a   USBCDC_handleSetControlLineState
+0000eb2e   USBCDC_handleSetLineCoding
+0000c82c   USBCDC_intfStatus
+0000af54   USBCDC_receiveData
+0000d0b2   USBCDC_sendData
 00000902   USBCNF
 00000903   USBCNF_H
 00000902   USBCNF_L
@@ -1296,40 +1269,36 @@ address    name
 00000932   USBVECINT
 00000933   USBVECINT_H
 00000932   USBVECINT_L
-0000c47a   USB_Handler_v
-0000be6e   USB_InitSerialStringDescriptor
-00002862   USB_RX_memcpy
-0000285e   USB_TX_memcpy
-0000e63e   USB_connect
-0000de16   USB_connectionInfo
-0000e446   USB_disable
-0000e468   USB_disconnect
-0000c9f8   USB_enable
-0000ea58   USB_handleClockEvent
-0000ea5c   USB_handleEnumCompleteEvent
-0000ea60   USB_handleResetEvent
-0000ea64   USB_handleResumeEvent
-0000ea68   USB_handleSuspendEvent
-0000e9e6   USB_handleVbusOffEvent
-0000e784   USB_handleVbusOnEvent
-0000d1bc   USB_init
-0000e25c   USB_initMemcpy
-0000b2e4   USB_reset
-0000e6bc   USB_resume
-0000e9ee   USB_setEnabledEvents
-0000e0b4   USB_suspend
+0000c8c4   USB_Handler_v
+00002950   USB_RX_memcpy
+0000294c   USB_TX_memcpy
+0000e784   USB_connect
+0000e5ce   USB_disable
+0000e5f0   USB_disconnect
+0000ce42   USB_enable
+0000eb32   USB_handleClockEvent
+0000eb36   USB_handleEnumCompleteEvent
+0000eb3a   USB_handleResetEvent
+0000eb3e   USB_handleResumeEvent
+0000eb42   USB_handleSuspendEvent
+0000eac8   USB_handleVbusOffEvent
+0000e898   USB_handleVbusOnEvent
+0000ba9e   USB_reset
+0000e7e8   USB_resume
+0000e2b2   USB_suspend
+0000d272   USCI_A1_ISR
 0000015c   WDTCTL
 0000015d   WDTCTL_H
 0000015c   WDTCTL_L
-0000df0c   XT2_Start
-0000e9f6   XT2_Stop
+0000e16a   XT2_Start
+0000ead0   XT2_Stop
 00003400   __STACK_END
 000000a0   __STACK_SIZE
-0000ea24   __TI_ISR_TRAP
+0000eafe   __TI_ISR_TRAP
 00000001   __TI_args_main
 00000001   __TI_auto_init
-0000286e   __TI_cleanup_ptr
-00002872   __TI_dtors_ptr
+0000295c   __TI_cleanup_ptr
+00002960   __TI_dtors_ptr
 00000001   __TI_exit
 0000ffd2   __TI_int41
 0000ffd4   __TI_int42
@@ -1356,126 +1325,126 @@ address    name
 ffffffff   __binit__
 00002400   __bss__
 ffffffff   __c_args__
-0000eeaa   __cinit__
+0000eed6   __cinit__
 00002400   __data__
-0000e702   __divu
+0000e816   __divu
 00002400   __edata__
-00002881   __end__
-0000ea8c   __etext__
-0000e718   __mpyi_f5hw
+0000296f   __end__
+0000eb66   __etext__
+0000e82c   __mpyi_f5hw
 ffffffff   __pinit__
-0000e702   __remu
+0000e816   __remu
 0000a000   __text__
-0000d5fe   _auto_init
-0000e162   _c_int00
-0000e162   _c_int00_noexit
-00002866   _lock
-0000ea86   _nop
+0000d8c6   _auto_init
+0000e334   _c_int00
+0000e334   _c_int00_noexit
+00002954   _lock
+0000eb60   _nop
 0000fffe   _reset_vector
 00003360   _stack
-0000e9be   _system_pre_init
-0000286a   _unlock
+0000eaa0   _system_pre_init
+00002958   _unlock
 00002378   abIEP0Buffer
 00002370   abOEP0Buffer
-00002710   abUsbRequestIncomingData
-00002708   abUsbRequestReturnData
-0000ea6c   abort
-00002718   abramSerialStringDescriptor
-0000ed7a   abromConfigurationDescriptorGroup
-0000ee72   abromDeviceDescriptor
-0000ec96   abromStringDescriptor
-000027fa   bCDCDataReceived_event
-0000273c   bEnumerationStatus
-0000273b   bFunctionSuspended
-0000273a   bStatusAction
+000027fe   abUsbRequestIncomingData
+000027f6   abUsbRequestReturnData
+0000eb46   abort
+00002806   abramSerialStringDescriptor
+0000ee00   abromConfigurationDescriptorGroup
+0000ee9e   abromDeviceDescriptor
+0000ed70   abromStringDescriptor
+000028e8   bCDCDataReceived_event
+0000282a   bEnumerationStatus
+00002829   bFunctionSuspended
+00002828   bStatusAction
 ffffffff   binit
-00002742   bluerobin_on
-00002743   bluerobin_start_now
-0000e798   bluerobin_stop
-0000eeaa   cinit
-0000274a   current_packet_size
+00002830   bluerobin_on
+00002831   bluerobin_start_now
+0000e8ac   bluerobin_stop
+0000eed6   cinit
+00002838   current_packet_size
 0000259c   ed_address
-000026dc   ed_data
+000026de   ed_data
 00002400   edata
-00002881   end
-0000ea8c   etext
-0000adde   iUsbInterruptHandler
+0000296f   end
+0000eb66   etext
+0000b6d4   iUsbInterruptHandler
 00002596   initPacket
-0000c152   isDupSandFFrame
-0000a85e   main
-0000e846   memcpy
-0000df3c   memcpyDMA0
-0000e50e   memmove
-0000ee9e   mrfiBroadcastAddr
-0000d446   mrfiSpiCmdStrobe
-0000ddae   mrfiSpiInit
-00002827   numUSbEvent
-0000ea70   nwk_NVObj
-0000e320   nwk_QInit
-0000df6c   nwk_QadjustOrder
-0000a9c8   nwk_QfindOldest
-0000ca7c   nwk_QfindSlot
-0000c972   nwk_SendEmptyPollRspFrame
-0000bbfe   nwk_allocateLocalRxPort
-0000e48a   nwk_buildAckReqFrame
-0000c59e   nwk_buildFrame
-0000e0e0   nwk_checkAppMsgTID
-0000e346   nwk_checkConnInfo
-0000e52e   nwk_connectionControl
-0000de48   nwk_deviceAddress
-0000d646   nwk_findAlreadyJoined
-0000d874   nwk_findPeer
-0000e400   nwk_frameInit
-0000ea2a   nwk_freeConnection
-0000ea88   nwk_freqInit
-0000ea30   nwk_getBCastAddress
-0000e18c   nwk_getConnInfo
-0000ea36   nwk_getFWVersion
-0000e858   nwk_getJoinToken
-0000e86a   nwk_getLinkToken
-0000d8b8   nwk_getLocalLinkID
-0000e87c   nwk_getMyAddress
-0000ea3c   nwk_getMyRxType
-0000dbf6   nwk_getNextConnection
-0000e97c   nwk_getNumObjectFromMsg
-0000ea74   nwk_getProtocolVersion
-0000e904   nwk_getQ
-0000ea42   nwk_getSFInfoPtr
-0000cc6c   nwk_getSandFFrame
-0000e1b6   nwk_globalsInit
-0000c50c   nwk_isConnectionValid
-0000d8fc   nwk_isLinkDuplicate
-0000d71a   nwk_isSandFClient
-0000d490   nwk_isValidReply
-0000ea78   nwk_join
-0000e7ac   nwk_joinContext
-0000daca   nwk_joinInit
-0000e1e0   nwk_linkInit
-0000e622   nwk_mgmtInit
-0000c8ea   nwk_nwkInit
-0000e9c8   nwk_pingInit
-0000ea7c   nwk_processFreq
-0000d26a   nwk_processJoin
-0000bfee   nwk_processLink
-0000bda0   nwk_processMgmt
-0000cf10   nwk_processPing
-0000ea80   nwk_processSecurity
-0000dca0   nwk_putNumObjectIntoMsg
-0000c1f8   nwk_radioControl
-0000df9c   nwk_rawReceive
-0000d2bc   nwk_rawSend
-0000db08   nwk_replayFrame
-0000e9fe   nwk_resetSFMarker
-0000c340   nwk_retrieveFrame
-0000cfe4   nwk_saveJoinedDevice
-0000ea8a   nwk_securityInit
-0000cafc   nwk_sendAckReply
-0000dfcc   nwk_sendFrame
-0000e922   nwk_setJoinContext
-0000e88e   nwk_setJoinToken
-0000e8a0   nwk_setLinkToken
-0000e930   nwk_setListenContext
-0000e58e   nwk_setMyAddress
+000027e8   intBuffer
+0000c5a0   isDupSandFFrame
+000026b6   led_toggle
+0000c78c   main
+0000e95a   memcpy
+0000e674   memmove
+0000eeca   mrfiBroadcastAddr
+0000d756   mrfiSpiCmdStrobe
+0000e0a4   mrfiSpiInit
+000026ff   newDataFlag
+000028ff   numUSbEvent
+0000eb4a   nwk_NVObj
+0000e4ca   nwk_QInit
+0000e19a   nwk_QadjustOrder
+0000b41c   nwk_QfindOldest
+0000cec6   nwk_QfindSlot
+0000cdbc   nwk_SendEmptyPollRspFrame
+0000c1cc   nwk_allocateLocalRxPort
+0000e612   nwk_buildAckReqFrame
+0000c9e8   nwk_buildFrame
+0000e2de   nwk_checkAppMsgTID
+0000e4f0   nwk_checkConnInfo
+0000e694   nwk_connectionControl
+0000e0d8   nwk_deviceAddress
+0000d90e   nwk_findAlreadyJoined
+0000daf6   nwk_findPeer
+0000e5aa   nwk_frameInit
+0000eb04   nwk_freeConnection
+0000eb62   nwk_freqInit
+0000eb0a   nwk_getBCastAddress
+0000e35e   nwk_getConnInfo
+0000eb10   nwk_getFWVersion
+0000e96c   nwk_getJoinToken
+0000e97e   nwk_getLinkToken
+0000e990   nwk_getMyAddress
+0000eb16   nwk_getMyRxType
+0000def0   nwk_getNextConnection
+0000ea6a   nwk_getNumObjectFromMsg
+0000eb4e   nwk_getProtocolVersion
+0000ea18   nwk_getQ
+0000eb1c   nwk_getSFInfoPtr
+0000d03e   nwk_getSandFFrame
+0000e388   nwk_globalsInit
+0000c956   nwk_isConnectionValid
+0000db3a   nwk_isLinkDuplicate
+0000d9e2   nwk_isSandFClient
+0000d7a0   nwk_isValidReply
+0000eb52   nwk_join
+0000e8c0   nwk_joinContext
+0000dd8a   nwk_joinInit
+0000e3b2   nwk_linkInit
+0000e768   nwk_mgmtInit
+0000cd34   nwk_nwkInit
+0000eaaa   nwk_pingInit
+0000eb56   nwk_processFreq
+0000d57a   nwk_processJoin
+0000c43c   nwk_processLink
+0000c36e   nwk_processMgmt
+0000d2e0   nwk_processPing
+0000eb5a   nwk_processSecurity
+0000df62   nwk_putNumObjectIntoMsg
+0000c646   nwk_radioControl
+0000e1ca   nwk_rawReceive
+0000d5cc   nwk_rawSend
+0000ddc8   nwk_replayFrame
+0000ead8   nwk_resetSFMarker
+0000c6ea   nwk_retrieveFrame
+0000d34c   nwk_saveJoinedDevice
+0000eb64   nwk_securityInit
+0000cf46   nwk_sendAckReply
+0000e1fa   nwk_sendFrame
+0000ea36   nwk_setJoinContext
+0000e9a2   nwk_setJoinToken
+0000e9b4   nwk_setLinkToken
+0000e6d4   nwk_setMyAddress
 00002518   packet_ready_flag
 00001c00   pbXBufferAddressEp1
 00001d00   pbXBufferAddressEp2
@@ -1506,85 +1475,101 @@ ffffffff   binit
 000021c0   pbYBufferAddressEp86
 000022c0   pbYBufferAddressEp87
 ffffffff   pinit
-00002747   ptrTX
+00002835   ptrTX
+00002780   rxBuffer
+000027e4   rxCompleteFlag
+000027e7   rxIdx
 00002519   rxtx_flag
-0000e7c0   sCB
-000027d7   sInit_done
-000026bc   simpliciti_data
-000026ba   simpliciti_flag
-0000ab28   simpliciti_main
-00002741   simpliciti_on
-00002744   simpliciti_start_now
-000027fc   simpliciti_sync_buffer
-00002810   simpliciti_sync_buffer_status
-0000ee84   stUsbHandle
-00002740   system_status
+0000e8d4   sCB
+000027e9   sInit_done
+000026be   simpliciti_data
+000026bd   simpliciti_flag
+0000a000   simpliciti_main
+0000282f   simpliciti_on
+00002832   simpliciti_start_now
+000028ea   simpliciti_sync_buffer
+000028fe   simpliciti_sync_buffer_status
+0000eeb0   stUsbHandle
+000026fe   status_code
+0000274e   stringBuffer
+0000282e   system_status
 00000920   tEndPoint0DescriptorBlock
 000023c8   tInputEndPointDescriptorBlock
 00002388   tOutputEndPointDescriptorBlock
 00002380   tSetupPacket
-0000ea8c   tUsbRequestList
+0000eb66   tUsbRequestList
+00002704   t_batt
+00002714   t_day
+00002722   t_dow
+00002710   t_heart
+0000271c   t_hour
+00002734   t_medhour
+0000271e   t_minute
+00002716   t_month
+00002720   t_second
+00002708   t_signal
+0000270c   t_temperature
+00002718   t_year
 0000251a   total_packets
-0000e36c   usbClearDeviceFeature
-0000d214   usbClearEndpointFeature
-0000c62e   usbDecodeAndProcessUsbRequest
-0000e7d4   usbGetConfiguration
-0000e72e   usbGetConfigurationDescriptor
-0000e744   usbGetDeviceDescriptor
-0000e20a   usbGetDeviceStatus
-0000cd52   usbGetEndpointStatus
-0000e5ac   usbGetInterface
-0000e5ca   usbGetInterfaceStatus
-0000d30e   usbGetLineCoding
-0000d4da   usbGetStringDescriptor
-0000e8b2   usbInvalidRequest
-0000e7e8   usbReceiveDataPacketOnEP0
-0000d760   usbReceiveNextPacketOnOEP0
-0000e54e   usbSendDataPacketOnEP0
-0000cdc2   usbSendNextPacketOnIEP0
-0000e93e   usbSendZeroLengthPacketOnIEP0
-0000dd44   usbSetAddress
-0000e2ac   usbSetConfiguration
-0000e7fc   usbSetControlLineState
-0000e392   usbSetDeviceFeature
-0000d360   usbSetEndpointFeature
-0000e658   usbSetInterface
-0000e988   usbSetLineCoding
-0000274e   usb_buffer
-00002770   usb_bufferIndex
-0000a000   usb_decode
-0000e56e   usb_handler_init
-00002771   usb_newdata
-00002772   usb_sendack
-000026fe   wBytesRemainingOnIEP0
-00002700   wBytesRemainingOnOEP0
-0000273e   wUsbEventMask
-0000e75a   wbsl_GpioIsr
-0000274b   wbsl_OPCode
-0000c0a8   wbsl_RfIsr
-0000d524   wbsl_SpiCmdStrobe
-0000dde2   wbsl_SpiInit
-0000e5e8   wbsl_SpiReadReg
-0000e9dc   wbsl_SpiReadRxFifo
-0000e6d4   wbsl_SpiWriteReg
-0000e994   wbsl_SpiWriteTxFifo
-0000c29c   wbsl_config
+000027b2   txBuffer
+000027e5   txCompleteFlag
+000027e6   txIdx
+0000e516   usbClearDeviceFeature
+0000d524   usbClearEndpointFeature
+0000ca78   usbDecodeAndProcessUsbRequest
+0000e8e8   usbGetConfiguration
+0000e842   usbGetConfigurationDescriptor
+0000e858   usbGetDeviceDescriptor
+0000e3dc   usbGetDeviceStatus
+0000d124   usbGetEndpointStatus
+0000e6f2   usbGetInterface
+0000e710   usbGetInterfaceStatus
+0000d61e   usbGetLineCoding
+0000d7ea   usbGetStringDescriptor
+0000e9c6   usbInvalidRequest
+0000e8fc   usbReceiveDataPacketOnEP0
+0000da28   usbReceiveNextPacketOnOEP0
+0000e6b4   usbSendDataPacketOnEP0
+0000d194   usbSendNextPacketOnIEP0
+0000ea44   usbSendZeroLengthPacketOnIEP0
+0000e006   usbSetAddress
+0000e456   usbSetConfiguration
+0000e910   usbSetControlLineState
+0000e53c   usbSetDeviceFeature
+0000d670   usbSetEndpointFeature
+0000e79e   usbSetInterface
+0000ea76   usbSetLineCoding
+0000283c   usb_buffer
+0000285e   usb_bufferIndex
+0000abbe   usb_decode
+0000285f   usb_newdata
+00002860   usb_sendack
+000027ec   wBytesRemainingOnIEP0
+000027ee   wBytesRemainingOnOEP0
+0000282c   wUsbEventMask
+00002724   watch_day
+00002732   watch_dow
+0000272c   watch_hour
+0000272e   watch_minute
+00002726   watch_month
+00002730   watch_second
+00002728   watch_year
+0000e86e   wbsl_GpioIsr
+00002839   wbsl_OPCode
+0000c4f6   wbsl_RfIsr
+0000d834   wbsl_SpiCmdStrobe
+0000e72e   wbsl_SpiReadReg
+0000eabe   wbsl_SpiReadRxFifo
 0000251c   wbsl_data
 00002554   wbsl_data_length
 00002516   wbsl_flag
-00002749   wbsl_inc
-0000ce32   wbsl_link
-0000ba2c   wbsl_main
-00002745   wbsl_on
-0000274c   wbsl_packetLength
+00002837   wbsl_inc
+00002833   wbsl_on
+0000283a   wbsl_packetLength
 00002517   wbsl_packet_flag
-0000d7a6   wbsl_reset
-0000dffc   wbsl_sendPacket
-0000e672   wbsl_setTimer
-00002748   wbsl_size
-00002746   wbsl_start_now
+00002836   wbsl_size
+00002834   wbsl_start_now
 00002594   wbsl_status
-0000de7a   wbsl_transmit
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -2325,315 +2310,326 @@ address    name
 00002594   wbsl_status
 00002596   initPacket
 0000259c   ed_address
-000026ba   simpliciti_flag
-000026bc   simpliciti_data
-000026dc   ed_data
-000026fe   wBytesRemainingOnIEP0
-00002700   wBytesRemainingOnOEP0
-00002708   abUsbRequestReturnData
-00002710   abUsbRequestIncomingData
-00002718   abramSerialStringDescriptor
-0000273a   bStatusAction
-0000273b   bFunctionSuspended
-0000273c   bEnumerationStatus
-0000273e   wUsbEventMask
-00002740   system_status
-00002741   simpliciti_on
-00002742   bluerobin_on
-00002743   bluerobin_start_now
-00002744   simpliciti_start_now
-00002745   wbsl_on
-00002746   wbsl_start_now
-00002747   ptrTX
-00002748   wbsl_size
-00002749   wbsl_inc
-0000274a   current_packet_size
-0000274b   wbsl_OPCode
-0000274c   wbsl_packetLength
-0000274e   usb_buffer
-00002770   usb_bufferIndex
-00002771   usb_newdata
-00002772   usb_sendack
-00002773   HeartRate_u8
-00002774   Speed_u8
-00002776   Distance_u16
-000027d7   sInit_done
-000027fa   bCDCDataReceived_event
-000027fc   simpliciti_sync_buffer
-00002810   simpliciti_sync_buffer_status
-00002812   BRTX_PacketState_u8
-00002814   BRTX_StatusFlags_t
-00002816   BRTX_ConfigFlags_t
-00002817   BRTX_PacketChannel_u8
-00002818   BRTX_FirstPacketTime_u16
-0000281a   BRTX_BasicPeriodTime_u16
-0000281c   BRTX_ID_u32
-00002820   BRTX_SC_u8
-00002822   BRTX_FirstData_u32
-00002826   BRTX_SecondData_u8
-00002827   numUSbEvent
-0000284a   BRTX_PacketBits_t
-0000285e   USB_TX_memcpy
-00002862   USB_RX_memcpy
-00002866   _lock
-0000286a   _unlock
-0000286e   __TI_cleanup_ptr
-00002872   __TI_dtors_ptr
-0000287c   CC_OscStartupTime_u16
-0000287e   CC_256ByteWriteTime_u16
-00002881   __end__
-00002881   end
+000026b6   led_toggle
+000026bd   simpliciti_flag
+000026be   simpliciti_data
+000026de   ed_data
+000026fe   status_code
+000026ff   newDataFlag
+00002700   DateTimeChangedFlag
+00002701   MedicineChangedFlag
+00002702   AlarmChangedFlag
+00002704   t_batt
+00002708   t_signal
+0000270c   t_temperature
+00002710   t_heart
+00002714   t_day
+00002716   t_month
+00002718   t_year
+0000271c   t_hour
+0000271e   t_minute
+00002720   t_second
+00002722   t_dow
+00002724   watch_day
+00002726   watch_month
+00002728   watch_year
+0000272c   watch_hour
+0000272e   watch_minute
+00002730   watch_second
+00002732   watch_dow
+00002734   t_medhour
+0000274e   stringBuffer
+00002780   rxBuffer
+000027b2   txBuffer
+000027e4   rxCompleteFlag
+000027e5   txCompleteFlag
+000027e6   txIdx
+000027e7   rxIdx
+000027e8   intBuffer
+000027e9   sInit_done
+000027ec   wBytesRemainingOnIEP0
+000027ee   wBytesRemainingOnOEP0
+000027f6   abUsbRequestReturnData
+000027fe   abUsbRequestIncomingData
+00002806   abramSerialStringDescriptor
+00002828   bStatusAction
+00002829   bFunctionSuspended
+0000282a   bEnumerationStatus
+0000282c   wUsbEventMask
+0000282e   system_status
+0000282f   simpliciti_on
+00002830   bluerobin_on
+00002831   bluerobin_start_now
+00002832   simpliciti_start_now
+00002833   wbsl_on
+00002834   wbsl_start_now
+00002835   ptrTX
+00002836   wbsl_size
+00002837   wbsl_inc
+00002838   current_packet_size
+00002839   wbsl_OPCode
+0000283a   wbsl_packetLength
+0000283c   usb_buffer
+0000285e   usb_bufferIndex
+0000285f   usb_newdata
+00002860   usb_sendack
+00002861   HeartRate_u8
+00002862   Speed_u8
+00002864   Distance_u16
+000028e8   bCDCDataReceived_event
+000028ea   simpliciti_sync_buffer
+000028fe   simpliciti_sync_buffer_status
+000028ff   numUSbEvent
+00002900   BRTX_PacketState_u8
+00002902   BRTX_StatusFlags_t
+00002904   BRTX_ConfigFlags_t
+00002905   BRTX_PacketChannel_u8
+00002906   BRTX_FirstPacketTime_u16
+00002908   BRTX_BasicPeriodTime_u16
+0000290a   BRTX_ID_u32
+0000290e   BRTX_SC_u8
+00002910   BRTX_FirstData_u32
+00002914   BRTX_SecondData_u8
+00002938   BRTX_PacketBits_t
+0000294c   USB_TX_memcpy
+00002950   USB_RX_memcpy
+00002954   _lock
+00002958   _unlock
+0000295c   __TI_cleanup_ptr
+00002960   __TI_dtors_ptr
+0000296a   CC_OscStartupTime_u16
+0000296c   CC_256ByteWriteTime_u16
+0000296f   __end__
+0000296f   end
 00003360   _stack
 00003400   __STACK_END
 0000a000   .text
 0000a000   __text__
-0000a000   usb_decode
-0000a396   USBCDC_receiveData
-0000a546   MRFI_Init
-0000a85e   main
-0000a9c8   nwk_QfindOldest
-0000ab28   simpliciti_main
-0000ac86   CdcToHostFromBuffer
-0000adde   iUsbInterruptHandler
-0000af26   MRFI_Transmit
-0000b06c   CC_RadioInit_v
-0000b2e4   USB_reset
-0000b404   SMPL_Ioctl
-0000b51c   SMPL_SendOpt
-0000b830   CdcToBufferFromHost
-0000ba2c   wbsl_main
-0000bbfe   nwk_allocateLocalRxPort
-0000bda0   nwk_processMgmt
-0000be6e   USB_InitSerialStringDescriptor
-0000bfee   nwk_processLink
-0000c0a8   wbsl_RfIsr
-0000c152   isDupSandFFrame
-0000c1f8   nwk_radioControl
-0000c29c   wbsl_config
-0000c340   nwk_retrieveFrame
-0000c3e2   USBCDC_intfStatus
-0000c47a   USB_Handler_v
-0000c50c   nwk_isConnectionValid
-0000c59e   nwk_buildFrame
-0000c62e   usbDecodeAndProcessUsbRequest
-0000c6be   CC_SPI_Init_v
-0000c8ea   nwk_nwkInit
-0000c972   nwk_SendEmptyPollRspFrame
-0000c9f8   USB_enable
-0000ca7c   nwk_QfindSlot
-0000cafc   nwk_sendAckReply
-0000cb7c   BR_SPI_Init_v
-0000cbf4   USBCDC_bytesInUSBBuffer
-0000cc6c   nwk_getSandFFrame
-0000cce0   USBCDC_sendData
-0000cd52   usbGetEndpointStatus
-0000cdc2   usbSendNextPacketOnIEP0
-0000ce32   wbsl_link
-0000cea2   CC_RadioTransmitRegularData_v
-0000cf10   nwk_processPing
-0000cf7c   SMPL_LinkListen
-0000cfe4   nwk_saveJoinedDevice
-0000d04a   CopyUsbToBuff
-0000d0a8   MRFI_SetRFPwr
-0000d106   MRFI_SetLogicalChannel
-0000d162   MRFI_ReplyDelay
-0000d1bc   USB_init
-0000d214   usbClearEndpointFeature
-0000d26a   nwk_processJoin
-0000d2bc   nwk_rawSend
-0000d30e   usbGetLineCoding
-0000d360   usbSetEndpointFeature
-0000d3b0   Handler_SetLineCoding
-0000d3fc   InitClock_v
-0000d446   mrfiSpiCmdStrobe
-0000d490   nwk_isValidReply
-0000d4da   usbGetStringDescriptor
-0000d524   wbsl_SpiCmdStrobe
-0000d56e   Get_TLV_Info
-0000d5b6   MRFI_Rssi
-0000d5fe   _auto_init
-0000d646   nwk_findAlreadyJoined
-0000d68e   BRTX_MakePacket_v
-0000d6d4   BR_CalcRandomTimeOffset_u16
-0000d71a   nwk_isSandFClient
-0000d760   usbReceiveNextPacketOnOEP0
-0000d7a6   wbsl_reset
-0000d7ec   SMPL_Receive
-0000d830   SetupPacketInterruptHandler
-0000d874   nwk_findPeer
-0000d8b8   nwk_getLocalLinkID
-0000d8fc   nwk_isLinkDuplicate
-0000d9c8   MRFI_RxIdle
-0000da0a   PWRVBUSoffHandler
-0000da4c   CC_RadioIdle_v
-0000da8c   SetVCore
-0000daca   nwk_joinInit
-0000db08   nwk_replayFrame
-0000db82   CdcResetData
-0000dbbc   MRFI_RxAddrIsFiltered
-0000dbf6   nwk_getNextConnection
-0000dc30   BRTX_Start_v
-0000dc68   BRTX_Timing_IRQ_v
-0000dca0   nwk_putNumObjectIntoMsg
-0000dd0e   UNMI_ISR
-0000dd44   usbSetAddress
-0000dd7a   BR_CalcCRC_u8
-0000ddae   mrfiSpiInit
-0000dde2   wbsl_SpiInit
-0000de16   USB_connectionInfo
-0000de48   nwk_deviceAddress
-0000de7a   wbsl_transmit
-0000deac   MRFI_WakeUp
-0000dedc   PWRVBUSonHandler
-0000df0c   XT2_Start
-0000df3c   memcpyDMA0
-0000df6c   nwk_QadjustOrder
-0000df9c   nwk_rawReceive
-0000dfcc   nwk_sendFrame
-0000dffc   wbsl_sendPacket
-0000e02c   MRFI_RxOn
-0000e05a   OEP0InterruptHandler
-0000e088   SMPL_Init
-0000e0b4   USB_suspend
-0000e0e0   nwk_checkAppMsgTID
-0000e138   MRFI_Sleep
-0000e162   _c_int00
-0000e162   _c_int00_noexit
-0000e18c   nwk_getConnInfo
-0000e1b6   nwk_globalsInit
-0000e1e0   nwk_linkInit
-0000e20a   usbGetDeviceStatus
-0000e234   BRTX_DataTransfered_v
-0000e25c   USB_initMemcpy
-0000e2ac   usbSetConfiguration
-0000e2fa   BSP_GpioPort1Isr
-0000e320   nwk_QInit
-0000e346   nwk_checkConnInfo
-0000e36c   usbClearDeviceFeature
-0000e392   usbSetDeviceFeature
-0000e3b8   BSP_Delay
-0000e3dc   BSP_Init
-0000e400   nwk_frameInit
-0000e424   BR_Init_v
-0000e446   USB_disable
-0000e468   USB_disconnect
-0000e48a   nwk_buildAckReqFrame
-0000e4ce   BlueRobin_RadioISR_v
-0000e4ce   CC_RadioPowerdown_v
-0000e4ce   CC_RadioStop_v
-0000e4ce   TX_PacketEnd
-0000e4ee   MRFI_RxCompleteISR
-0000e50e   memmove
-0000e52e   nwk_connectionControl
-0000e54e   usbSendDataPacketOnEP0
-0000e56e   usb_handler_init
-0000e58e   nwk_setMyAddress
-0000e5ac   usbGetInterface
-0000e5ca   usbGetInterfaceStatus
-0000e5e8   wbsl_SpiReadReg
-0000e606   IEP0InterruptHandler
-0000e622   nwk_mgmtInit
-0000e63e   USB_connect
-0000e658   usbSetInterface
-0000e672   wbsl_setTimer
-0000e68c   BR_SPI_SingleWriteRead_u8
-0000e6a4   MRFI_DelayMs
-0000e6bc   USB_resume
-0000e6d4   wbsl_SpiWriteReg
-0000e6ec   MRFI_RandomByte
-0000e702   __divu
-0000e702   __remu
-0000e718   __mpyi_f5hw
-0000e72e   usbGetConfigurationDescriptor
-0000e744   usbGetDeviceDescriptor
-0000e75a   wbsl_GpioIsr
-0000e770   BSP_InitBoard
-0000e784   USB_handleVbusOnEvent
-0000e798   bluerobin_stop
-0000e7ac   nwk_joinContext
-0000e7c0   sCB
-0000e7d4   usbGetConfiguration
-0000e7e8   usbReceiveDataPacketOnEP0
-0000e7fc   usbSetControlLineState
-0000e810   BR_CalcRandomChannel_u8
-0000e822   CC_OscOn_v
-0000e834   CdcIsReceiveInProgress
-0000e846   memcpy
-0000e858   nwk_getJoinToken
-0000e86a   nwk_getLinkToken
-0000e87c   nwk_getMyAddress
-0000e88e   nwk_setJoinToken
-0000e8a0   nwk_setLinkToken
-0000e8b2   usbInvalidRequest
-0000e8c4   BR_SPI_WriteRead_u8
-0000e8d4   CC_SPI_WriteRead_u8
-0000e8e4   USBCDC_handleDataReceived
-0000e8f4   TIMER0_A1_ISR
-0000e904   nwk_getQ
-0000e914   BRTX_WriteData_v
-0000e922   nwk_setJoinContext
-0000e930   nwk_setListenContext
-0000e93e   usbSendZeroLengthPacketOnIEP0
-0000e94c   BRTX_GetTimer_u16
-0000e958   BR_SPI_SelectChipWaitUntilReady_v
-0000e964   MRFI_PostKillSem
-0000e970   MRFI_Receive
-0000e97c   nwk_getNumObjectFromMsg
-0000e988   usbSetLineCoding
-0000e994   wbsl_SpiWriteTxFifo
-0000e9a0   BRTX_GetID_u32
-0000e9aa   BRTX_SetID_v
-0000e9b4   BRTX_Stop_v
-0000e9be   _system_pre_init
-0000e9c8   nwk_pingInit
-0000e9d2   I_LSL
-0000e9dc   wbsl_SpiReadRxFifo
-0000e9e6   USB_handleVbusOffEvent
-0000e9ee   USB_setEnabledEvents
-0000e9f6   XT2_Stop
-0000e9fe   nwk_resetSFMarker
-0000ea06   BR_SPI_DeselectChip_v
-0000ea0c   BR_SPI_SelectChip_v
-0000ea12   CC_SPI_DeselectChip_v
-0000ea18   MRFI_GetRadioState
-0000ea1e   SMPL_Send
-0000ea24   __TI_ISR_TRAP
-0000ea2a   nwk_freeConnection
-0000ea30   nwk_getBCastAddress
-0000ea36   nwk_getFWVersion
-0000ea3c   nwk_getMyRxType
-0000ea42   nwk_getSFInfoPtr
-0000ea48   USBCDC_handleReceiveCompleted
-0000ea4c   USBCDC_handleSendCompleted
-0000ea50   USBCDC_handleSetControlLineState
-0000ea54   USBCDC_handleSetLineCoding
-0000ea58   USB_handleClockEvent
-0000ea5c   USB_handleEnumCompleteEvent
-0000ea60   USB_handleResetEvent
-0000ea64   USB_handleResumeEvent
-0000ea68   USB_handleSuspendEvent
-0000ea6c   C$$EXIT
-0000ea6c   abort
-0000ea70   nwk_NVObj
-0000ea74   nwk_getProtocolVersion
-0000ea78   nwk_join
-0000ea7c   nwk_processFreq
-0000ea80   nwk_processSecurity
-0000ea84   BRTX_PrepareData_v
-0000ea86   _nop
-0000ea88   nwk_freqInit
-0000ea8a   nwk_securityInit
-0000ea8c   __etext__
-0000ea8c   etext
-0000ea8c   tUsbRequestList
-0000eb96   RandomValue_u8
-0000ec96   abromStringDescriptor
-0000ed7a   abromConfigurationDescriptorGroup
-0000ee72   abromDeviceDescriptor
-0000ee84   stUsbHandle
-0000ee9e   mrfiBroadcastAddr
-0000eeaa   __cinit__
-0000eeaa   cinit
+0000a000   simpliciti_main
+0000abbe   usb_decode
+0000af54   USBCDC_receiveData
+0000b104   MRFI_Init
+0000b41c   nwk_QfindOldest
+0000b57c   CdcToHostFromBuffer
+0000b6d4   iUsbInterruptHandler
+0000b81c   MRFI_Transmit
+0000ba9e   USB_reset
+0000bbbe   SMPL_Ioctl
+0000bcd6   SMPL_SendOpt
+0000bfea   CdcToBufferFromHost
+0000c1cc   nwk_allocateLocalRxPort
+0000c36e   nwk_processMgmt
+0000c43c   nwk_processLink
+0000c4f6   wbsl_RfIsr
+0000c5a0   isDupSandFFrame
+0000c646   nwk_radioControl
+0000c6ea   nwk_retrieveFrame
+0000c78c   main
+0000c82c   USBCDC_intfStatus
+0000c8c4   USB_Handler_v
+0000c956   nwk_isConnectionValid
+0000c9e8   nwk_buildFrame
+0000ca78   usbDecodeAndProcessUsbRequest
+0000cb08   CC_SPI_Init_v
+0000cd34   nwk_nwkInit
+0000cdbc   nwk_SendEmptyPollRspFrame
+0000ce42   USB_enable
+0000cec6   nwk_QfindSlot
+0000cf46   nwk_sendAckReply
+0000cfc6   USBCDC_bytesInUSBBuffer
+0000d03e   nwk_getSandFFrame
+0000d0b2   USBCDC_sendData
+0000d124   usbGetEndpointStatus
+0000d194   usbSendNextPacketOnIEP0
+0000d204   CC_RadioTransmitRegularData_v
+0000d272   USCI_A1_ISR
+0000d2e0   nwk_processPing
+0000d34c   nwk_saveJoinedDevice
+0000d3b2   CopyUsbToBuff
+0000d410   MRFI_SetRFPwr
+0000d46e   MRFI_SetLogicalChannel
+0000d4ca   MRFI_ReplyDelay
+0000d524   usbClearEndpointFeature
+0000d57a   nwk_processJoin
+0000d5cc   nwk_rawSend
+0000d61e   usbGetLineCoding
+0000d670   usbSetEndpointFeature
+0000d6c0   Handler_SetLineCoding
+0000d70c   InitClock_v
+0000d756   mrfiSpiCmdStrobe
+0000d7a0   nwk_isValidReply
+0000d7ea   usbGetStringDescriptor
+0000d834   wbsl_SpiCmdStrobe
+0000d87e   MRFI_Rssi
+0000d8c6   _auto_init
+0000d90e   nwk_findAlreadyJoined
+0000d956   BRTX_MakePacket_v
+0000d99c   BR_CalcRandomTimeOffset_u16
+0000d9e2   nwk_isSandFClient
+0000da28   usbReceiveNextPacketOnOEP0
+0000da6e   SMPL_Receive
+0000dab2   SetupPacketInterruptHandler
+0000daf6   nwk_findPeer
+0000db3a   nwk_isLinkDuplicate
+0000dc06   MRFI_RxIdle
+0000dc48   PWRVBUSoffHandler
+0000dc8a   UART_recv_async
+0000dccc   CC_RadioIdle_v
+0000dd0c   UART_Init_v
+0000dd4c   SetVCore
+0000dd8a   nwk_joinInit
+0000ddc8   nwk_replayFrame
+0000de42   CdcResetData
+0000de7c   MRFI_RxAddrIsFiltered
+0000deb6   RTC_Init_v
+0000def0   nwk_getNextConnection
+0000df2a   BRTX_Timing_IRQ_v
+0000df62   nwk_putNumObjectIntoMsg
+0000dfd0   UNMI_ISR
+0000e006   usbSetAddress
+0000e03c   BR_CalcCRC_u8
+0000e070   UART_send_async
+0000e0a4   mrfiSpiInit
+0000e0d8   nwk_deviceAddress
+0000e10a   MRFI_WakeUp
+0000e13a   PWRVBUSonHandler
+0000e16a   XT2_Start
+0000e19a   nwk_QadjustOrder
+0000e1ca   nwk_rawReceive
+0000e1fa   nwk_sendFrame
+0000e22a   MRFI_RxOn
+0000e258   OEP0InterruptHandler
+0000e286   SMPL_Init
+0000e2b2   USB_suspend
+0000e2de   nwk_checkAppMsgTID
+0000e30a   MRFI_Sleep
+0000e334   _c_int00
+0000e334   _c_int00_noexit
+0000e35e   nwk_getConnInfo
+0000e388   nwk_globalsInit
+0000e3b2   nwk_linkInit
+0000e3dc   usbGetDeviceStatus
+0000e406   BRTX_DataTransfered_v
+0000e456   usbSetConfiguration
+0000e4a4   BSP_GpioPort1Isr
+0000e4ca   nwk_QInit
+0000e4f0   nwk_checkConnInfo
+0000e516   usbClearDeviceFeature
+0000e53c   usbSetDeviceFeature
+0000e562   BSP_Delay
+0000e586   BSP_Init
+0000e5aa   nwk_frameInit
+0000e5ce   USB_disable
+0000e5f0   USB_disconnect
+0000e612   nwk_buildAckReqFrame
+0000e634   BlueRobin_RadioISR_v
+0000e634   CC_RadioPowerdown_v
+0000e634   CC_RadioStop_v
+0000e634   TX_PacketEnd
+0000e654   MRFI_RxCompleteISR
+0000e674   memmove
+0000e694   nwk_connectionControl
+0000e6b4   usbSendDataPacketOnEP0
+0000e6d4   nwk_setMyAddress
+0000e6f2   usbGetInterface
+0000e710   usbGetInterfaceStatus
+0000e72e   wbsl_SpiReadReg
+0000e74c   IEP0InterruptHandler
+0000e768   nwk_mgmtInit
+0000e784   USB_connect
+0000e79e   usbSetInterface
+0000e7b8   BR_SPI_SingleWriteRead_u8
+0000e7d0   MRFI_DelayMs
+0000e7e8   USB_resume
+0000e800   MRFI_RandomByte
+0000e816   __divu
+0000e816   __remu
+0000e82c   __mpyi_f5hw
+0000e842   usbGetConfigurationDescriptor
+0000e858   usbGetDeviceDescriptor
+0000e86e   wbsl_GpioIsr
+0000e884   BSP_InitBoard
+0000e898   USB_handleVbusOnEvent
+0000e8ac   bluerobin_stop
+0000e8c0   nwk_joinContext
+0000e8d4   sCB
+0000e8e8   usbGetConfiguration
+0000e8fc   usbReceiveDataPacketOnEP0
+0000e910   usbSetControlLineState
+0000e924   BR_CalcRandomChannel_u8
+0000e936   CC_OscOn_v
+0000e948   CdcIsReceiveInProgress
+0000e95a   memcpy
+0000e96c   nwk_getJoinToken
+0000e97e   nwk_getLinkToken
+0000e990   nwk_getMyAddress
+0000e9a2   nwk_setJoinToken
+0000e9b4   nwk_setLinkToken
+0000e9c6   usbInvalidRequest
+0000e9d8   BR_SPI_WriteRead_u8
+0000e9e8   CC_SPI_WriteRead_u8
+0000e9f8   USBCDC_handleDataReceived
+0000ea08   TIMER0_A1_ISR
+0000ea18   nwk_getQ
+0000ea28   BRTX_WriteData_v
+0000ea36   nwk_setJoinContext
+0000ea44   usbSendZeroLengthPacketOnIEP0
+0000ea52   MRFI_PostKillSem
+0000ea5e   MRFI_Receive
+0000ea6a   nwk_getNumObjectFromMsg
+0000ea76   usbSetLineCoding
+0000ea82   BRTX_GetID_u32
+0000ea8c   BRTX_SetID_v
+0000ea96   BRTX_Stop_v
+0000eaa0   _system_pre_init
+0000eaaa   nwk_pingInit
+0000eab4   I_LSL
+0000eabe   wbsl_SpiReadRxFifo
+0000eac8   USB_handleVbusOffEvent
+0000ead0   XT2_Stop
+0000ead8   nwk_resetSFMarker
+0000eae0   BR_SPI_DeselectChip_v
+0000eae6   BR_SPI_SelectChip_v
+0000eaec   CC_SPI_DeselectChip_v
+0000eaf2   MRFI_GetRadioState
+0000eaf8   SMPL_Send
+0000eafe   __TI_ISR_TRAP
+0000eb04   nwk_freeConnection
+0000eb0a   nwk_getBCastAddress
+0000eb10   nwk_getFWVersion
+0000eb16   nwk_getMyRxType
+0000eb1c   nwk_getSFInfoPtr
+0000eb22   USBCDC_handleReceiveCompleted
+0000eb26   USBCDC_handleSendCompleted
+0000eb2a   USBCDC_handleSetControlLineState
+0000eb2e   USBCDC_handleSetLineCoding
+0000eb32   USB_handleClockEvent
+0000eb36   USB_handleEnumCompleteEvent
+0000eb3a   USB_handleResetEvent
+0000eb3e   USB_handleResumeEvent
+0000eb42   USB_handleSuspendEvent
+0000eb46   C$$EXIT
+0000eb46   abort
+0000eb4a   nwk_NVObj
+0000eb4e   nwk_getProtocolVersion
+0000eb52   nwk_join
+0000eb56   nwk_processFreq
+0000eb5a   nwk_processSecurity
+0000eb5e   BRTX_PrepareData_v
+0000eb60   _nop
+0000eb62   nwk_freqInit
+0000eb64   nwk_securityInit
+0000eb66   __etext__
+0000eb66   etext
+0000eb66   tUsbRequestList
+0000ec70   RandomValue_u8
+0000ed70   abromStringDescriptor
+0000ee00   abromConfigurationDescriptorGroup
+0000ee9e   abromDeviceDescriptor
+0000eeb0   stUsbHandle
+0000eeca   mrfiBroadcastAddr
+0000eed6   __cinit__
+0000eed6   cinit
 0000ffd2   __TI_int41
 0000ffd4   __TI_int42
 0000ffd6   __TI_int43
@@ -2663,4 +2659,4 @@ ffffffff   __pinit__
 ffffffff   binit
 ffffffff   pinit
 
-[1071 symbols]
+[1082 symbols]

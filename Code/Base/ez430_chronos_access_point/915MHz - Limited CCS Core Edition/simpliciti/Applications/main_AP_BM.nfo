@@ -1,0 +1,78 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern unsigned char sCB() is called from 0 sites in this file.
+    It appears to be inlineable (size = 18 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void simpliciti_main() is called from 0 sites in this file.
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	SMPL_Send() (4 times)
+	SMPL_Receive() (1 times)
+	UART_recv_async() (1 times)
+	UART_send_async() (6 times)
+	SMPL_Ioctl() (1 times)
+	SMPL_Init() (1 times)
+	BSP_Init() (1 times)
+
+Making unmodified global variable CONST:
+	static unsigned char sNumCurrentPeers = 0u;
+
+Variable has no explicitly assigned value:
+	static unsigned char linkID0
+
+Address of global variable is never taken:
+	static const unsigned char sNumCurrentPeers
+
+
+Global variable is not modified in this file:
+	static const unsigned char sNumCurrentPeers
+
+
+These functions may be recursive:
+	simpliciti_main()
+
+These external functions are called but not defined here:
+	BSP_Init()
+	SMPL_Init()
+	SMPL_Ioctl()
+	UART_send_async()
+	UART_recv_async()
+	SMPL_Receive()
+	SMPL_Send()
+
+Variable's value is constant in this file:
+    static const unsigned char sNumCurrentPeers = 0u;
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void simpliciti_main() is called from 0 sites in this file.
+    It has 4 non-trivial scope blocks nested 4 deep.
+    It calls these functions:
+	<NONE>
+
+		====== Unroll-and-jam Result Summary ======
+
+LOOP#2 in simpliciti_main() fails to unroll-and-jam: Outer Loop has multiple blocks
+
+		====== End Unroll-and-jam Result ======
+
+
+==============================================================================
+
+extern unsigned char sCB() is called from 0 sites in this file.
+    It appears to be inlineable (size = 18 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

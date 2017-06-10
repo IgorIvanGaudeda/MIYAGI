@@ -8,6 +8,8 @@ CMD_SRCS += \
 ../msp430USB.cmd 
 
 C_SRCS += \
+../RTC.c \
+../UART.c \
 ../ccSPI.c \
 ../cmdHandler.c \
 ../main.c \
@@ -15,6 +17,8 @@ C_SRCS += \
 ../usbEventHandling.c 
 
 OBJS += \
+./RTC.obj \
+./UART.obj \
 ./ccSPI.obj \
 ./cmdHandler.obj \
 ./main.obj \
@@ -22,6 +26,8 @@ OBJS += \
 ./usbEventHandling.obj 
 
 C_DEPS += \
+./RTC.d \
+./UART.d \
 ./ccSPI.d \
 ./cmdHandler.d \
 ./main.d \
@@ -29,6 +35,8 @@ C_DEPS += \
 ./usbEventHandling.d 
 
 C_DEPS__QUOTED += \
+"RTC.d" \
+"UART.d" \
 "ccSPI.d" \
 "cmdHandler.d" \
 "main.d" \
@@ -36,6 +44,8 @@ C_DEPS__QUOTED += \
 "usbEventHandling.d" 
 
 OBJS__QUOTED += \
+"RTC.obj" \
+"UART.obj" \
 "ccSPI.obj" \
 "cmdHandler.obj" \
 "main.obj" \
@@ -43,6 +53,8 @@ OBJS__QUOTED += \
 "usbEventHandling.obj" 
 
 C_SRCS__QUOTED += \
+"../RTC.c" \
+"../UART.c" \
 "../ccSPI.c" \
 "../cmdHandler.c" \
 "../main.c" \

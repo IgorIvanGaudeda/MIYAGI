@@ -1,0 +1,159 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void UART_Init_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__enable_interrupt() (1 times)
+
+extern unsigned char UART_recv_async() is called from 0 sites in this file.
+    It appears to be inlineable (size = 50 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void UART_send_async() is called from 0 sites in this file.
+    It appears to be inlineable (size = 47 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void USCI_A1_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+These functions may be recursive:
+	UART_Init_v()
+
+These external functions are called but not defined here:
+	__enable_interrupt()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void USCI_A1_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void UART_send_async() is called from 0 sites in this file.
+    It appears to be inlineable (size = 47 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function UART_send_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:75-79
+	for the statement txBuffer[*&txIdx] = *pData_u8; at line 77
+
+	Consider declaring 'pData_u8' as unsigned char * restrict pData_u8
+	to assert that lvalues *pData_u8;
+	and                    txBuffer[*&txIdx];
+	do not access the same object in memory.
+
+ADVICE: In function UART_send_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:75-79
+	for the statement txBuffer[*&txIdx] = *pData_u8; at line 77
+	and the statement ++(*&txIdx); at line 78
+
+	Consider declaring 'pData_u8' as unsigned char * restrict pData_u8
+	to assert that lvalues *pData_u8;
+	and                    *&txIdx;
+	do not access the same object in memory.
+
+ADVICE: In function UART_send_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:75-79
+	for the statement if ( *pData_u8 != 13 ) goto g5; else goto g6; at line 75
+	and the statement txBuffer[*&txIdx] = *pData_u8; at line 77
+
+	Consider declaring 'pData_u8' as unsigned char * restrict pData_u8
+	to assert that lvalues *pData_u8;
+	and                    txBuffer[*&txIdx];
+	do not access the same object in memory.
+
+ADVICE: In function UART_send_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:75-79
+	for the statement if ( *pData_u8 != 13 ) goto g5; else goto g6; at line 75
+	and the statement ++(*&txIdx); at line 78
+
+	Consider declaring 'pData_u8' as unsigned char * restrict pData_u8
+	to assert that lvalues *pData_u8;
+	and                    *&txIdx;
+	do not access the same object in memory.
+
+==============================================================================
+
+extern unsigned char UART_recv_async() is called from 0 sites in this file.
+    It appears to be inlineable (size = 50 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+ADVICE: In function UART_recv_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:97-101
+	for the statement *buffer = rxBuffer[*&rxIdx]; at line 99
+
+	Consider declaring 'buffer' as unsigned char * restrict buffer
+	to assert that lvalues *buffer;
+	and                    rxBuffer[*&rxIdx];
+	do not access the same object in memory.
+
+ADVICE: In function UART_recv_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:97-101
+	for the statement *buffer = rxBuffer[*&rxIdx]; at line 99
+
+	Consider declaring 'buffer' as unsigned char * restrict buffer
+	to assert that lvalues *buffer;
+	and                    *&rxIdx;
+	do not access the same object in memory.
+
+ADVICE: In function UART_recv_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:97-101
+	for the statement *buffer = rxBuffer[*&rxIdx]; at line 99
+	and the statement ++(*&rxIdx); at line 100
+
+	Consider declaring 'buffer' as unsigned char * restrict buffer
+	to assert that lvalues *buffer;
+	and                    *&rxIdx;
+	do not access the same object in memory.
+
+ADVICE: In function UART_recv_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:97-101
+	for the statement *buffer = rxBuffer[*&rxIdx]; at line 99
+	and the statement if ( rxBuffer[*&rxIdx] != 13 ) goto g5; else goto g6; at line 97
+
+	Consider declaring 'buffer' as unsigned char * restrict buffer
+	to assert that lvalues *buffer;
+	and                    rxBuffer[*&rxIdx];
+	do not access the same object in memory.
+
+ADVICE: In function UART_recv_async() in ../UART.c
+	in the 'while' loop at lines ../UART.c:97-101
+	for the statement *buffer = rxBuffer[*&rxIdx]; at line 99
+	and the statement if ( rxBuffer[*&rxIdx] != 13 ) goto g5; else goto g6; at line 97
+
+	Consider declaring 'buffer' as unsigned char * restrict buffer
+	to assert that lvalues *buffer;
+	and                    *&rxIdx;
+	do not access the same object in memory.
+
+==============================================================================
+
+extern void UART_Init_v() is called from 0 sites in this file.
+    It appears to be inlineable (size = 35 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

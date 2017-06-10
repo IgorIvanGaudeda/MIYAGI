@@ -38,6 +38,8 @@ main.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Co
 main.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/bsp_macros.h
 main.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/mrfi/mrfi_defs.h
 main.obj: ../WBSL/wbsl.h
+main.obj: ../UART.h
+main.obj: ../RTC.h
 
 ../main.c: 
 C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/intrinsics.h: 
@@ -77,3 +79,5 @@ C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/b
 C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/bsp_macros.h: 
 C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/mrfi/mrfi_defs.h: 
 ../WBSL/wbsl.h: 
+../UART.h: 
+../RTC.h: 
