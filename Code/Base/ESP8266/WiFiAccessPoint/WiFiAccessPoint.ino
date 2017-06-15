@@ -27,11 +27,11 @@ const int NTP_PACKET_SIZE = 48; // NTP time is in the first 48 bytes of message
 byte packetBuffer[NTP_PACKET_SIZE]; //buffer to hold incoming & outgoing packets
 
 // NTP Servers:
-//static const char ntpServerName[] = "us.pool.ntp.org";
-static const char ntpServerName[] = "time.nist.gov";
-//static const char ntpServerName[] = "time-a.timefreq.bldrdoc.gov";
-//static const char ntpServerName[] = "time-b.timefreq.bldrdoc.gov";
-//static const char ntpServerName[] = "time-c.timefreq.bldrdoc.gov";
+static const char ntpServerName[] = "us.pool.ntp.org";
+static const char ntpServerName1[] = "time.nist.gov";
+static const char ntpServerName2[] = "time-a.timefreq.bldrdoc.gov";
+static const char ntpServerName3[] = "time-b.timefreq.bldrdoc.gov";
+static const char ntpServerName4[] = "time-c.timefreq.bldrdoc.gov";
 
 time_t getNtpTime();
 
@@ -60,7 +60,7 @@ enum POWER_STATES {INITIALIZING, RUNNING} POWER_STATES;
 #define EEPROM_TS_CHANNEL 220
 #define EEPROM_TS_ID 240
 
-#define EEPROM_VALID_KEY 4
+#define EEPROM_VALID_KEY 1
 
 #define LED_POWER 12
 #define LED_RADIO 13
@@ -170,11 +170,15 @@ int t_minute = 00;
 int t_second = 00;
 int t_dow = 00;
 
+int timediff = 0;
+
 uint8_t DSTflag = 0;
 uint8_t MedicineChangedFlag = 0;
+uint8_t newDataFlag = 0;
 
 uint8_t alarmCode = 0;
 uint8_t alarmCodeChannel = 0;
+
 
 #define NO_ALARM    0x00
 #define FALL        0x01
@@ -200,11 +204,11 @@ void ledWiFiHandler(void *pArg)
 
 void ledPowerHandler(void *pArg)
 {
-  if (WiFiState == SCAN || SETUP_SERVER)
+  if (WiFiState == SCAN || WiFiState ==SETUP_SERVER)
   {
-    digitalWrite(LED_WIFI, HIGH);
+    digitalWrite(LED_POWER, HIGH);
   }
-  else if (WiFiState == WAIT_USER || CONNECT)
+  else if (WiFiState == WAIT_USER || WiFiState ==CONNECT)
   {
     digitalWrite(LED_POWER, !digitalRead(LED_POWER));
   }
@@ -503,7 +507,7 @@ void setup()
     digitalWrite(14, HIGH);
 
     PowerState = INITIALIZING;
-    RadioState = FIND;
+    RadioState = OFF;
     
     os_timer_setfn(&ledWifiTimer, ledWiFiHandler, NULL);
     os_timer_arm(&ledWifiTimer, 500, true);
@@ -512,7 +516,7 @@ void setup()
     os_timer_arm(&ledPowerTimer, 500, true);
 
     os_timer_setfn(&ledRadioTimer, ledRadioHandler, NULL);
-    os_timer_arm(&ledRadioTimer, 250, true);
+    os_timer_arm(&ledRadioTimer, 500, true);
 
     yield();
     // 
@@ -804,6 +808,7 @@ void loop()
                     if (sendEmail("configuration_done", Person1Email, Person1Name, TS_Channel_ID))
                     {
                       WiFiState = CONFIGURED;
+                      RadioState = FIND;
                       MedicineChangedFlag = 1;
                       EEPROM.write(EEPROM_STATE, CONFIGURED);
                       EEPROM.commit();
@@ -830,7 +835,7 @@ void loop()
                     else
                     {// email error
                       WiFiState = SCAN;
-                
+                      RadioState = OFF;
                       EEPROM.write(EEPROM_STATE, CONNECT);
                       EEPROM.commit();
                     }
@@ -871,14 +876,14 @@ void loop()
                 if (jsonReply.indexOf("{\"id\":" + TS_Channel_ID) == -1)
                 {
                     WiFiState = SCAN;
-                
+                    RadioState = OFF;
                     EEPROM.write(EEPROM_STATE, SCAN);
                     EEPROM.commit();
                 }
                 else
                 {
                     WiFiState = CONFIGURED;
-                
+                    RadioState = FIND;
                     EEPROM.write(EEPROM_STATE, CONFIGURED);
                     EEPROM.commit();
                 }                
@@ -920,13 +925,16 @@ void loop()
         {
           getChannelInfo();
 
+          cmdBuffer = "";
+          recvTemp = 0;
           SerialAP.print(cmdReadWatchData);
-  
-          delay(200);
-          
-          while (SerialAP.available() > 0 )
+          Serial.println(cmdReadWatchData);
+          delay(50);
+
+          while (SerialAP.available() > 0)
           {
             recvTemp = SerialAP.read();
+            Serial.print(recvTemp);
             cmdBuffer += recvTemp;
             if (recvTemp == 0x0D)
             {
@@ -934,7 +942,7 @@ void loop()
               {
                 Serial.println("Resposta R recebida: " + cmdBuffer);
                 RadioState = SYNC;
-                
+                newDataFlag = 1;
                 lastBattery = (cmdBuffer[1]-0x30)*100 + (cmdBuffer[2]-0x30)*10 + (cmdBuffer[3]-0x30);
                 lastRadioPower = (cmdBuffer[5]-0x30)*100 + (cmdBuffer[6]-0x30)*10 + (cmdBuffer[7]-0x30);
                 lastTemperature = (cmdBuffer[9]-0x30)*100 + (cmdBuffer[10]-0x30)*10 + (cmdBuffer[11]-0x30);
@@ -956,9 +964,11 @@ void loop()
                 Serial.println(timeNow);
                 Serial.print("watchnow: ");
                 Serial.println(watchTime);
+
+                timediff = watchTime - watchTime;
                 
                 // if difference is more than 5 minutes
-                if (((watchTime - timeNow) > 300 || (watchTime - timeNow) < -300) && timeSync == 1)
+                if ((timediff > 300 || timediff < -300) && timeSync == 1)
                 {
                   t_day = day();
                   t_month = month();
@@ -1079,6 +1089,7 @@ void loop()
               
               cmdBuffer = "";
             }
+            delay(10);
           }
           
           if (lastWatchRead != 0 && (timeNow - lastWatchRead) > 300)
@@ -1095,34 +1106,36 @@ void loop()
             cmdSendMedicineTimes += "C";
             cmdSendMedicineTimes[1] = 0x0D;
             SerialAP.print(cmdSendMedicineTimes);
+            Serial.println("Alarme Limpo");
           }
-          if (client.connect(host.c_str(), 80))
-          {
-            String url = "/channels/" + TS_Channel_ID + "?api_key=" + TS_Private_Key + 
-              "&metadata=" + Person1Name + "," + Person2Name + "," + 
-                      Person1Email + "," + Person2Email + "," + 
-                              Person1Twitter + "," + Person2Twitter + "," + 
-                              Person1Phone + "," + Person2Phone + "," +
-              String(alarmCode) + "," + MedicineList + ",0";
-  
-              Serial.println(url);
-              
-              client.print(String("PUT ") + url + " HTTP/1.1\r\n" +
-                 "Host: " + host + "\r\n" +
-                 "Connection: Keep-Alive\r\n\r\n");
-  
-              while (client.connected())
-              {
-                  yield();
-                  String line = client.readStringUntil('\n');
-                  Serial.println(line);
-                  if (line.indexOf("{\"id\":") != -1)
-                  {
-                    
-                      break;
-                  }
-              }
-          }
+
+            if (client.connect(host.c_str(), 80))
+            {
+              String url = "/channels/" + TS_Channel_ID + "?api_key=" + TS_Private_Key + 
+                "&metadata=" + Person1Name + "," + Person2Name + "," + 
+                        Person1Email + "," + Person2Email + "," + 
+                                Person1Twitter + "," + Person2Twitter + "," + 
+                                Person1Phone + "," + Person2Phone + "," +
+                String(alarmCode) + "," + MedicineList + ",0";
+    
+                Serial.println(url);
+                
+                client.print(String("PUT ") + url + " HTTP/1.1\r\n" +
+                   "Host: " + host + "\r\n" +
+                   "Connection: Keep-Alive\r\n\r\n");
+    
+                while (client.connected())
+                {
+                    yield();
+                    String line = client.readStringUntil('\n');
+                    Serial.println(line);
+                    if (line.indexOf("{\"id\":") != -1)
+                    {
+                      
+                        break;
+                    }
+                }
+            }
 
           // send alarm every 5 minutes
           if ((alarmCode != NO_ALARM)&& ((timeNow - lastAlarmSent) > 300))
@@ -1197,28 +1210,31 @@ void loop()
             //lastAlarmSent = timeNow;
           }
 
-          if (client.connect(host.c_str(), 80))
+          if (newDataFlag == 1)
           {
-            String url = "/update?api_key=" + TS_Channel_Key + 
-            "&field1=" + String(lastBattery) +
-            "&field2=" + String(lastRadioPower) +
-            "&field3=" + String(lastTemperature) +
-            "&field4=" + String(lastHeartRate);
-            Serial.println(url);
-          
-            client.print(String("POST ") + url + " HTTP/1.1\r\n" +
-               "Host: " + host + "\r\n" +
-               "Connection: Keep-Alive\r\n\r\n");
-
-            while (client.connected())
+            if (client.connect(host.c_str(), 80))
             {
-                yield();
-                String line = client.readStringUntil('\n');
-                Serial.println(line);
-                if (line.indexOf("{\"id\":") != -1)
-                {
-                    break;
-                }
+              String url = "/update?api_key=" + TS_Channel_Key + 
+              "&field1=" + String(lastBattery) +
+              "&field2=" + String(lastRadioPower) +
+              "&field3=" + String(lastTemperature) +
+              "&field4=" + String(lastHeartRate);
+              Serial.println(url);
+            
+              client.print(String("POST ") + url + " HTTP/1.1\r\n" +
+                 "Host: " + host + "\r\n" +
+                 "Connection: Keep-Alive\r\n\r\n");
+  
+              while (client.connected())
+              {
+                  yield();
+                  String line = client.readStringUntil('\n');
+                  Serial.println(line);
+                  if (line.indexOf("{\"id\":") != -1)
+                  {
+                      break;
+                  }
+              }
             }
           }
           lastCheck = timeNow;
@@ -1420,34 +1436,41 @@ uint8_t sendSMS(String number, String message)
 
 time_t getNtpTime()
 {
+  uint8_t tries = 0;
   IPAddress ntpServerIP; // NTP server's ip address
 
-  while (Udp.parsePacket() > 0) ; // discard any previously received packets
-  Serial.println("Transmit NTP Request");
-  // get a random server from the pool
-  WiFi.hostByName(ntpServerName, ntpServerIP);
-  Serial.print(ntpServerName);
-  Serial.print(": ");
-  Serial.println(ntpServerIP);
-  sendNTPpacket(ntpServerIP);
-  uint32_t beginWait = millis();
-  while (millis() - beginWait < 1500) {
-    int size = Udp.parsePacket();
-    if (size >= NTP_PACKET_SIZE) {
-      Serial.println("Receive NTP Response");
-      Udp.read(packetBuffer, NTP_PACKET_SIZE);  // read packet into the buffer
-      unsigned long secsSince1900;
-      // convert four bytes starting at location 40 to a long integer
-      secsSince1900 =  (unsigned long)packetBuffer[40] << 24;
-      secsSince1900 |= (unsigned long)packetBuffer[41] << 16;
-      secsSince1900 |= (unsigned long)packetBuffer[42] << 8;
-      secsSince1900 |= (unsigned long)packetBuffer[43];
-      timeSync = 1;
-      return secsSince1900 - 2208988800UL + timeZone * SECS_PER_HOUR;
+  while (tries < 3)
+  {
+    while (Udp.parsePacket() > 0) ; // discard any previously received packets
+    Serial.println("Transmit NTP Request");
+    // get a random server from the pool
+    WiFi.hostByName(ntpServerName, ntpServerIP);
+    Serial.print(ntpServerName);
+    Serial.print(": ");
+    Serial.println(ntpServerIP);
+    sendNTPpacket(ntpServerIP);
+    uint32_t beginWait = millis();
+    while (millis() - beginWait < 3000)
+    {
+      int size = Udp.parsePacket();
+      if (size >= NTP_PACKET_SIZE)
+      {
+        Serial.println("Receive NTP Response");
+        Udp.read(packetBuffer, NTP_PACKET_SIZE);  // read packet into the buffer
+        unsigned long secsSince1900;
+        // convert four bytes starting at location 40 to a long integer
+        secsSince1900 =  (unsigned long)packetBuffer[40] << 24;
+        secsSince1900 |= (unsigned long)packetBuffer[41] << 16;
+        secsSince1900 |= (unsigned long)packetBuffer[42] << 8;
+        secsSince1900 |= (unsigned long)packetBuffer[43];
+        timeSync = 1;
+        return secsSince1900 - 2208988800UL + timeZone * SECS_PER_HOUR;
+      }
     }
+    
   }
   Serial.println("No NTP Response :-(");
-  return 0; // return 0 if unable to get the time
+  return 0;
 }
 
 // send an NTP request to the time server at the given address
