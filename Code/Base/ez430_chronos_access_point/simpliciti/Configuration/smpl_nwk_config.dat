@@ -46,12 +46,12 @@
 # * protocol changes are reflected in different maximum network
 # * application payload size.
 # */
---define=MAX_NWK_PAYLOAD=9
+--define=MAX_NWK_PAYLOAD=32
 
 #/* Maximum size of application payload */
 #/*-DMAX_APP_PAYLOAD=10*/
 #/* [BM] Increase max payload size for sync application */
---define=MAX_APP_PAYLOAD=19
+--define=MAX_APP_PAYLOAD=32
 
 #/* default Link token */
 --define=DEFAULT_LINK_TOKEN=0x01020304

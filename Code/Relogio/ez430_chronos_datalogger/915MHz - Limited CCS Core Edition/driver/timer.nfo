@@ -1,0 +1,151 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern void TIMER0_A0_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__bic_SR_register_on_exit() (1 times)
+	get_bluerobin_data() (1 times)
+	is_bluerobin() (1 times)
+	is_altitude_measurement() (1 times)
+	is_datalog() (1 times)
+	clock_tick() (1 times)
+
+extern void TIMER0_A1_5_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__bic_SR_register_on_exit() (1 times)
+	BRRX_TimerTask_v() (1 times)
+	 ? () (1 times)
+
+extern void Timer0_A3_Start() is called from 0 sites in this file.
+    It appears to be inlineable (size = 29 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void Timer0_A3_Stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void Timer0_A4_Delay() is called from 0 sites in this file.
+    It appears to be inlineable (size = 52 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	__enable_interrupt() (1 times)
+	__disable_interrupt() (1 times)
+	to_lpm() (1 times)
+
+extern void Timer0_Init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void Timer0_Start() is called from 0 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern void Timer0_Stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+Address of global variable is never taken:
+	static unsigned char button_lock_counter$1
+
+
+
+These functions may be recursive:
+	TIMER0_A0_ISR()
+	TIMER0_A1_5_ISR()
+	Timer0_A4_Delay()
+
+These external functions are called but not defined here:
+	to_lpm()
+	__disable_interrupt()
+	__enable_interrupt()
+	 ? ()
+	BRRX_TimerTask_v()
+	clock_tick()
+	is_datalog()
+	is_altitude_measurement()
+	is_bluerobin()
+	get_bluerobin_data()
+	__bic_SR_register_on_exit()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void Timer0_Stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void Timer0_Start() is called from 0 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void Timer0_Init() is called from 0 sites in this file.
+    It appears to be inlineable (size = 10 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void Timer0_A4_Delay() is called from 0 sites in this file.
+    It appears to be inlineable (size = 52 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void Timer0_A3_Stop() is called from 0 sites in this file.
+    It appears to be inlineable (size = 4 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void Timer0_A3_Start() is called from 0 sites in this file.
+    It appears to be inlineable (size = 29 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void TIMER0_A1_5_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern void TIMER0_A0_ISR() is called from 0 sites in this file.
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+== END OF INFO OUTPUT==

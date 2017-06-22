@@ -3,7 +3,6 @@
 simpliciti/Applications/main_AP_BM.obj: ../simpliciti/Applications/main_AP_BM.c
 simpliciti/Applications/main_AP_BM.obj: C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/string.h
 simpliciti/Applications/main_AP_BM.obj: C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/linkage.h
-simpliciti/Applications/main_AP_BM.obj: C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/stdlib.h
 simpliciti/Applications/main_AP_BM.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/bsp.h
 simpliciti/Applications/main_AP_BM.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/boards/EZ430-CHRONOS_DONGLE/bsp_board_defs.h
 simpliciti/Applications/main_AP_BM.obj: C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/mcus/bsp_msp430_defs.h
@@ -36,7 +35,6 @@ simpliciti/Applications/main_AP_BM.obj: C:/ti/ccs620/ccsv6/tools/compiler/msp430
 ../simpliciti/Applications/main_AP_BM.c: 
 C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/string.h: 
 C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/linkage.h: 
-C:/ti/ccs620/ccsv6/tools/compiler/msp430_4.2.1/include/stdlib.h: 
 C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/bsp.h: 
 C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/boards/EZ430-CHRONOS_DONGLE/bsp_board_defs.h: 
 C:/Users/igorg/workspace_v6_2/ez430_chronos_access_point/simpliciti/Components/bsp/mcus/bsp_msp430_defs.h: 

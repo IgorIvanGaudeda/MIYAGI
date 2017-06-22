@@ -1,0 +1,56 @@
+MSP430 C/C++ Optimizer                  v4.2.1
+Build Number 1NGPW-KDADEMDK-RTARQ-WAR-ZACIF_U_S_R
+
+		======File-level Analysis Summary======
+
+
+extern unsigned char acceleration_value_is_positive() is called from 1 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+extern unsigned convert_acceleration_value_to_mgrav() is called from 0 sites in this file.
+    It appears to be inlineable (size = 59 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	acceleration_value_is_positive() (1 times)
+
+extern void reset_acceleration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 1 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+
+Making this function inlineable: acceleration_value_is_positive()
+
+
+		======= End file-level Analysis =======
+
+
+==============================================================================
+
+extern void reset_acceleration() is called from 0 sites in this file.
+    It appears to be inlineable (size = 1 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned char acceleration_value_is_positive() is called from 1 sites in this file.
+    It appears to be inlineable (size = 7 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	<NONE>
+
+==============================================================================
+
+extern unsigned convert_acceleration_value_to_mgrav() is called from 0 sites in this file.
+    It appears to be inlineable (size = 59 units)
+    It has 3 non-trivial scope blocks nested 3 deep.
+    It calls these functions:
+	acceleration_value_is_positive() (1 times)
+
+== END OF INFO OUTPUT==

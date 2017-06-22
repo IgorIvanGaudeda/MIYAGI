@@ -82,7 +82,7 @@ void UART_send_async(u8 *pData_u8)
 	txBuffer[txIdx] = (*pData_u8);
 
 	// start transmission
-	txIdx = 1;
+	txIdx = 0;
 	txCompleteFlag = 0;
 	UART_TX_BUFFER = txBuffer[0];
 }

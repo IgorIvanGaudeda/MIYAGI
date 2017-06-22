@@ -965,7 +965,7 @@ void loop()
                 Serial.print("watchnow: ");
                 Serial.println(watchTime);
 
-                timediff = watchTime - watchTime;
+                timediff = watchTime - timeNow;
                 
                 // if difference is more than 5 minutes
                 if ((timediff > 300 || timediff < -300) && timeSync == 1)
